@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#f7fcf9] text-gray-800 min-h-screen">
+    <div class="flex min-h-screen">
+      <aside
+        class="hidden w-[250px] shrink-0 border-r border-gray-100 bg-[#eaf8f1] md:block"
+      >
+        <div class="flex items-center gap-2 px-5 py-5">
+          <img
+            class="h-8 w-8"
+            src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/UmVjeWNsZUNvbm5lY3RfTG9nb18xX3Jma2o3cQ==/template_primary"
+            alt="RecycleConnect logo"
+          />
+          <h1 class="text-bold font-bold text-[#077053]">
+            Recycle<span class="font-medium text-medium">Connect</span>
+          </h1>
+        </div>
+        <nav class="mt-4 flex flex-col gap-1 px-3 text-sm">
+          <a
+            href="#"
+            class="flex items-center gap-3 text-[#077053] rounded-lg py-3 px-3 hover:bg-white/60"
+          >
+            <img
+              class="h-4 w-4"
+              src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/aG9tZV92Y2xoeDI=/template_primary"
+              alt=""
+            />
+            Home
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 rounded-lg px-3 py-3 text-[#077053] hover:bg-white/60"
+          >
+            <img
+              class="h-4 w-4"
+              src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/cGlja3VwX2E4dGQxZQ==/template_primary"
+              alt=""
+            />
+            Request Pickup
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 rounded-lg bg-[#CCF7DC]/40 px-3 py-3 font-semibold text-[#077053]"
+          >
+            <img
+              class="h-4 w-4"
+              src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/aGlzdG9yeV9vcmZnemM=/template_primary"
+              alt=""
+            />
+            History
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 rounded-lg px-3 py-3 text-[#077053] hover:bg-white/60"
+          >
+            <img
+              class="h-4 w-4"
+              src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/cmV3YXJkX2xseHJvdw==/template_primary"
+              alt=""
+            />
+            Rewards
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 rounded-lg px-3 py-3 text-[#077053] hover:bg-white/60"
+          >
+            <img
+              class="h-4 w-4"
+              src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/cHJvZmlsZV91bGFmZHY=/template_primary"
+              alt=""
+            />
+            Profile
+          </a>
+        </nav>
+      </aside>
+      <div class="min-w-0 flex-1">
+        <header
+          class="flex items-center h-16 justify-end gap-3 border-b border-green-100 bg-[#f7fcf9] px-5 py-2 md:px-10"
+        >
+          <img
+            class="h-4 w-4"
+            src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/YmVsbHNfaWs5em1r/template_primary"
+            alt="notification"
+          />
+          <img
+            class="h-8 w-8 rounded-full object-cover"
+            src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/YXZhdGFyX2huZnFlNQ==/template_primary"
+            alt="user profile"
+          />
+          <p class="text-sm font-medium text-gray-700" alt="Lilian">Lilian</p>
+          <img
+            class="h-3 w-3"
+            src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/Y2hldnJvbl93bnhwcmM=/template_primary"
+            alt="dropdown"
+          />
+        </header>
+
+        <main class="px-5 py-6 md:px-10 md:py-8">
+          <h1 class="font-bold text-xl text-[#077053]">Pick Up History</h1>
+          <div class="flex items-center justify-between mt-4 gap-3">
+            <div class="flex gap-4 text-sm">
+              <p class="bg-[#077053] text-white px-3 py-2 rounded-lg shadow-sm">All</p>
+              <p
+                class="bg-white/60 text-[#077053] px-5 py-2 rounded border border-green-100 rounded-lg shadow-sm"
+              >
+                Ongoing
+              </p>
+              <p
+                class="bg-white/60 text-[#077053] px-5 py-2 rounded border border-green-100 rounded-lg shadow-sm"
+              >
+                Completed
+              </p>
+            </div>
+            <div
+              class="flex w-full flex-wrap items-center bg-white gap-2 rounded-lg border border-green-100 px-3 py-2 shadow-sm sm:w-64"
+            >
+              <img
+                class="h-4 w-4 shrink-0"
+                src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/YWthci1pY29uc19zZWFyY2hfaHc1aGEx/template_primary"
+                alt="search"
+              />
+              <input
+                type="text"
+                placeholder="Search"
+                class="min-w-0 flex-1 text-sm outline-none placeholder:text-gray-400"
+              />
+              <img
+                class="h-4 w-4 shrink-0 right-5"
+                src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/Y2FyYm9uX2dsb2JhbC1maWx0ZXJzX2VqZmx3NQ==/template_primary"
+                alt="filter"
+              />
+            </div>
+          </div>
+
+          <div
+            class="mt-4 flex bg-[#E8F6EE] border border-green-100 py-6 px-8 rounded-lg justify-between hover:shadow-md"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="flex justify-center items-center shrink-0 h-12 w-12 rounded-full bg-[#D1FFE3] mr-5"
+              >
+                <img
+                  class="h-12 w-12"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/cGxhc3RpY19xM2d6bGs=/template_primary"
+                  alt="plastic"
+                />
+              </div>
+              <div>
+                <p class="text-[#077053] font-bold">Plastic, Paper, Glass</p>
+                <p class="text-sm text-gray-500">Sep 20, 2026 - 10:34 AM</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <div class="flex-col items-end gap-2">
+                <span
+                  class="bg-[#D1FFE3] text-[#077053] text-center text-sm px-4 py-2 rounded-lg font-semibold mt-2"
+                  >Completed</span
+                >
+                <div class="text-[#077053] flex gap-5 text-sm font-bold mt-2">
+                  <span>12.5KG</span>
+                  <span>N2500</span>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="h-3 w-3"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yXzJfbGt1aWJl/template_primary"
+                  alt="Side button"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 flex bg-[#E8F6EE] border border-green-100 py-6 px-8 rounded-lg justify-between hover:shadow-md"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="flex justify-center items-center shrink-0 h-12 w-12 rounded-full bg-[#D1FFE3] mr-5"
+              >
+                <img
+                  class="h-12 w-12"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/cGxhc3RpY19xM2d6bGs=/template_primary"
+                  alt="plastic"
+                />
+              </div>
+              <div>
+                <p class="text-[#077053] font-bold">Plastic, Metal</p>
+                <p class="text-sm text-gray-500">Sep 15, 2026 - 2:15 pm</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <div class="flex-col items-end gap-2">
+                <span
+                  class="bg-[#D1FFE3] text-[#077053] text-center text-sm px-4 py-2 rounded-lg font-semibold mt-2"
+                  >Completed</span
+                >
+                <div class="text-[#077053] flex gap-5 text-sm font-bold mt-2">
+                  <span>6.2KG</span>
+                  <span>N1800</span>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="h-3 w-3"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yXzJfbGt1aWJl/template_primary"
+                  alt="Side button"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 flex bg-[#E8F6EE] border border-green-100 py-6 px-8 rounded-lg justify-between hover:shadow-md"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="flex justify-center items-center shrink-0 h-12 w-12 rounded-full bg-[#D1FFE3] mr-5"
+              >
+                <img
+                  class="h-6 w-6"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yXzFfaW1nZnBq/template_primary"
+                  alt="Glass"
+                />
+              </div>
+              <div>
+                <p class="text-[#077053] font-bold">Paper, Glass</p>
+                <p class="text-sm text-gray-500">Sep 20, 2026 - 10:34 AM</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <div class="flex-col items-end gap-2">
+                <span
+                  class="bg-[#D1E4FF] text-[#0482EF] text-center text-sm px-4 py-2 rounded-lg font-semibold mt-2"
+                  >Completed</span
+                >
+                <div class="text-[#0482EF] flex gap-5 text-sm font-bold mt-2">
+                  <span>5.6KG</span>
+                  <span>N1200</span>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="h-3 w-3"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yXzJfbGt1aWJl/template_primary"
+                  alt="Side button"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 flex bg-[#E8F6EE] border border-green-100 py-6 px-8 rounded-lg justify-between hover:shadow-md"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="flex justify-center items-center shrink-0 h-12 w-12 rounded-full bg-[#D1FFE3] mr-5"
+              >
+                <img
+                  class="h-6 w-6"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yX2d3cnNpcw==/template_primary"
+                  alt="E-waste"
+                />
+              </div>
+              <div>
+                <p class="text-[#077053] font-bold">E-waste</p>
+                <p class="text-sm text-gray-500">Sep 20, 2026 - 10:34 AM</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <div class="flex-col items-end gap-2">
+                <span
+                  class="bg-[#D1FFE3] text-[#077053] text-center text-sm px-4 py-2 rounded-lg font-semibold mt-2"
+                  >Completed</span
+                >
+                <div class="text-[#077053] flex gap-5 text-sm font-bold mt-2">
+                  <span>3.3KG</span>
+                  <span>N900</span>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="h-3 w-3"
+                  src="https://res-console.cloudinary.com/hesd0s4y/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/VmVjdG9yXzJfbGt1aWJl/template_primary"
+                  alt="Side button"
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
