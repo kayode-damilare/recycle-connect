@@ -17,7 +17,7 @@
     />
     <title>pickup-status</title>
   </head>
-  <body>
+  <body class="bg-[#f3faf5]">
     <div class="absolute -top-2 z-50">
       <svg
         width="652"
@@ -57,7 +57,7 @@
         </defs>
       </svg>
     </div>
-    <div id="app" class="flex relative flex-row w-full">
+    <div id="app" class="flex relative flex-row gap-6 w-full">
       <div
         class="w-full max-w-[357px] px-[10px] font[Inter] bg-[#e8f6ee] flex flex-col"
       >
@@ -103,7 +103,7 @@
         >
           <a
             class="flex flex-row text-[#07543e] hover:shadow-sm hover:shadow-[#087a55] cursor-pointer text-base font-medium py-[4px] px-[5px] hover:border rounded-xl items-end gap-2"
-            href="home"
+            href="Landing-page.html"
             ><svg
               width="25"
               height="26"
@@ -130,7 +130,7 @@
           >
           <a
             class="flex flex-row gap-2 text-[#07543e] text-base font-medium py-[4px] px-[5px] hover:border hover:shadow-sm hover:shadow-[#087a55] cursor-pointer rounded-xl items-end"
-            href="Request"
+            href="Household-Request.html"
           >
             <svg
               width="24"
@@ -148,7 +148,7 @@
           >
           <a
             class="flex flex-row gap-2 text-[#07543e] text-base font-medium py-[4px] px-[5px] hover:border hover:shadow-sm hover:shadow-[#087a55] cursor-pointer rounded-xl items-end"
-            href="History"
+            href="Pickup-History.html"
           >
             <svg
               width="24"
@@ -169,7 +169,7 @@
           >
           <a
             class="flex flex-row gap-2 text-[#07543e] text-base font-medium py-[4px] px-[5px] hover:border hover:shadow-sm hover:shadow-[#087a55] cursor-pointer rounded-xl items-end"
-            href="Reward"
+            href="Collector-Reward.html"
             ><svg
               width="30"
               height="30"
@@ -197,7 +197,7 @@
 
           <a
             class="flex flex-row gap-2 py-[4px] px-[5px] text-base font-medium hover:border hover:shadow-sm hover:shadow-[#087a55] cursor-pointer rounded-xl text-[#07543e] items-end"
-            href="Profile"
+            href="collector-Profile.html"
             ><svg
               width="28"
               height="28"
@@ -224,7 +224,9 @@
           >
         </nav>
       </div>
+      <!------main content------>
       <div class="w-full pr-4 bg-[#f2faf5]">
+        <!-----header2------>
         <nav class="flex flex-row mt-4 mb-14 items-center gap-4 place-self-end">
           <a href=""
             ><svg
@@ -298,6 +300,7 @@
             </svg>
           </a>
         </nav>
+        <!----heading and rating----->
         <h2 class="text-4xl font-bold pl-4 font-[inter] leading-[30px] mb-6">
           Pickup Status & Confirmation
         </h2>
@@ -343,9 +346,11 @@
               </span>
             </div>
 
-            <div class="relative flex flex-col items-center flex-1 z-10">
+            <div
+              class="relative flex flex-col text-center items-center flex-1 z-10"
+            >
               <div
-                class="w-8 h-8 bg-[#b7dacd] border-1 border-[#087a55] text-white rounded-full flex items-center justify-center font-bold shadow-md"
+                class="w-8 h-8 bg-[#b7dacd] text-[#087a55] border border-[#087a55] rounded-full flex item-center justify-center font-bold shadow-md"
               >
                 .
               </div>
@@ -361,8 +366,13 @@
             </div>
           </div>
         </div>
-        <div class="w-full flex flex-rows">
-          <div id="info" class="w-full flex flex-col gap-4 p-4">
+        <!------info content------>
+        <div class="w-full flex flex-rows gap-6">
+          <!----left info content---->
+          <div
+            id="info"
+            class="w-full max-w-[508px] flex flex-col gap-4 p-4 border shadow-sm shadow-black"
+          >
             <h3 class="font-extrabold text-2xl font-[inter] leading-[30px]">
               Collector Matched
             </h3>
@@ -437,21 +447,22 @@
             </div>
             <ul class="flex flex-row gap-6 mt-20 w-full mx-w-2xl">
               <li
-                href="profile"
-                class="border w-full text-center py-2 rounded-xl text-[#087a55] bg-[#e8f6ee] shadow-md transition-shadow duration-300 shadow-black cursor-pointer"
+                href="Collector-profile.html"
+                class="border w-full text-center py-2 rounded-xl text-[#087a55] bg-[#e8f6ee] shadow-sm transition-shadow duration-300 shadow-black cursor-pointer"
               >
                 View Profile
               </li>
               <li
-                href="contact"
-                class="border w-full text-center py-2 rounded-xl text-[#087a55] bg-[#e8f6ee] shadow-md transition-shadow duration-300 shadow-black cursor-pointer"
+                href="Collector-contact.html"
+                class="border w-full text-center py-2 rounded-xl text-[#087a55] bg-[#e8f6ee] shadow-sm transition-shadow duration-300 shadow-black cursor-pointer"
               >
                 Contact
               </li>
             </ul>
           </div>
-          <div id="map">
-            <div class="relative">
+          <!---map section---->
+          <div id="map" class="w-full max-w-[464px] h-full max-h-[288px]">
+            <div class="relative cover w-full h-full overflow-hidden">
               <span
                 class="absolute inset-0 flex items-center justify-center z-10"
               >
@@ -520,7 +531,7 @@
         <button
           class="w-full mt-8 mb-8 mt-8 bg-[#07543e] h-10 text-[#e8f6ee] leading-[30px] rounded-lg text-center font-[inter] text-base"
         >
-          <a href="" target="_blank">View Life Tracker</a>
+          <a href="Pickup-status.html" target="_blank">View Life Tracker</a>
         </button>
       </div>
     </div>
