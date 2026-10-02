@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <title>RecycleConnect Sign-in</title>
+    </head>
+    <body>
+        <div class="Sign-in-container">
+            <div class="branding-section">
+                <div class="eco-watermark">
+                    <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790883054/f4ab1007fa8460ba7f38126d8bfdb5cdd5134ed9_nuawh7.jpg" alt="logo-watermark" class="logo-watermark">
+                </div>
+
+                <div class="Recycle-mainlogo">
+                    <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790715284/fe1a3e9445108f7b67cbddb8b1f19ae4a5d3911f_f0so5l.png" alt="RecycleConnect logo" class="RecycleConnect-logo">
+                    <h1 class="Recycle-logoname"><strong>Recycle</strong><span>Connect</span></h1>
+                    <p class="Recycle-logrep">Reduce &bull; Recycle &bull; Reuse</p>
+                </div>
+
+                <div class="branding-message">
+                    <p>A Cleaner tomorrow, <br>starts with you.</p>
+                </div>
+
+                <div class="Eco-logo">
+                    <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790883054/f4ab1007fa8460ba7f38126d8bfdb5cdd5134ed9_nuawh7.jpg" alt="Eco logo" class="logo-illustration">
+                </div>
+            </div>
+
+            <div class="login-section">
+                <div class="role-btn">
+                    <button class="household-btn">Household</button>
+                    <button class="collector-btn">Collector</button>
+                </div>
+
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Log in to your account to continue</p>
+                </div>
+
+                <form id="login-form" action="/submit-data">
+                    <div class="input-group">
+                        <label for="email">Email address</label>
+                        <div class="input-wrapper">
+                            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M20.4286 0H1.57143C1.15466 0 0.754961 0.179107 0.460261 0.497918C0.165561 0.81673 0 1.24913 0 1.7V15.3C0 15.7509 0.165561 16.1833 0.460261 16.5021C0.754961 16.8209 1.15466 17 1.57143 17H20.4286C20.8453 17 21.245 16.8209 21.5397 16.5021C21.8344 16.1833 22 15.7509 22 15.3V1.7C22 1.24913 21.8344 0.81673 21.5397 0.497918C21.245 0.179107 20.8453 0 20.4286 0ZM18.7 1.7L11 7.463L3.3 1.7H18.7ZM1.57143 15.3V2.4735L10.5521 9.197C10.6837 9.29571 10.8399 9.3486 11 9.3486C11.1601 9.3486 11.3163 9.29571 11.4479 9.197L20.4286 2.4735V15.3H1.57143Z" fill="#8E8E93"/>
+                            </svg>
+                            <input type="email" id="email" placeholder="Email address">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M21 10.56H18.875V3.84C18.875 1.719 17.0844 0 14.875 0H7.125C4.91563 0 3.125 1.719 3.125 3.84V10.56H1C0.446875 10.56 0 10.989 0 11.52V23.04C0 23.571 0.446875 24 1 24H21C21.5531 24 22 23.571 22 23.04V11.52C22 10.989 21.5531 10.56 21 10.56ZM5.375 3.84C5.375 2.913 6.15937 2.16 7.125 2.16H14.875C15.8406 2.16 16.625 2.913 16.625 3.84V10.56H5.375V3.84ZM19.75 21.84H2.25V12.72H19.75V21.84ZM10.125 17.67V19.26C10.125 19.392 10.2375 19.5 10.375 19.5H11.625C11.7625 19.5 11.875 19.392 11.875 19.26V17.67C12.133 17.4922 12.3255 17.2404 12.4249 16.9509C12.5243 16.6614 12.5255 16.349 12.4282 16.0588C12.3309 15.7686 12.1402 15.5155 11.8836 15.336C11.6269 15.1564 11.3176 15.0597 11 15.0597C10.6824 15.0597 10.3731 15.1564 10.1164 15.336C9.85978 15.5155 9.66909 15.7686 9.57182 16.0588C9.47454 16.349 9.47568 16.6614 9.57509 16.9509C9.6745 17.2404 9.86704 17.4922 10.125 17.67Z" fill="#8E8E93"/>
+                            </svg>
+                            <input type="password" id="password" placeholder="Password">
+                            <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-alt">
+                            <path d="M25.2056 11.1097C25.8224 10.3042 25.8224 9.21505 25.2056 8.40825C23.2628 5.87205 18.6016 0.649994 13.1596 0.649994C7.71762 0.649994 3.05642 5.87205 1.1136 8.40825C0.813075 8.79438 0.649902 9.2697 0.649902 9.75899C0.649902 10.2483 0.813075 10.7236 1.1136 11.1097C3.05642 13.6459 7.71762 18.868 13.1596 18.868C18.6016 18.868 23.2628 13.6459 25.2056 11.1097Z" stroke="#087A55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.1597 13.6628C15.3158 13.6628 17.0636 11.915 17.0636 9.75899C17.0636 7.60295 15.3158 5.85513 13.1597 5.85513C11.0037 5.85513 9.25586 7.60295 9.25586 9.75899C9.25586 11.915 11.0037 13.6628 13.1597 13.6628Z" stroke="#087A55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Log In</button>
+
+                    <div class="login-option">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="socialmedia-login">
+                        <button type="button" class="socialmedia-btn"><img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790882398/devicon_google_ljmnce.png" alt="Google"></button>
+                        <button type="button" class="socialmedia-btn"><img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790913220/apple-logo_uqu1nx.png" alt="Apple"></button>
+                        <button type="button" class="socialmedia-btn"><img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790882382/devicon_facebook_dp8vsr.png" alt="Facebook"></button>
+                    </div>
+
+                    <div class="signup-link">
+                        <p>Don't have an account? <a href="#">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
