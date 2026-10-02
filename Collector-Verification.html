@@ -35,9 +35,9 @@
         <!-- nav-links -->
 
         <nav
-          class="flex flex-col font-[600] pt-[50px] text-[hsl(163,53%,26%)] gap-7"
+          class="flex flex-col font-[600] pt-[50px] text-[hsl(163,53%,26%)] gap-"
         >
-          <div class="flex items-center">
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(63,85%,18%)] cursor-pointer hover:bg-[hsl(143,143%,91%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Group_3_d9tfgk.png"
               alt="home-img"
@@ -45,7 +45,10 @@
             />
             <p class="px-5 text-base">Home</p>
           </div>
-          <div class="flex items-center">
+
+
+          
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(163,85%,18%)] cursor-pointer hover:bg-[hsl(143,100%,91%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Vector_7_tlfhk8.png"
               alt="request-img"
@@ -53,7 +56,15 @@
             />
             <p class="px-5 text-base">Request Pickup</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(63,85%,18%)] cursor-pointer hover:bg-[hsl(143,143%,91%)] pl-3">
+            <img
+              src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790949768/Group_31_h3j0fl.png"
+              alt="history-img"
+              class="w-4 h-4"
+            />
+            <p class="px-5 text-base">Become a Collector</p>
+          </div>
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(163,85%,18%)] cursor-pointer hover:bg-[hsl(143,100%,91%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_8_gamkmf.png"
               alt="history-img"
@@ -61,7 +72,7 @@
             />
             <p class="px-5 text-base">History</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(163,85%,18%)] cursor-pointer hover:bg-[hsl(143,100%,91%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Group_2_vepo5f.png"
               alt="reward-img"
@@ -69,7 +80,7 @@
             />
             <p class="px-5 text-base">Reward</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:border-[hsl(163,85%,18%)] cursor-pointer hover:bg-[hsl(143,100%,91%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Vector_9_k0etbg.png"
               alt="profile-img"
@@ -107,30 +118,40 @@
             <h1 class="text-[30px] font-[700]">Identity Verification</h1>
             <p class="text-[18px] font-[600] text-[hsl(163,53%,26%)]">Your documents are being reviewed. This usually takes 1-2 business days.</p> 
           </div>
-          <div class="pl-8 pr-15">
-            <div class="flex flex-col w-full h-[130px] border-b-[1.5px] border-l-[1px] border-gray-200 font-[700] gap-3 rounded-bl-[12px] pl-16 ">
+
+          <div class="relative pl-8 pr-15">
+           <div class="absolute left-[33px] top-5 bottom-0 w-[2px] bg-[hsl(163,53%,26%)]"></div> 
+            <div class="flex flex-col w-full h-[130px] border-b-[1.5px] border-gray-200 font-[700] gap-3 rounded-bl-[12px] pl-16 relative">
+            <div class="absolute -left-3 top-4 w-8 h-8 bg-[hsl(163,53%,26%)] rounded-full border-l-[1px] border-gray-200 flex items-center justify-center text-white text-xs">
+            <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790951181/icons8-done-24_ic6njr.png" alt="" class=" w-6 h-6 rounded-full transparent bg-[hsl(163,53%,26%)] object-contain text-white"
+            ></div>
               <h3 class="text-[hsl(163,53%,26%)] text-[20px] pt-4">ID Document</h3>
               <div class="flex justify-between"> 
                 <div>
-                  <p class="text-[16px]">Sep 23, 2026   .  10:24AM</p>
-                  <p class="text-sm font-[400] ">submitted</p>
+                  <div class="text-[16px]"><span>Sep 23, 2026</span><span class="relative -top-[2px] text-[14px] mx-4">*</span> <span>  10:24AM</span></div>
+                  <p class="text-[14px] font-[500] ">submitted</p>
                 </div>
                 <div class="flex h-[40px] w-[140px] rounded-[12px] justify-center items-center shadow-sm text-[hsl(161,88%,25%) border-[hsl(148,20%,87%)] bg-[hsl(146,44%,94%)]">Completed</div> 
               </div>
             </div>
 
             <div class="flex flex-col h-[130px] w-full border-b-[1.5px] border-l-[1px] border-gray-200 font-[700] rounded-bl-[12px] gap-3 rounded-tl-[12px] pl-16"> 
+            <div class="absolute left-5 top-38 w-8 h-8 bg-[hsl(163,53%,26%)] rounded-full flex items-center justify-center text-white text-xs">
+            <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790951181/icons8-done-24_ic6njr.png" alt="" class=" w-6 h-6 rounded-full transparent bg-[hsl(163,53%,26%)] object-contain text-white"
+            ></div>
               <h3 class="text-[hsl(163,53%,26%)] text-[20px] pt-4">Background Check</h3>
               <div class="flex justify-between">
-                <p class="text-[16px]">Verifying your information</p>
+                <p class="text-[14px] font-[500]">Verifying your information</p>
                 <div class="flex h-[40px] w-[140px] rounded-[12px] items-center justify-center shadow-sm text-[hsl(163,85%,18%)] border-[hsl(148,20%,87%)] bg-[hsl(148,20%,87%)]">In Progress</div>
               </div>
             </div>
 
             <div class="flex flex-col h-[130px] w-full border-b-[1px] border-l-[1px] border-gray-200 font-[700] gap-3 rounded-tl-[12px] rounded-bl-[12px] pl-16"> 
+            <div class="absolute left-5 top-70 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white text-xs">
+            </div>
               <h3 class="text-[hsl(163,53%,26%)] text-[20px] pt-4">Training Certificate</h3>
               <div class="flex justify-between">
-                <p class="text-[16px]">Required</p>
+                <p class="text-[14px] font-[500]">Required</p>
                 <div class="flex h-[40px] w-[140px] justify-center rounded-[12px] items-center shadow-sm text-[hsl(39,87%,62%)] border-[hsla(148,20%,87%)] bg-[hsl(48,100%,85%)]">Pending</div>
               </div>
             </div>
