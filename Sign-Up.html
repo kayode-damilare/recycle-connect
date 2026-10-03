@@ -3,9 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Sign-Up Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  
+<body class="flex">
+  <aside class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]">
+
+    <!-- Logo -->
+
+     <div class="mt-47 bg-[#F2FAF5]">
+      <div class="flex flex-col justify-center items-center gap-1 p-6">
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791036677/RecycleConnect_Logo_icon_1_x603h6.png" alt="logo" class="max-w-[137px] w-full max-h-[135px] h-full">
+        <div class="flex">
+          <h2 class="font-[Montserrat] font-bold text-[28px] text-[#07543E]">Recycle</h2>
+          <span class="font-[Montserrat] text-[28px] text-[#07543E]">Connect</span>
+        </div>
+        
+        <div>
+          <ul class="flex gap-8 text-[#07543E]">
+            <li>Reduce</li>
+            <li>Recycle</li>
+            <li>Reuse</li>
+          </ul>
+        </div>
+
+        <div class="max-w-[159px] w-full text-center mt-6">
+          <h2 class="text-[#07543E] font-semibold font-[Inter]">A cleaner tomorrow starts with you.</h2>
+        </div>
+        
+      </div>
+     </div>
+
+     <!-- LOWER IMAGE -->
+
+     <div class="">
+      <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791037531/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_2_sdj5cz.png" alt="Eco-friendly representation image" class="w-full max-h-[736px] h-full rounded-[0_0_50px_0]">
+     </div>
+     
+  </aside>
+
+  <!-- MAIN CONTENT -->
+
+  <main class="p-12 flex flex-col gap-2 bg-[#F2FAF5] w-full">
+  <div class="mt-20">
+
+    
+    <h1 class="font-[Inter] font-bold text-[40px]">
+      Create Your Account
+    </h1>
+    <p class="font-[Inter] text-[18px] text-[#07543E]">
+      Start your journey towards a greener tomorrow today!
+    </p>
+
+    <!-- FORM  -->
+
+    <form action="" class="flex flex-col gap-4 mt-4">
+
+      <!-- NAME -->
+
+      <input type="text" id="name" name="name" placeholder="Full Name" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+      <!-- EMAIL -->
+
+      <input type="email" name="mail" id="e-mail" placeholder="Email Address" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+      <!-- PHONE NUMBER -->
+
+      <input type="tel" name="phone-number" id="phone" placeholder="Phone Number" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+      <!-- PASSWORD -->
+
+      <input type="password" name="password" id="password" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+      <!-- CONFIRM PASSWORD -->
+
+      <input type="password" name="password id=confirm-pass" placeholder="Confirm Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+      <!-- TERMS AND CONDITIONS -->
+
+      <div>
+        <input type="checkbox" name="agree" id="terms-condition" required class=" checked:accent-[#087A55] ring-[#087A55] border border-[#087A55] h-3 w-3 ">
+        <label for="terms-condition" class="text-[#087A55]">I Agree to the Terms & Conditions and Privacy Policy</label>
+      </div>
+    </form>
+
+    <!-- CREATE ACCOUNT BUTTON  -->
+
+    <div class="mt-15">
+      <a class="flex justify-center items-center bg-[#087A55] w-full text-white max-h-[68px] h-screen font-[Inter] font-semibold rounded-[12px] cursor-pointer" href="House-Dashboard.html">
+      Create Account
+    </a>
+    </div>
+
+    <!-- SIGN IN  -->
+
+    <div class="flex justify-center mt-15 font-bold text-[20px] font-[Inter] font-[#087A55]">
+      <h2 >Already have an account? <a href="Sign-in.html" class="text-[#087A55]">Sign In</a></h2>
+    </div>
+    </div>
+  </main>
 </body>
 </html>
