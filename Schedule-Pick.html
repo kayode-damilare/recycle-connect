@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="index.js"></script>
+    <script defer src="Schedule-Pick.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link
       rel="stylesheet"
@@ -65,9 +65,9 @@
       </svg>
     </div>
     <!-----website section------>
-    <div id="app" class="flex relative flex-row gap-6 w-full bg-[#f2faf5]">
+    <div id="app" class="flex flex-rows relative gap-6  bg-[#f2faf5]">
       <div
-        class="w-full max-w-[357px] px-[10px] font[Inter] bg-[#e8f6ee] flex flex-col"
+        class="w-full max-w-[356px]  px-[10px] font[Inter] bg-[#e8f6ee]"
       >
         <div class="flex flex-row mt-4 mb-20 gap-4 items-center">
           <svg
@@ -107,7 +107,7 @@
           </h2>
         </div>
         <nav
-          class="flex flex-col w-full max-w-[309px] gap-4 absolute z-50 top-[150px] left-[20px]"
+          class="flex flex-col w-full max-w-[289px] gap-4 absolute z-50 top-[150px] left-[20px]"
         >
           <a
             class="flex flex-row text-[#07543e] hover:shadow-sm hover:shadow-[#087a55] cursor-pointer text-base font-medium py-[4px] px-[5px] hover:border rounded-xl items-end gap-2"
@@ -232,7 +232,7 @@
           >
         </nav>
       </div>
-      <div class="w-full pr-6">
+      <div class=" pr-6">
         <!-----header2------>
         <nav class="flex flex-row mt-4 mb-14 items-center gap-4 place-self-end">
           <a href=""
@@ -309,34 +309,64 @@
         </nav>
         <!----heading and rating----->
         <div class="mb-20 font-[inter]">
-            <h2 class="text-4xl font-bold  leading-[30px] mb-2">
-                Schedule Pickup
-            </h2>
-            <p class="text-[#246955] font-medium leading-[24px] ">
-                Choose a date and time for your pickup.
-            </p>
+          <h2 class="text-4xl font-bold leading-[30px] mb-2">
+            Schedule Pickup
+          </h2>
+          <p class="text-[#246955] font-medium leading-[24px]">
+            Choose a date and time for your pickup.
+          </p>
         </div>
         <div class="flex flex-row mt-8 gap-8">
           <!----calender---->
-          <div
-            class="w-[491px] h-[332px] bg-[#F5F5F5] border shadow-md rounded-lg items-center justify-center p-8"
-          >
+          <div id="calendar"
+            class="w-[451px] h-[332px] bg-[#F5F5F5] border shadow-md rounded-lg items-center justify-center p-8">
             <header class="flex flex-row gap-4 items-center justify-center">
-              <button><i class="fas fa-arrow-left"></i></button>
-              <h2 class="text-xl font-bold">October 2023</h2>
-              <button><i class="fas fa-arrow-right"></i></button>
+              <button id="prev-month"><i class="fas fa-arrow-left"></i></button>
+              <h2 id="monthyear" class="text-xl font-bold">October 2023</h2>
+              <button id="next-month">
+                <i class="fas fa-arrow-right"></i>
+              </button>
             </header>
-
             <div class="grid grid-cols-7 gap-2 mt-4">
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Sun</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Mon</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Tue</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Wed</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Thu</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Fri</div>
-              <div class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500">Sat</div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Sun
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Mon
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Tue
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Wed
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Thu
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Fri
+              </div>
+              <div
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+              >
+                Sat
+              </div>
+            </div>
 
-              <!-- Days of the month -->
+            <!-- Days of the month -->
+            <div id="days" class="grid grid-cols-7 gap-2 mt-2">
               <div
                 class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
               >
@@ -428,7 +458,7 @@
                 25
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center  text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
               >
                 26
               </div>
@@ -454,50 +484,97 @@
               </div>
             </div>
           </div>
-            <!----time slot----->
-          <div class="flex flex-col gap-4 ml-10 w-[362px] h-[318px] ">
-            <p class="text-lg font-semibold">Set Time Slot</p>
-            <div class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md">
-            <input class="rounded-full focus:ring-[#246955] focus:bg-[#246955]" type="checkbox" name="time" value="morning" /> 8:00 AM - 10:00AM
-            </div>
-            <div class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2  border shadow-md">
-            <input class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]" type="checkbox" name="time" value="afternoon" /> 10:00 AM -
-            12:00 PM
-            </div>
-            <div class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md">
-            <input class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]" type="checkbox" name="time" value="evening" /> 12:00
-            PM- 2:00 PM
-            </div>
-            <div class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md">
-            <input class="rounded-full focus:ring-[#246955] focus:caret-[#246955] focus:bg-[#246955]" type="checkbox" name="time" value="night" /> 2:00 PM
-            - 4:00 PM
-            </div>
-            <div class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md">
-            <input class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]" type="checkbox" name="time" value="late-night" /> 4:00
-            PM - 6:00 PM
-          </div> 
+          
+          <!----time slot----->
+          <div class="flex flex-col gap-4 ml-10 w-[362px] h-[318px]">
+          <p class="text-lg font-semibold">Set Time Slot</p>
+          <div
+            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          >
+            <input
+              class="rounded-full focus:ring-[#246955] focus:bg-[#246955]"
+              type="checkbox"
+              name="time"
+              value="morning"
+            />
+            8:00 AM - 10:00AM
+          </div>
+          <div
+            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          >
+            <input
+              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
+              type="checkbox"
+              name="time"
+              value="afternoon"
+            />
+            10:00 AM - 12:00 PM
+          </div>
+          <div
+            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          >
+            <input
+              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
+              type="checkbox"
+              name="time"
+              value="evening"
+            />
+            12:00 PM- 2:00 PM
+          </div>
+          <div
+            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          >
+            <input
+              class="rounded-full focus:ring-[#246955] focus:caret-[#246955] focus:bg-[#246955]"
+              type="checkbox"
+              name="time"
+              value="night"
+            />
+            2:00 PM - 4:00 PM
+          </div>
+          <div
+            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          >
+            <input
+              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
+              type="checkbox"
+              name="time"
+              value="late-night"
+            />
+            4:00 PM - 6:00 PM
+          </div>
         </div>
       </div>
-          <!----footer text----->
-        <p class="w-full max-w-[450px] text-[#246955]  flex flex-row gap-4 items-start mt-10 text-sm font-semibold">
-            <input class="border-2 border-[#246955]  bg:[#246955] focus:ring-[#246955] focus:bg-[#246955] " type="checkbox" name="terms" value="agree" /> I confirm pickup at my registered adress in 12 Greenview Estate, Lagos, on Fri,
-            Sep 4, 2026 between 8:00AM - 10:00AM. 
-        </p>
-        <p class="ml-8 text-sm text-[#246955] font-semibold leading-[20px]">
-            I understand a no-show fee may apply.
-        </p>
-        <div class="flex flex-row w-full max-w-[745px] place-self-end gap-16 mb-20 mt-12">
-            <button
-                class="bg-[#e8f6ee] text-[#246955] w-[250px] shadow h-[50px] rounded-lg"
-            >
-                Back
-            </button>
-            <button
-                class="bg-[#246955] text-white  w-[470px]  rounded-lg hover:bg-[#087a55]"
-            >
-                Next
-            </button>
-        </div>
+      <!----footer text----->
+      <p
+        class="w-full max-w-[450px] text-[#246955] flex flex-row gap-4 items-start mt-10 text-sm font-semibold"
+      >
+        <input
+          class="border-2 border-[#246955] bg:[#246955] focus:ring-[#246955] focus:bg-[#246955]"
+          type="checkbox"
+          name="terms"
+          value="agree"
+        />
+        I confirm pickup at my registered adress in 12 Greenview Estate, Lagos,
+        on Fri, Sep 4, 2026 between 8:00AM - 10:00AM.
+      </p>
+      <p class="ml-8 text-sm text-[#246955] font-semibold leading-[20px]">
+        I understand a no-show fee may apply.
+      </p>
+      <div
+        class="flex flex-row place-self-end gap-16 mb-20 mt-12"
+      >
+        <button
+          class="bg-[#e8f6ee] text-[#246955] w-[250px] shadow h-[50px] rounded-lg"
+        >
+          Back
+        </button>
+        <button
+          class="bg-[#246955] text-white w-[470px] rounded-lg hover:bg-[#087a55]"
+        >
+          Next
+        </button>
+      </div>
     </div>
   </body>
 </html>
