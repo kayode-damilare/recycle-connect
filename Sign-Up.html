@@ -10,10 +10,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Sign-Up Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="flex">
-  <aside class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]">
+<body class="bg-[#F2FAF5] flex flex-col">
+
+  <!-- NAV BAR -->
+
+  <header class="bg-white h-[64px] px-30 py-2 shadow-[0_4px_4px_rgba(0,0,0,0.05)] w-full fixed">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center font-['Montserrat'] text-[#077053] text-14px">
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle-Connect-Logo" class="w-[48px] h-[42px]">
+        <h2 class="font-bold">Recycle</h2><span class="">Connect</span>
+      </div>
+      
+      <div class="">
+        <ul class="flex gap-16 text-[#043C2D] font-bold leading-0">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#about">About US</a></li>
+          <li><a href="">For Collection</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="">
+        <button class="inline-flex justify-center items-center h-[38px] gap-1 bg-[#087a55] p-1 rounded-[40px] max-w-full w-[156px] text-[#FEF9F9] font-bold cursor-pointer">
+          <span><a href="Sign-Up.html">Get Started</a></span><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg" class="w-5">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="flex">
+
+  
+   <aside class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]">
 
     <!-- Logo -->
 
@@ -50,7 +82,7 @@
 
   <!-- MAIN CONTENT -->
 
-  <main class="p-12 flex flex-col gap-2 bg-[#F2FAF5] w-full">
+   <main class="p-12 flex flex-col gap-2 bg-[#F2FAF5] w-full">
   <div class="mt-20">
 
     
@@ -79,11 +111,19 @@
 
       <!-- PASSWORD -->
 
-      <input type="password" name="password" id="password" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <div class="relative ">
+        <input type="password" name="password" id="password" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <i class="fa-slab-press fa-regular fa-eye absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-[#087A55]"></i>
+      </div>
+      
 
       <!-- CONFIRM PASSWORD -->
 
-      <input type="password" name="password id=confirm-pass" placeholder="Confirm Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <div class="relative">
+        <input type="password" name="password id=confirm-pass" placeholder="Confirm Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+        <i class="fa-slab-press fa-regular fa-eye absolute text-[#087A55] top"></i>
+      </div>
+      
 
       <!-- TERMS AND CONDITIONS -->
 
@@ -110,5 +150,7 @@
     </div>
     </div>
   </main>
+
+  </div>
 </body>
 </html>
