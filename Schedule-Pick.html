@@ -488,56 +488,58 @@
           <!----time slot----->
           <div class="flex flex-col gap-4 ml-10 w-[362px] h-[318px]">
           <p class="text-lg font-semibold">Set Time Slot</p>
-          <div
-            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+          <label for="morning"
+            class="flex flex-row relative cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
           >
+
             <input
-              class="rounded-full focus:ring-[#246955] focus:bg-[#246955]"
-              type="checkbox"
+              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955] focus:outline-none"
+              type="radio"
               name="time"
               value="morning"
             />
-            8:00 AM - 10:00AM
-          </div>
-          <div
-            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+            
+            8:00 AM - 10:00AM 
+          </label>
+          <label for="afternoon"
+            class="flex flex-row cursor-pointer relative text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
           >
             <input
               class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="checkbox"
+              type="radio"
               name="time"
               value="afternoon"
             />
             10:00 AM - 12:00 PM
-          </div>
+          </label>
           <div
-            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+            class="flex flex-row cursor-pointer relative text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
           >
             <input
               class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="checkbox"
+              type="radio"
               name="time"
               value="evening"
             />
             12:00 PM- 2:00 PM
           </div>
           <div
-            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+            class="flex flex-row cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
           >
             <input
               class="rounded-full focus:ring-[#246955] focus:caret-[#246955] focus:bg-[#246955]"
-              type="checkbox"
+              type="radio"
               name="time"
               value="night"
-            />
+            /> 
             2:00 PM - 4:00 PM
           </div>
           <div
-            class="flex flex-row text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+            class="flex flex-row cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
           >
             <input
               class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="checkbox"
+              type="radio"
               name="time"
               value="late-night"
             />
