@@ -1,34 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <div>
-            <header
-          class="flex items-center h-16 justify-end gap-3 border-b border-green-100 bg-[#f7fcf9] px-5 py-2 md:px-10"
-        >
-          <img
-            class="h-4 w-4"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869712/bells_ik9zmk.png"
-            alt="notification"
-          />
-          <img
-            class="h-8 w-8 rounded-full object-cover"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869726/avatar_hnfqe5.png"
-            alt="user profile"
-          />
-          <p class="text-[16px] font-medium font-[Inter] leading-[100%] text-gray-700">Lilian</p>
-          <img
-            class="h-3 w-3"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869745/chevron_wnxprc.svg"
-            alt="dropdown"
-          />
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecycleConnect | Collector Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-[#f7fcf9] text-gray-800 min-h-screen font-[Inter]">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between h-16 border-b border-green-100 bg-white px-5 md:px-10"
+    >
+      <a href="index.html" class="flex items-center">
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+          alt="Recycle Connect logo"
+        />
+        <span class="font-[Montserrat] text-[24px] text-[#077053]">
+          <span class="font-bold">Recycle</span>Connect
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <img
+          class="h-4 w-4"
+          src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869712/bells_ik9zmk.png"
+          alt="notification"
+        />
+        <img
+          class="h-8 w-8 rounded-full object-cover"
+          src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869726/avatar_hnfqe5.png"
+          alt="user profile"
+        />
+        <p class="text-[16px] font-medium text-gray-700">Lilian</p>
+        <img
+          class="h-3 w-3"
+          src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869745/chevron_wnxprc.svg"
+          alt="dropdown"
+        />
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-6xl mx-auto px-5 md:px-10 py-8 space-y-6">
+      <h1 class="font-bold text-[32px] md:text-[40px] text-black">
+        Hello. Collector
+      </h1>
+
+            <!-- Stats -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white text-center border border-gray-200 py-4 rounded-lg shadow-sm">
+          <p class="text-[16px] text-black">12</p>
+          <p class="font-bold text-[18px] text-black">Pick-Ups</p>
         </div>
-    </div>
-</body>
+        <div class="bg-white text-center border border-gray-200 py-4 rounded-lg shadow-sm">
+          <p class="text-[16px] text-black">68kg</p>
+          <p class="font-bold text-[18px] text-black">Collected</p>
+        </div>
+        <div class="bg-white text-center border border-gray-200 py-4 rounded-lg shadow-sm">
+          <p class="text-[16px] text-black">₦24K</p>
+          <p class="font-bold text-[18px] text-black">Earned</p>
+        </div>
+      </section>
+
+      <!-- Organization (one connected block) -->
+      <section>
+        <div class="bg-[#087A55] flex justify-between items-center px-8 py-3 rounded-t-lg text-white">
+          <img class="h-[30.75px] w-[30.75px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718904/griddy-icons_enterprise_lns3z1.png" alt="" />
+          <img class="h-5 w-5" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791725040/Polygon_1_fkjrr8.png" alt="" />
+        </div>
+
+        <div class="bg-white rounded-b-lg px-6 py-4 space-y-2">
+          <h2 class="font-bold text-black text-[24px]">GreenLoop Recyclers</h2>
+
+          <div class="flex items-center gap-2">
+            <img class="w-[20px] h-[28px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718917/Group_1_ydbxik.png" alt="" />
+            <p class="font-semibold text-[16px] text-black">Yaba, Lagos</p>
+          </div>
+
+          <div class="flex items-center gap-6 font-medium text-[14px] text-black pl-7">
+            <span>Plastic</span>
+            <span>Paper</span>
+            <span>Cans</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <img class="w-[30.9px] h-[30.83px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718891/eva_phone-fill_amcjfc.png" alt="Phone" />
+            <p class="font-bold text-[22px] text-black">0801 234 5678</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pickup requests -->
+      <section>
+        <h2 class="font-bold text-[24px] text-black">Pickup requests near you</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-3">
+          <!-- Card 1 -->
+          <div class="bg-white border border-gray-200 px-4 py-4 rounded-lg shadow-sm space-y-1">
+            <div class="flex items-center gap-3">
+              <img class="w-[37.4px] h-[40.8px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718931/Group_2_wdtd3v.png" alt="" />
+              <p class="font-bold text-[16px] text-black">Amaka. O</p>
+            </div>
+            <div class="flex items-center gap-3 pl-7">
+              <img class="w-[17px] h-[27px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718943/Vector_2_pjmmtm.png" alt="Location" />
+              <p class="font-semibold text-[16px] text-black">Yaba - 1.2Km</p>
+            </div>
+            <p class="font-semibold text-[16px] text-black pl-7">Plastic - 5Kg</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white border border-gray-200 px-4 py-4 rounded-lg shadow-sm space-y-1">
+            <div class="flex items-center gap-3">
+              <img class="w-[37.4px] h-[40.8px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718931/Group_2_wdtd3v.png" alt="" />
+              <p class="font-bold text-[16px] text-black">Tunde B.</p>
+            </div>
+            <div class="flex items-center gap-3 pl-7">
+              <img class="w-[17px] h-[27px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718943/Vector_2_pjmmtm.png" alt="Location" />
+              <p class="font-semibold text-[16px] text-black">Surulere - 3Km</p>
+            </div>
+            <p class="font-semibold text-[16px] text-black pl-7">Cans - 8kg</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white border border-gray-200 px-4 py-4 rounded-lg shadow-sm space-y-1">
+            <div class="flex items-center gap-3">
+              <img class="w-[37.4px] h-[40.8px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718931/Group_2_wdtd3v.png" alt="" />
+              <p class="font-bold text-[16px] text-black">Ngozi E.</p>
+            </div>
+            <div class="flex items-center gap-3 pl-7">
+              <img class="w-[17px] h-[27px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791718943/Vector_2_pjmmtm.png" alt="Location" />
+              <p class="font-semibold text-[16px] text-black">Lekki - 4.5Km</p>
+            </div>
+            <p class="font-semibold text-[16px] text-black pl-7">Paper - 12Kg</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
