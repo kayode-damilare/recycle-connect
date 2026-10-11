@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Verify your code | RecycleConnect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,10 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#f7fcf9] text-gray-800 min-h-screen">
-    <div class="flex min-h-screen">
+    <div class="flex min-h-screen flex-col lg:flex-row">
+
+      <!-- SIDEBAR (laptop only) -->
       <aside
-        class=" hidden md:block bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]"
+        class="hidden lg:block bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat lg:max-w-[360px] xl:max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]"
       >
+        <!-- Logo -->
         <div class="mt-47 bg-[#F2FAF5]">
           <div class="flex flex-col justify-center items-center gap-1 p-6">
             <img
@@ -52,7 +55,6 @@
         </div>
 
         <!-- LOWER IMAGE -->
-
         <div class="">
           <img
             src="https://res.cloudinary.com/vyomyquu/image/upload/v1791037531/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_2_sdj5cz.png"
@@ -62,95 +64,82 @@
         </div>
       </aside>
 
-      <!-- Header -->
-      <div class="min-w-0 flex-1 flex flex-col">
-        <header
-          class="flex items-center h-16 justify-around gap-3 border-b border-green-100 bg-white px-5 py-2 md:px-10"
+      <!-- MAIN -->
+      <main
+        class="min-w-0 flex-1 bg-[#F1F7ED] px-5 py-10 sm:px-10 sm:py-14 lg:px-20 lg:py-16"
+      >
+        <div
+          class="w-full max-w-[600px] mx-auto lg:mx-0 lg:ml-10 flex flex-col"
         >
-          <div>
-            <ul class="flex gap-16 text-[#043C2D] font-bold leading-0">
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#about">About US</a></li>
-              <li><a href="">For Collection</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
-          <div class="">
-            <button
-              class="inline-flex justify-center items-center h-[38px] gap-1 bg-[#087a55] p-1 rounded-[40px] max-w-full w-[156px] text-[#FEF9F9] font-bold cursor-pointer"
-            >
-              <span><a href="Sign-Up.html">Get Started</a></span
-              ><img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg"
-                class="w-5"
-              />
-            </button>
-          </div>
-        </header>
+          <h2
+            class="font-bold font-[Inter] text-[28px] sm:text-[32px] lg:text-[36px] leading-tight text-[#07543E]"
+          >
+            Verify your code
+          </h2>
+          <p
+            class="mt-2 max-w-[420px] font-[Inter] text-base sm:text-lg lg:text-[20px] text-gray-800"
+          >
+            We sent a 6-digit code to you@gmail.com. Enter it below
+          </p>
 
-        <!-- Main-->
-        <main class="flex-1 bg-[#F1F7ED] px-6 md:px-20 py-16">
-          <div class="max-w-[600px] mx-auto md:mx-0 md:ml-10 flex flex-col">
-            <h2
-              class="font-bold font-[Inter] text-[36px] leading-[100%] text-[#000000]"
-            >
-              Verify your code
-            </h2>
-            <p
-              class="max-w-[420px] font-sm font-[Inter] text-[20px] text-gray-800"
-            >
-              We sent a 6-digit code to you@gmail.com. Enter it below
-            </p>
-            <div class="mt-10 flex gap-4">
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-              <input
-                type="text"
-                inputmode="numeric"
-                maxlength="1"
-                class="code-box w-[56px] h-[56px] text-center text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
-              />
-            </div>
-            <p class="mt-6 text-grey-800 font-[Inter]">
-              Don't get it?
-              <span class="font-bold text-[#087A55]">Resend in 0:45</span>
-            </p>
-            <button
-              class="mt-12 w-full h-[52px] font-[Inter] font-[28px] bg-[#087A55] text-white font-bold rounded-lg cursor-pointer"
-            >
-              Verify Code
-            </button>
+          <!-- CODE BOXES -->
+          <div id="code-group" class="mt-8 sm:mt-10 flex gap-2 sm:gap-4">
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 1"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 2"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 3"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 4"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 5"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+              aria-label="Digit 6"
+              class="code-box min-w-0 flex-1 max-w-[56px] aspect-square text-center text-xl sm:text-2xl font-bold border border-[#087A55] rounded-lg bg-white outline-none focus:ring-2 focus:ring-[#087A55]"
+            />
           </div>
-        </main>
-      </div>
+
+          <p class="mt-6 text-gray-800 font-[Inter]">
+            Don't get it?
+            <span class="font-bold text-[#087A55]">Resend in 0:45</span>
+          </p>
+
+          <button
+            class="mt-10 sm:mt-12 w-full h-[52px] font-[Inter] text-base font-bold bg-[#087A55] text-white rounded-lg cursor-pointer hover:bg-[#066a49] transition-colors"
+          >
+            Verify Code
+          </button>
+        </div>
+      </main>
     </div>
   </body>
 </html>
