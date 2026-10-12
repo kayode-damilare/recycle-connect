@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Collector Profile | RecycleConnect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,101 +12,121 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#f7fcf9] text-gray-800 min-h-screen">
+
+  <!-- pb-20 leaves room for the bottom nav on mobile -->
+  <body class="min-h-screen bg-[#f7fcf9] pb-20 text-gray-800 md:pb-0">
     <div class="flex min-h-screen">
+      <!-- SIDEBAR -->
       <aside
-        class="hidden w-[250px] shrink-0 border-r border-gray-100 bg-[#eaf8f1] md:block bg-[url('https://res.cloudinary.com/hesd0s4y/image/upload/v1790926932/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_s6m9kv.png')] bg-top bg-no-repeat"
+        class="fixed inset-x-0 bottom-0 z-50 border-t border-gray-100 bg-[#eaf8f1] md:sticky md:top-0 md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r lg:w-[250px]"
       >
-        <div class="flex items-center p-6 ">
-          <a href="index.html" class="flex items-center">
+        <!-- Logo -->
+        <div
+          class="hidden items-center justify-center px-4 py-6 md:flex lg:justify-start lg:px-6"
+        >
+          <a href="index.html" class="flex items-center gap-2">
             <img
               src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
               alt="Recycle Connect logo"
+              class="h-8 w-8 shrink-0"
             />
-            <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">
-              Recycle
-            </h2>
-            <span class="font-[Montserrat] text-[24px] text-[#077053]"
-              >Connect</span
+            <span
+              class="hidden whitespace-nowrap font-[Montserrat] text-[18px] text-[#077053] lg:block"
             >
+              <b class="font-bold">Recycle</b>Connect
+            </span>
           </a>
         </div>
-        <nav class="mt-10 flex flex-col gap-1 px-6 text-sm">
-          <ul class="gap-2">
+
+        <nav class="px-2 py-1 text-sm md:mt-6 md:px-3 lg:mt-10 lg:px-6">
+          <ul class="flex justify-around md:flex-col md:justify-start md:gap-2">
             <li
               data-href="House-Dashboard.html"
-              class="flex gap-2 items-center rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
-                class="max-w-[18px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
+                class="w-[18px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >Home</span
               >
             </li>
 
             <li
               data-href="House-Request.html"
-              class=" flex items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
-                class="max-w-[18px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%] "
+                class="w-[18px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >Request Pickup</span
               >
             </li>
 
+            <!-- ACTIVE ITEM -->
             <li
               data-href="Collector.html"
-              class="flex bg-[#D1FFE3] items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded bg-[#D1FFE3] p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
-                class="max-w-[18px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
+                class="w-[18px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >Become A Collector</span
               >
             </li>
 
             <li
               data-href="PickUp-History.html"
-              class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
-                class="max-w-[24px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
+                class="w-[22px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >History</span
               >
             </li>
 
             <li
               data-href="Collector-Reward.html"
-              class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
-                class="max-w-[22px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
+                class="w-[22px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >Rewards</span
               >
             </li>
 
             <li
-              data-href=".html"
-              class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
+              data-href="Profile.html"
+              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
             >
               <img
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
-                class="max-w-[22px] w-full rounded"
-              /><span
-                class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
+                class="w-[22px] rounded"
+                alt=""
+              />
+              <span
+                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
                 >Profile</span
               >
             </li>
@@ -115,122 +135,245 @@
       </aside>
 
       <div class="min-w-0 flex-1">
+        <!-- HEADER -->
         <header
-          class="flex items-center h-16 justify-end gap-3 bg-[#f7fcf9] px-5 py-2 md:px-10"
+          class="flex h-16 items-center justify-between gap-3 border-b border-green-100 bg-[#f7fcf9] px-4 py-2 sm:px-5 md:justify-end md:px-10"
         >
-          <img
-            class="h-4 w-4"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869712/bells_ik9zmk.png"
-            alt="notification"
-          />
-          <img
-            class="h-8 w-8 rounded-full object-cover"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869726/avatar_hnfqe5.png"
-            alt="user profile"
-          />
-          <p class="text-[16px] font-[Inter] font-medium text-[#043C2D]" >Lilian</p>
-          <img
-            class="h-3 w-3"
-            src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869745/chevron_wnxprc.svg"
-            alt="dropdown"
-          />
+          <a href="index.html" class="flex items-center md:hidden">
+            <img
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+              alt="Recycle Connect logo"
+              class="h-7 w-7"
+            />
+            <span class="font-[Montserrat] text-[18px] font-bold text-[#077053]"
+              >Recycle<span class="font-normal">Connect</span></span
+            >
+          </a>
+
+          <div class="flex items-center gap-3">
+            <img
+              class="h-4 w-4"
+              src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869712/bells_ik9zmk.png"
+              alt="notification"
+            />
+            <img
+              class="h-8 w-8 rounded-full object-cover"
+              src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869726/avatar_hnfqe5.png"
+              alt="user profile"
+            />
+            <p
+              class="hidden font-[Inter] text-[16px] font-medium leading-none text-gray-700 sm:block"
+            >
+              Lilian
+            </p>
+            <img
+              class="h-3 w-3"
+              src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869745/chevron_wnxprc.svg"
+              alt="dropdown"
+            />
+          </div>
         </header>
 
-        <main class="flex flex-col px-5 py-6 md:px-10 md:py-8">
-            <div class="flex flex-row ">
-                <div class="mx-6 shrink-0">
-                    <img src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256929/Ellipse_7_wpcvrj.png" alt="avatar" class="w-[150px] h-[150px] rounded-full object-cover" />
-                </div>
-                <div class="flex flex-col gap-2">
-                    <h2 class="text-[#17221E] font-[Inter] text-[22px] font-semibold md:text-[24px] leading-[100%]">John Olumide</h2>
-                    <p class="text-[i6px] font-[Inter] text-[#17221E]">RC-4578</p>
-                    <div class="flex items-center gap-[10px]">
-                        <img class="w-[35px] h-[35px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png" alt="star" />
-                        <p class="px-[20px] py-[9px] rounded-full bg-[#087A55] text-white font-semibold font-[Inter] text-[16px]">Verified Collector</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <img class="h-[20px] w-[20px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png" alt="star" />
-                      <img class="h-[20px] w-[20px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png" alt="star" />
-                      <img class="h-[20px] w-[20px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png" alt="star" />
-                      <p class="text-[18px] font-[Inter] font-sm">4.5 (128 Reviews)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-row mt-6 justify-around bg-[#E8F6EE] rounded-lg px-[120px] md:px-[131px] py-[39px] items-center">
-              <div class="flex flex-col gap-1">
-                <p class="font-bold font-[Inter] text-[20px] sm:text-[28px] text-[#07543E]">124</p>
-                <p class="font-bold font-[Inter] text-[24px] text-[#043C2D]">Completed Collections</p>
+        <main class="px-4 py-5 sm:px-5 md:px-10 md:py-8">
+          <!-- PROFILE TOP -->
+          <div
+            class="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:gap-6 sm:text-left"
+          >
+            <img
+              src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256929/Ellipse_7_wpcvrj.png"
+              alt="avatar"
+              class="h-[110px] w-[110px] shrink-0 rounded-full object-cover sm:h-[130px] sm:w-[130px] lg:h-[150px] lg:w-[150px]"
+            />
+            <div class="flex flex-col items-center gap-2 sm:items-start">
+              <h1
+                class="font-[Inter] text-[22px] font-semibold leading-none text-[#17221E] md:text-[24px]"
+              >
+                John Olumide
+              </h1>
+              <p class="font-[Inter] text-[14px] text-[#17221E] md:text-[16px]">
+                RC-4578
+              </p>
+              <div class="flex items-center gap-2.5">
+                <img
+                  class="h-7 w-7 sm:h-[35px] sm:w-[35px]"
+                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png"
+                  alt="star"
+                />
+                <p
+                  class="rounded-full bg-[#087A55] px-4 py-1.5 font-[Inter] text-[14px] font-semibold text-white sm:px-5 sm:py-2 sm:text-[16px]"
+                >
+                  Verified Collector
+                </p>
               </div>
-              <div class="flex flex-col gap-1">
-                <p class="font-semibold font-[Inter] text-[20px] sm:text-[28px] text-[#07543E]">98%</p>
-                <p class="font-semibold font-[Inter] text-[24px] text-[#043C2D]">On-Time Rate</p>
+              <div class="flex items-center gap-1">
+                <img
+                  class="h-5 w-5"
+                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png"
+                  alt="star"
+                />
+                <img
+                  class="h-5 w-5"
+                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png"
+                  alt="star"
+                />
+                <img
+                  class="h-5 w-5"
+                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791256911/Star_1_ruqb1e.png"
+                  alt="star"
+                />
+                <p class="ml-1 font-[Inter] text-[14px] md:text-[18px]">
+                  4.5 (128 Reviews)
+                </p>
               </div>
             </div>
-            <!-- About -->
-             <div class="mt-6 md:mt-4">
-              <h2 class="font-bold text-[20px] text-[Inter] leading-[100%] sm:text-[28px] text-[#07543E]">About</h2>
-              <p class="text-[20px] font-medium font-[Inter] text-[#043C2D]">Hi! I'm John, a verified collector based in Lagos. I'm passionate about keeping our environment clean and green</p>
-             </div>
+          </div>
 
-             <!-- Service Area-->
-              <div class="grid gap-6 md:grid-cols-[1fr_300px] mt-5">
-                <!-- Service Area -->
-                <div class="flex flex-col gap-3">
-                  <div class="">
-                   <h2 class="font-bold ext-[20px] text-[Inter] leading-[100%] sm:text-[28px] text-[#07543E]">Service Area</h2>
-                   <div class="flex gap-2 items-center">
-                    <img class="w-[22.5px] h-[22.8px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869440/home_vclhx2.svg" alt="Service Area" />
-                    <p class="text-[20px] font-medium font-[Inter] text-[#000000]">Lagos Mainland + Ikeja + Surulere</p>
-                   </div>
+          <!-- STATS -->
+          <div
+            class="mt-6 grid grid-cols-2 gap-4 rounded-lg bg-[#E8F6EE] px-4 py-6 text-center sm:px-8 sm:py-8 md:text-left lg:px-[60px] lg:py-[39px]"
+          >
+            <div class="flex flex-col gap-1 md:items-center">
+              <p
+                class="font-[Inter] text-[24px] font-bold text-[#07543E] md:text-[28px]"
+              >
+                124
+              </p>
+              <p
+                class="font-[Inter] text-[14px] font-bold text-[#043C2D] sm:text-[18px] lg:text-[24px]"
+              >
+                Completed Collections
+              </p>
+            </div>
+            <div class="flex flex-col gap-1 md:items-center">
+              <p
+                class="font-[Inter] text-[24px] font-bold text-[#07543E] md:text-[28px]"
+              >
+                98%
+              </p>
+              <p
+                class="font-[Inter] text-[14px] font-bold text-[#043C2D] sm:text-[18px] lg:text-[24px]"
+              >
+                On-Time Rate
+              </p>
+            </div>
+          </div>
+
+          <!-- ABOUT -->
+          <section class="mt-6">
+            <h2
+              class="font-[Inter] text-[20px] font-bold leading-none text-[#07543E] md:text-[24px] lg:text-[28px]"
+            >
+              About
+            </h2>
+            <p
+              class="mt-2 font-[Inter] text-[15px] font-medium text-[#043C2D] md:text-[18px] lg:text-[20px]"
+            >
+              Hi! I'm John, a verified collector based in Lagos. I'm passionate
+              about keeping our environment clean and green.
+            </p>
+          </section>
+
+          <!-- SERVICE AREA + AVAILABILITY + CONTACT -->
+          <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_300px]">
+            <div class="flex min-w-0 flex-col gap-6">
+              <!-- Service Area -->
+              <section>
+                <h2
+                  class="font-[Inter] text-[20px] font-bold leading-none text-[#07543E] md:text-[24px] lg:text-[28px]"
+                >
+                  Service Area
+                </h2>
+                <div class="mt-2 flex items-center gap-2">
+                  <img
+                    class="h-[22px] w-[22px] shrink-0"
+                    src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869440/home_vclhx2.svg"
+                    alt="Service Area"
+                  />
+                  <p
+                    class="font-[Inter] text-[15px] font-medium text-gray-600 md:text-[18px] lg:text-[20px]"
+                  >
+                    Lagos Mainland + Ikeja + Surulere
+                  </p>
                 </div>
-                <!-- Availability-->
-                 <div>
-                  <h2 class="font-bold text-[20px] text-[Inter] leading-[100%] sm:text-[28px] text-[#07543E] mb-3">Availability</h2>
-                  <div class=" bg-[#E8F6EE] flex gap-4 items-center w-fit px-4 py-2 shadow-md rounded-lg">
-                    <img class="w-[41.67px] h-[41.67px]" src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791280082/Group_qlrccf.png" alt="Availability" />
-                    <div class="grid grid-cols-4 gap-3 ">
-                      <div class="flex flex-col gap-1">
-                        <p class="text-[24px] font-[Inter] font-bold text-[#07543E]">Mon</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">7:00AM</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">6:00PM</p>
-      
-                      </div>
+              </section>
 
-                      <div class="flex flex-col gap-1">
-                        <p class="text-[24px] font-[Inter] font-bold text-[#07543E]">Wed</p>
-                        <p class="-text-[16px] font-[Inter] text-[#043C2D]">7:00AM</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">6:00PM</p>
-      
-                      </div>
-
-                      <div class="flex flex-col gap-1">
-                        <p class="text-[24px] font-[Inter] font-bold text-[#07543E]">Fri</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">7:00AM</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">6:00PM</p>
-      
-                      </div>
-
-                      <div class="flex flex-col gap-1">
-                        <p class="text-[24px] font-[Inter] font-bold text-[#07543E]">Sat</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">7:00AM</p>
-                        <p class="text-[16px] font-[Inter] text-[#043C2D]">6:00PM</p>
-      
-                      </div>
+              <!-- Availability -->
+              <section>
+                <h2
+                  class="mb-3 font-[Inter] text-[20px] font-bold leading-none text-[#07543E] md:text-[24px] lg:text-[28px]"
+                >
+                  Availability
+                </h2>
+                <div
+                  class="flex w-full items-center gap-3 rounded-lg bg-[#E8F6EE] px-3 py-3 shadow-md sm:w-fit sm:gap-4 sm:px-4"
+                >
+                  <img
+                    class="hidden h-[41px] w-[41px] shrink-0 sm:block"
+                    src="https://res.cloudinary.com/hesd0s4y/image/upload/v1791280082/Group_qlrccf.png"
+                    alt="Availability"
+                  />
+                  <div class="grid flex-1 grid-cols-4 gap-2 sm:gap-4">
+                    <div class="flex flex-col gap-1">
+                      <p
+                        class="font-[Inter] text-[16px] font-bold text-[#07543E] sm:text-[20px] lg:text-[24px]"
+                      >
+                        Mon
+                      </p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">7:00AM</p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">6:00PM</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <p
+                        class="font-[Inter] text-[16px] font-bold text-[#07543E] sm:text-[20px] lg:text-[24px]"
+                      >
+                        Wed
+                      </p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">7:00AM</p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">6:00PM</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <p
+                        class="font-[Inter] text-[16px] font-bold text-[#07543E] sm:text-[20px] lg:text-[24px]"
+                      >
+                        Fri
+                      </p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">7:00AM</p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">6:00PM</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <p
+                        class="font-[Inter] text-[16px] font-bold text-[#07543E] sm:text-[20px] lg:text-[24px]"
+                      >
+                        Sat
+                      </p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">7:00AM</p>
+                      <p class="font-[Inter] text-[11px] text-[#043C2D] sm:text-[14px] lg:text-[16px]">6:00PM</p>
                     </div>
                   </div>
-                 </div>
                 </div>
+              </section>
+            </div>
 
-                <!--- Contacts -->
-                <aside class="bg-[#E8F6EE] flex flex-col gap-3 px-4 py-6 self-end rounded-lg">
-                  <p class="font-bold font-[Inter] text-[20px] sm:text-[28px] text-[#07543E]">Contact</p>
-                  <p class="font-bold text-lg sm:text-xl text-[#07543E]"> + 2348034567890</p>
-                  <button class="bg-[#07543E] text-white py-2 px-4 rounded-lg hover:bg-[#043C2D]">Message</button>
-                </aside>
-              </div>
+            <!-- CONTACT -->
+            <aside
+              class="flex flex-col gap-3 self-end rounded-lg bg-[#E8F6EE] px-4 py-6 shadow-md"
+            >
+              <p
+                class="font-[Inter] text-[20px] font-bold text-[#07543E] md:text-[24px]"
+              >
+                Contact
+              </p>
+              <p class="font-[Inter] text-[16px] font-bold text-[#07543E] md:text-[18px]">
+                +234 803 456 7890
+              </p>
+              <button
+                class="rounded-lg bg-[#07543E] px-4 py-2 font-[Inter] font-semibold text-white hover:bg-[#043C2D]"
+              >
+                Message
+              </button>
+            </aside>
+          </div>
         </main>
-
       </div>
     </div>
   </body>
