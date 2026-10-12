@@ -95,33 +95,43 @@
 
     <!-- FORM  -->
 
-    <form action="" class="flex flex-col gap-4 mt-4">
+    <form id="signup-form" class="flex flex-col gap-4 mt-4">
 
       <!-- NAME -->
 
-      <input type="text" id="name" name="name" placeholder="Full Name" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <input type="text" id="name" name="fullName" placeholder="Full Name" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
 
       <!-- EMAIL -->
 
-      <input type="email" name="mail" id="e-mail" placeholder="Email Address" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <input type="email" name="email" id="e-mail" placeholder="Email Address" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
 
       <!-- PHONE NUMBER -->
 
-      <input type="tel" name="phone-number" id="phone" placeholder="Phone Number" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <input type="tel" name="phone" id="phone" placeholder="Phone Number" minlength="11" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
 
       <!-- PASSWORD -->
 
       <div class="relative ">
-        <input type="password" name="password" id="password" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
-      <i class="fa-slab-press fa-regular fa-eye absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-[#087A55]"></i>
+        <input type="password" name="password" id="password" minlength="8" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+        <button type="button" class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer" data-target="password" aria-label="Show password" >
+
+          <i class="fa-regular fa-eye" ></i>
+
+        </button>
       </div>
       
 
       <!-- CONFIRM PASSWORD -->
 
       <div class="relative">
-        <input type="password" name="password id=confirm-pass" placeholder="Confirm Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
-        <i class="fa-slab-press fa-regular fa-eye absolute text-[#087A55] top-4 right-4 cursor-pointer"></i>
+        <input type="password" name="confirmPassword" id="confirm-pass" placeholder="Confirm Password" minlength="8" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+
+        <button type="button" class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer" data-target="confirm-pass" aria-label="Show password">
+
+          <i class="fa-regular fa-eye"></i>
+
+        </button>
       </div>
       
 
@@ -132,25 +142,45 @@
         <label for="terms-condition" class="text-[#087A55]">I Agree to the Terms & Conditions and Privacy Policy</label>
       </div>
 
-          <!-- CREATE ACCOUNT BUTTON  -->
+      <!-- MESSAGE AREA  -->
 
-      <div class="mt-15">
-        <button class="flex justify-center items-center bg-[#087A55] w-full text-white h-[68px] font-[Inter] font-semibold rounded-[12px] cursor-pointer" type="submit" >
+      <p id="signup-message" role="status" aria-live="polite"></p>
+
+          <!-- CREATE ACCOUNT BUTTON  -->
+         
+      <div class="mt-6">
+        <button id="signup-button" class="flex justify-center items-center bg-[#087A55] w-full text-white h-[68px] font-[Inter] font-semibold rounded-[12px] cursor-pointer" type="submit" >
         Create Account
         </button>
     </div>
     </form>
 
+    <!-- GOOGLE LOGIN -->
+
+    <div class="flex flex-col items-center">
+      <div class="flex justify-center items-center gap-3 text-center text-[#043C2D] font-[Inter] mt-6">
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791662180/Line_1_1_xhymdp.png">
+        <span>or continue with</span>
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791662180/Line_1_1_xhymdp.png">
+      </div>
+
+      <div class="flex justify-center mt-4 w-[81px] h-[68px] items-center">
+        <img onclick="alert('Option still under construction')" src="https://res.cloudinary.com/vyomyquu/image/upload/v1791662415/Group_139_x3tsmp.png">
+      </div>
+    </div>
+
 
 
     <!-- SIGN IN  -->
 
-    <div class="flex justify-center mt-15 font-bold text-[20px] font-[Inter] font-[#087A55]">
+    <div class="flex justify-center mt-8 font-bold text-[20px] font-[Inter] font-[#087A55]">
       <h2 >Already have an account? <a href="Sign-in.html" class="text-[#087A55]">Sign In</a></h2>
     </div>
     </div>
   </main>
 
   </div>
+
+  <script src="signup.js"></script>
 </body>
 </html>
