@@ -13,20 +13,51 @@
   </head>
 
   <body class="bg-white font-['Inter']">
+    
+    <header
+      class="flex md:hidden items-center justify-between px-4 py-3 bg-[hsl(146,44%,94%)] sticky top-0 z-20"
+    >
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-1">
+          <img
+            src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+            alt="Recycle Connect logo"
+            class="w-7 h-7"
+          />
+          <h2 class="font-[Montserrat] font-bold text-[20px] text-[#077053]">
+            Recycle<span class="font-normal">Connect</span>
+          </h2>
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button aria-label="Notifications">
+          <img
+            src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png"
+            alt="bell-img"
+            class="w-5 h-5"
+          />
+        </button>
+        <img
+          src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Ellipse_8_efpgpl.png"
+          alt="Lillian-img"
+          class="w-8 h-8 rounded-full"
+        />
+      </div>
+    </header>
     <!-- Side-bar --> 
 
     <div class="relative flex">
-      <aside
-        class="relative flex flex-col flex-1 gap-12 md:px-7 md:py-5 min-h-screen max-h-full before:content-[''] before:absolute before:inset-0 before:bg-[hsl(146,44%,94%)] before:-z-20 after:content[''] after:absolute after:inset-y-0 after:-right-20 after:bg-no-repeat after:w-[130%] after:bg-h-full after:bg[position:80px_top] after:bg-[url('https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_xylfqu.png')] after:-z-10 after:pointer-events-none after:bg-overflow-visible"
+      <aside id="sidebar"
+        class="hidden relative md:flex flex-col flex-1 gap-12 px-7 py-5 min-h-screen self-stretch w-[250px] lg:w-[380px] shrink-0 before:content-[''] before:absolute before:inset-0 before:bg-[hsl(146,44%,94%)] before:-z-20 after:content[''] after:absolute after:inset-y-0 after:-right-20 after:bg-no-repeat after:w-[130%] after:bg-h-full after:bg[position:80px_top] after:bg-[url('https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_xylfqu.png')] after:-z-10 after:pointer-events-none after:bg-overflow-visible"
       > 
         <div class="flex gap-2 relative z-10">
           <img
             src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/RecycleConnect_Logo_icon_1_psu1u5.png"
             alt="Recycle-connect-logo"
-            class="w-8 h-8"
+            class="w-7 lg:w-8 h-7 lg:h-8"
           />
           <h1
-            class="text-[hsl(163,53%,26%)] text-[28px] font-[400] font-['Montserrat']"
+            class="text-[hsl(163,53%,26%)] text-[16px] lg:text-[28px] font-[400] font-['Montserrat']"
           >
             <strong class="font-[700]">Recycle</strong>Connect
           </h1>
@@ -35,9 +66,9 @@
         <!-- nav-links -->
 
         <nav
-          class="flex flex-col font-[600] pt-[40px] text-[hsl(163,53%,26%)] gap-"
+          class="flex flex-col font-[600] pt-[40px] text-[hsl(163,53%,26%)] gap-1 "
         >
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Group_3_d9tfgk.png"
               alt="home-img"
@@ -45,7 +76,7 @@
             />
             <p class="px-5 text-base">Home</p>
           </div>
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Vector_7_tlfhk8.png"
               alt="request-img"
@@ -53,7 +84,7 @@
             />
             <p class="px-5 text-base">Request Pickup</p>
           </div>
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790949768/Group_31_h3j0fl.png"
               alt="history-img"
@@ -61,7 +92,7 @@
             />
             <p class="px-5 text-base">Become a Collector</p>
           </div>
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_8_gamkmf.png"
               alt="history-img"
@@ -69,7 +100,7 @@
             />
             <p class="px-5 text-base">History</p>
           </div>
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Group_2_vepo5f.png"
               alt="reward-img"
@@ -77,7 +108,7 @@
             />
             <p class="px-5 text-base">Reward</p>
           </div>
-          <div class="flex items-center w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
+          <div class="flex items-center w-full lg:w-[330px] h-[55px] rounded-[12px] hover:border-[0.5px] hover:shadow-[hsl(161,88%,25%)] hover:shadow-lg cursor-pointer hover:border-[hsl(148,20%,87%)] pl-3">
             <img
               src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Vector_9_k0etbg.png"
               alt="profile-img"
@@ -88,9 +119,9 @@
         </nav>      
       </aside>
 
-      <main class="flex flex-3">
-       <section class=" flex-3">
-        <header class="flex gap-4 pt-4 justify-end items-center pr-10">
+      <main class="flex flex-3 bg-[hsl(142,44%,96%)]">
+       <section class=" flex-3 w-full min-w-0">
+        <header class="hidden md:flex gap-4 pt-4 justify-end items-center pr-10">
             <button aria-label="Notifications">
               <img
                 src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png"
@@ -110,7 +141,7 @@
               alt="drop-down-img" class="h-4 w-4 object-contain"
             />
           </header>
-          <div class="flex flex-col pt-[90px]">
+          <div class="hidden lg:flex flex-col pt-[90px]">
           <div class="flex-col px-13 mb-7">
             <h1 class="text-[30px] font-[700]">Identity Verification</h1>
             <p class="text-[18px] font-[600] text-[hsl(163,53%,26%)]">Your documents are being reviewed. This usually takes 1-2 business days.</p> 
@@ -159,8 +190,136 @@
               You will be notified once your verification is complete </div>
             </div>
           </div>
+        <!--Tablet & Mobile  -->
+           <div class="flex lg:hidden flex-col px-4 md:px-8 pt-5 pb-28">
+          <h1 class="text-[18px] md:text-[22px] font-bold">Identity Verification</h1>
+          <p class="text-[12px] md:text-[14px] font-[600] text-[hsl(163,53%,26%)] mt-1 leading-tight">Your documents are being reviewed. This usually takes 1-2 business days.</p>
+
+          <div class="relative mt-6 pl-10 md:pl-12">
+            <div class="absolute left-[15px] md:left-[17px] top-0 bottom-6 w-[2px] bg-[hsl(163,53%,26%)]"></div>
+
+            <!-- ID Card -->
+            <div class="relative mb-4">
+              <div class="absolute -left-[32px] md:-left-[40px] top-4 w-5 h-5 md:w-6 md:h-6 bg-[hsl(163,53%,26%)] rounded-full flex items-center justify-center"><img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790951181/icons8-done-24_ic6njr.png" class="w-4 h-4" /></div>
+              <div class="bg-white border-gray-200 rounded-[12px] p-3 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-6">
+                
+                  <div>
+                    <p class="text-[14px] md:text-[16px] font-bold text-[hsl(163,53%,26%)]">ID Document</p>
+                    <p class="text-[10px] md:text-[12px] text-gray-500">Submitted Sep 23, 2026 • 10:24AM</p>
+                  </div>
+                </div>
+                <span class="text-[10px] md:text-[12px] font-bold px-3 py-1 rounded-full bg-[hsl(146,44%,94%)]">Completed</span>
+              </div>
+            </div>
+
+            <!-- Background Card -->
+            <div class="relative mb-4">
+              <div class="absolute -left-[32px] md:-left-[40px] top-4 w-5 h-5 md:w-6 md:h-6 bg-[hsl(163,53%,26%)] rounded-full flex items-center justify-center"><img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790951181/icons8-done-24_ic6njr.png" class="w-4 h-4" /></div>
+              <div class="bg-white border-gray-200 rounded-[12px] p-3 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-2">
+                  <div>
+                    <p class="text-[14px] md:text-[16px] font-bold text-[hsl(163,53%,26%)]">Background Check</p>
+                    <p class="text-[10px] md:text-[12px] text-gray-500">Verifying your information</p>
+                  </div>
+                </div>
+                <span class="text-[10px] md:text-[12px] font-bold px-3 py-1 rounded-full bg-[#DDE8E0]">In Progress</span>
+              </div>
+            </div>
+
+            <!-- Training Card -->
+            <div class="relative mb-6">
+              <div class="absolute -left-[32px] md:-left-[40px] top-4 w-5 h-5 md:w-6 md:h-6 bg-yellow-400 rounded-full"></div>
+              <div class="bg-white border-gray-200 rounded-[12px] p-3 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-2">
+                  <div>
+                    <p class="text-[14px] md:text-[16px] font-bold text-[hsl(163,53%,26%)]">Training Certificate</p>
+                    <p class="text-[10px] md:text-[12px] text-gray-500">Required</p>
+                  </div>
+                </div>
+                <span class="text-[10px] md:text-[12px] font-bold px-3 py-1 rounded-full bg-[#FFF3B0]">Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[hsl(146,44%,94%)] rounded-xl ml-3 p-5 flex items-center gap-2 text-[10px] md:text-[14px] font-semibold text-[hsl(163,53%,26%)]">
+            <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_8_gamkmf.png" alt="" class="h-4 w-4">You will be notified once your verification is complete
+          </div>
+        </div>
           </section>
       </main>
+       <!-- mobile bottom nav -->
+
+    <nav
+      class="md:hidden flex fixed bottom-0 left-0 right-0 bg-[hsl(146,44%,94%)] border-t border-gray-200 justify-around py-2 px-2 z-40 rounded-t-[16px]shadow-[0_-2px_10px_rgba(0,0,0,0.05)]"
+    >
+      <a
+        href="House-Dashboard.html"
+        class="flex flex-col items-center gap-1 text-[#087a55] opacity-70"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
+          alt="home-icon"
+          class="w-[18px] h-[18px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Home</span>
+      </a>
+      <a
+        href="House-Request.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
+          alt="request-icon"
+          class="w-[20px] h-[18px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Pickup</span>
+      </a>
+      <a
+        href="Collector.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
+          alt="collector-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Collector</span>
+      </a>
+      <a
+        href="PickUp-History.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
+          alt="history-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">History</span>
+      </a>
+      <a
+        href="Collector-Reward.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
+          alt="reward-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Rewards</span>
+      </a>
+      <a
+        href="Profile.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
+          alt="profile-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Profile</span>
+      </a>
+    </nav>
   </body>
 </html>
  
