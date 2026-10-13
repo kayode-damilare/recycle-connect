@@ -13,21 +13,54 @@
   </head>
 
   <body class="bg-white font-['Inter']">
+    <header
+      class="flex md:hidden items-center justify-between px-4 py-3 bg-[hsl(146,44%,94%)] sticky top-0 z-20"
+    >
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-1">
+          <img
+            src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+            alt="Recycle Connect logo"
+            class="w-7 h-7"
+          />
+          <h2 class="font-[Montserrat] font-bold text-[20px] text-[#077053]">
+            Recycle<span class="font-normal">Connect</span>
+          </h2>
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button aria-label="Notifications">
+          <img
+            src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png"
+            alt="bell-img"
+            class="w-5 h-5"
+          />
+        </button>
+        <img
+          src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Ellipse_8_efpgpl.png"
+          alt="Lillian-img"
+          class="w-8 h-8 rounded-full"
+        />
+      </div>
+    </header>
     <!-- Side-bar -->
 
     <div class="relative flex">
       <aside
-        class="relative flex flex-col flex-1 gap-12 md:px-7 md:py-5 min-h-screen max-h-full before:content-[''] before:absolute before:inset-0 before:bg-[hsl(146,44%,94%)] before:-z-20 after:content[''] after:absolute after:inset-y-0 after:-right-20 after:bg-no-repeat after:w-[130%] after:bg-h-full after:bg[position:80px_top] after:bg-[url('https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_xylfqu.png')] after:-z-10 after:pointer-events-none after:bg-overflow-visible"
+        class="hidden relative md:flex flex-col flex-1 gap-12 md:px-7 md:py-5 min-h-screen max-h-full before:content-[''] before:absolute before:inset-0 before:bg-[hsl(146,44%,94%)] before:-z-20 after:content[''] after:absolute after:inset-y-0 after:-right-20 after:bg-no-repeat after:w-[130%] after:bg-h-full after:bg[position:80px_top] after:bg-[url('https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_xylfqu.png')] after:-z-10 after:pointer-events-none after:bg-overflow-visible"
       >
         <a href="index.html" class="flex items-center">
           <img
             src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
             alt="Recycle Connect logo"
           />
-          <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">
+          <h2
+            class="font-[Montserrat] font-bold text-[18px] lg:text-[24px] text-[#077053]"
+          >
             Recycle
           </h2>
-          <span class="font-[Montserrat] text-[24px] text-[#077053]"
+          <span
+            class="font-[Montserrat] text-[18px] lg:text-[24px] text-[#077053]"
             >Connect</span
           >
         </a>
@@ -119,7 +152,9 @@
 
       <main class="flex flex-3">
         <section class="flex-3">
-          <header class="flex gap-4 pt-4 justify-end items-center pr-10">
+          <header
+            class="hidden md:flex gap-4 pt-4 justify-end items-center pr-10"
+          >
             <button aria-label="Notifications">
               <img
                 src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png"
@@ -140,13 +175,13 @@
               class="h-4 w-4 object-contain"
             />
           </header>
-          <div class="pt-[85px] px-[35px]">
+          <div class="hidden lg:block pt-[85px] px-[35px]">
             <h1 class="text-[25px] font-[700]">Reward</h1>
             <p class="text-[hsl(163,85%,18%)] font-[600] text-[18px] py-[10px]">
               Earn points for every responsible recycling action
             </p>
           </div>
-          <div class="px-[35px]">
+          <div class="hidden lg:block px-[35px]">
             <div
               class="flex p-7 pt-9 gap-4 h-[140px] w-[750px] bg-[hsl(161,88%,25%)] rounded-[12px] border-[1.09px] border-[hsl(141,20%,87%)]"
             >
@@ -163,7 +198,7 @@
               </div>
             </div>
           </div>
-          <div class="px-[35px]">
+          <div class="hidden lg:block px-[35px]">
             <h3
               class="text-[20px] font-[700] text-[hsl(163,53%,26%)] py-[20px]"
             >
@@ -236,7 +271,7 @@
             </div>
           </div>
 
-          <div class="flex flex-2 pl-[35px] pr-[5px] gap-10">
+          <div class="hidden lg:flex flex-2 pl-[35px] pr-[5px] gap-10">
             <div class="flex-1">
               <h2
                 class="font-[700] text-[20px] text-[hsl(163,53%,26%)] mt-[20px] mb-[10px]"
@@ -263,7 +298,7 @@
                   </button>
                 </div>
                 <div
-                  class="flex flex-col gap-1 w-[205px] h-[200px] rounded-[14px] border-[1px] p-[12px] border-gray-200"
+                  class="hidden lg:flex flex-col gap-1 w-[205px] h-[200px] rounded-[14px] border-[1px] p-[12px] border-gray-200"
                 >
                   <img
                     src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791308568/Frame_27_ae1wjw.png"
@@ -337,8 +372,339 @@
               </div>
             </div>
           </div>
+
+          <!-- TABLET + MOBILE -->
+          <div
+            class="flex lg:hidden flex-col px-4 md:px-6 pt-4 pb-28 bg-[#F6FBF7] md:bg-white"
+          >
+            <!-- Title -->
+            <h1 class="text-[20px] md:text-[24px] font-bold text-black">
+              Reward
+            </h1>
+            <p class="text-[10px] md:text-[12px] font-semibold text-[#0F5A3E]">
+              Earn points for every responsible recycling action
+            </p>
+
+            <!-- Points banner -->
+            <div
+              class="mt-3 flex items-center gap-3 p-4 md:p-5 rounded-xl bg-[#0C6B3F] text-white"
+            >
+              <img
+                src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791279975/Group_119_ft2fzv.png"
+                class="w-10 h-10 md:w-12 md:h-12"
+              />
+              <div>
+                <h2 class="text-[14px] md:text-[18px] font-bold">
+                  2,450 points
+                </h2>
+                <p class="text-[10px] md:text-[12px] text-[#D8E5DE]">
+                  Keep recycling to earn more rewards
+                </p>
+              </div>
+            </div>
+
+            <!-- How to earn points -->
+            <h3
+              class="mt-6 text-[13px] md:text-[15px] font-bold text-[#0F5A3E]"
+            >
+              How to earn points
+            </h3>
+
+            <!-- Mobile: list style, Tablet: 3 cards grid -->
+            <div class="mt-3 flex flex-col md:grid md:grid-cols-3 gap-3">
+              <!-- Card 1 -->
+              <div
+                class="bg-white rounded-xl border-[1px] border-gray-200 p-3 md:p-4 flex md:flex-col gap-3 md:gap-2 shadow-sm"
+              >
+                <div
+                  class="w-8 h-8 md:w-10 md:h-10 bg-[#E9F5EC] rounded-lg flex items-center justify-center shrink-0"
+                >
+                  <img
+                    src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791281829/Frame_28_dztsj7.png"
+                    class="w-5 h-5"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h4 class="text-[11px] md:text-[12px] font-bold">
+                      Recycle materials
+                    </h4>
+                    <span
+                      class="md:hidden text-[9px] text-[#0F5A3E] font-semibold"
+                      >+100 pts</span
+                    >
+                  </div>
+                  <p
+                    class="text-[9px] md:text-[10px] text-gray-600 mt-1 leading-tight"
+                  >
+                    Earn point for every KG of recyclable material you dispose
+                    of
+                  </p>
+                  <div class="hidden md:flex mt-3">
+                    <span
+                      class="text-[10px] font-medium bg-[#E8F5EB] px-3 py-1.5 rounded-lg"
+                      >+100 points</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="bg-white rounded-xl border-[1px] border-gray-200 p-3 md:p-4 flex md:flex-col gap-3 md:gap-2 shadow-sm"
+              >
+                <div
+                  class="w-8 h-8 md:w-10 md:h-10 bg-[#E9F5EC] rounded-lg flex items-center justify-center shrink-0"
+                >
+                  <img
+                    src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Vector_7_tlfhk8.png"
+                    class="w-4 h-4"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h4 class="text-[11px] md:text-[12px] font-bold">
+                      Complete Pickups
+                    </h4>
+                    <span
+                      class="md:hidden text-[9px] text-[#0F5A3E] font-semibold"
+                      >+50 pts</span
+                    >
+                  </div>
+                  <p
+                    class="text-[9px] md:text-[10px] text-gray-600 mt-1 leading-tight"
+                  >
+                    Get rewarded when your pick up is successfully completed.
+                  </p>
+                  <div class="hidden md:flex mt-3">
+                    <span
+                      class="text-[10px] font-medium bg-[#E8F5EB] px-3 py-1.5 rounded-lg"
+                      >+50 points</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div
+                class="bg-white rounded-xl border-[1px] border-gray-200 p-3 md:p-4 flex md:flex-col gap-3 md:gap-2 shadow-sm"
+              >
+                <div
+                  class="w-8 h-8 md:w-10 md:h-10 bg-[#E9F5EC] rounded-lg flex items-center justify-center shrink-0"
+                >
+                  <img
+                    src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791281829/friend_icon_fqmt40.png"
+                    class="w-5 h-5"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h4 class="text-[11px] md:text-[12px] font-bold">
+                      Refer a friend
+                    </h4>
+                    <span
+                      class="md:hidden text-[9px] text-[#0F5A3E] font-semibold"
+                      >+200 pts</span
+                    >
+                  </div>
+                  <p
+                    class="text-[9px] md:text-[10px] text-gray-600 mt-1 leading-tight"
+                  >
+                    Invite friends to join RecycleConnect and earn one bonus
+                    point.
+                  </p>
+                  <div class="hidden md:flex mt-3">
+                    <span
+                      class="text-[10px] font-medium bg-[#E8F5EB] px-3 py-1.5 rounded-lg"
+                      >+200 points</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tablet: 2 columns for bottom section, Mobile: stacked -->
+            <div class="mt-6 flex flex-col md:flex-row md:gap-6">
+              <!-- Available Rewards -->
+              <div class="flex-1">
+                <h3 class="text-[13px] md:text-[15px] font-bold text-[#0F5A3E]">
+                  Available Rewards
+                </h3>
+                <div class="mt-3 grid grid-cols-2 gap-3">
+                  <div
+                    class="bg-white rounded-xl border-[1px] border-gray-200 p-3 flex flex-col gap-2 shadow-sm"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791308568/Frame_27_ae1wjw.png"
+                      class="w-8 h-8"
+                    />
+                    <h4 class="text-[11px] font-bold">
+                      N 1,000<br />cash Bonus
+                    </h4>
+                    <p class="text-[9px] text-[#0F5A3E]">+1000 points</p>
+                    <button
+                      class="mt-2 bg-[#0C6B3F] text-white text-[10px] font-bold rounded-lg py-2"
+                    >
+                      Redeem
+                    </button>
+                  </div>
+                  <div
+                    class="bg-white rounded-xl border-[1px] border-gray-200 p-3 flex flex-col gap-2 shadow-sm"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791308568/Frame_27_ae1wjw.png"
+                      class="w-8 h-8"
+                    />
+                    <h4 class="text-[11px] font-bold">
+                      N 2,500<br />cash Bonus
+                    </h4>
+                    <p class="text-[9px] text-[#0F5A3E]">+2500 points</p>
+                    <button
+                      class="mt-2 bg-[#0C6B3F] text-white text-[10px] font-bold rounded-lg py-2"
+                    >
+                      Redeem
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recent Activity -->
+              <div class="flex-1 mt-6 md:mt-0">
+                <h3 class="text-[13px] md:text-[15px] font-bold text-[#0F5A3E]">
+                  Recent Activity
+                </h3>
+                <div class="mt-3 flex flex-col gap-2">
+                  <div
+                    class="bg-white border-[1px] border-gray-200 rounded-xl p-3 flex items-center gap-3"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791308776/recycle_icon_kzxedf.png"
+                      class="w-6 h-6"
+                    />
+                    <div class="flex-1 flex justify-between items-center">
+                      <p
+                        class="text-[9px] md:text-[10px] font-medium text-[#0F5A3E] leading-tight"
+                      >
+                        Recycled Plastic, Paper and Glass
+                      </p>
+                      <span class="text-[9px] font-semibold text-gray-500"
+                        >+100 pts</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white border-[1px] border-gray-200 rounded-xl p-3 flex items-center gap-3"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791308582/pick_up_icon_1_qb1fpq.png"
+                      class="w-6 h-6"
+                    />
+                    <div class="flex-1 flex justify-between items-center">
+                      <p
+                        class="text-[9px] md:text-[10px] font-medium text-[#0F5A3E]"
+                      >
+                        Pick up completed
+                      </p>
+                      <span class="text-[9px] font-semibold text-gray-500"
+                        >+50 pts</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white border-[1px] border-gray-200 rounded-xl p-3 flex items-center gap-3"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/pftvcaqk/image/upload/v1791315078/Frame_30_1_gusxw4.png"
+                      class="w-6 h-6"
+                    />
+                    <div class="flex-1 flex justify-between items-center">
+                      <p
+                        class="text-[9px] md:text-[10px] font-medium text-[#0F5A3E]"
+                      >
+                        Referral Bonus
+                      </p>
+                      <span class="text-[9px] font-semibold text-gray-500"
+                        >+200 pts</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
+
+    <!-- mobile bottom nav -->
+
+    <nav
+      class="md:hidden flex fixed bottom-0 left-0 right-0 bg-[hsl(146,44%,94%)] border-t border-gray-200 justify-around py-2 px-2 z-40 rounded-t-[16px]shadow-[0_-2px_10px_rgba(0,0,0,0.05)]"
+    >
+      <a
+        href="House-Dashboard.html"
+        class="flex flex-col items-center gap-1 text-[#087a55] opacity-70"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
+          alt="home-icon"
+          class="w-[18px] h-[18px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Home</span>
+      </a>
+      <a
+        href="House-Request.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
+          alt="request-icon"
+          class="w-[20px] h-[18px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Pickup</span>
+      </a>
+      <a
+        href="Collector.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
+          alt="collector-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Collector</span>
+      </a>
+      <a
+        href="PickUp-History.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
+          alt="history-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">History</span>
+      </a>
+      <a
+        href="Collector-Reward.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
+          alt="reward-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Rewards</span>
+      </a>
+      <a
+        href="Profile.html"
+        class="flex flex-col items-center gap-1 text-[hsl(163,53%,26%)]"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
+          alt="profile-icon"
+          class="w-[20px] h-[20px] object-contain"
+        />
+        <span class="text-[10px] font-semibold leading-none">Profile</span>
+      </a>
+    </nav>
   </body>
 </html>
