@@ -6,81 +6,53 @@ const locationDisplay = document.getElementById("location-display");
 const useLocationBtn = document.getElementById("use-location-btn");
 const nextBtn = document.getElementById("next-btn");
 
-let selectedMaterials = [];
-let currentLocation = "12 Greenview Estate, Lagos"; // Default location
 
-const token = localStorage.getItem("token");
-if (!token) {
-  window.location.href = "/login.html"; // Redirect to login page if token is not found
-}
 
-// Fetch materials from the API and display them
-async function loadMaterials() {
-  try {
-    const response = await fetch(`${Base_URL}/materials/`, {
-        headers: {
-            "Authorization": `Bearer ${token}`
-        }
-    });
-    const result = await response.json();
-    if (!response.ok) {
-      throw new Error(result.message || "Failed to fetch materials");
-    }
-    
-    // result.data = [{name: "Plastic",description: "...", id: "..."}]
-    displayMaterials(result.data);
-    } catch (error) {
-      console.error("Error fetching materials:", error);
-    }
-}
-function displayMaterials(materials) {
-  materialsContainer.innerHTML = "";
-    materials.forEach((material) => {
-        const card = document.createElement("div");
-        card.className = 'material-card flex flex-col h-[130px] w-[130px] rounded-xl shadow-sm bg-white items-center justify-center gap-2 border-1 border-[hsl(150,19%,88%)] hover:border-2 hover:border-[hsl(161,88%,25%)] hover:bg-[hsl(146,44%,94%)]';
-        card.dataset.id = material.id;
-        card.innerHTML = `
-            <h3 class="text-[hsl(161,88%,25%)] font-semibold text-[14px]">${material.name}</h3>
-            <p class="text-[12px] text-[hsl(150,19%,88%)]">${material.description}</p>
-        `;
-        // Add click event listener to toggle selection
-        card.addEventListener("click", () => {
-          card.classList.toggle("selected");
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('materials-container');
+  const cards = container.querySelectorAll('.material-card');
 
-          if(selectedMaterials.includes(material.id)) {
-            selectedMaterials = selectedMaterials.filter(id => id !== material.id);
-          } else {
-            selectedMaterials.push(material.id);
-          }   
-          console.log("Selected:",selectedMaterials);
-        });
-        materialsContainer.appendChild(card);
-    });
+  // ---- CREATE BOX WITH JS ONLY (no HTML needed) ----
+  const othersBox = document.createElement('div');
+  othersBox.id = 'others-desc-box';
+  othersBox.className = 'hidden mt-4 mb-4 w-full';
 
-    // use current location button
-    useLocationBtn.addEventListener("click", () => {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          currentLocation = `${position.coords.latitude},${position.coords.longitude}`;
-          locationDisplay.textContent = ` ${currentLocation}`;
-        });
+  const textarea = document.createElement('textarea');
+  textarea.placeholder = 'Describe material';
+  textarea.className = 'w-full h-[90px] p-3 text-[13px] border border-[hsl(150,19%,88%)] rounded-xl resize-none outline-none focus:border-gray-200 bg-white';
+  othersBox.appendChild(textarea);
+
+  // Put it in the gap between cards and Remember Me
+  container.insertAdjacentElement('afterend', othersBox);
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // 1. Your existing logic - Hide ALL check-marks first (KEPT)
+      cards.forEach(c => {
+        const mark = c.querySelector('.check-mark');
+        mark.classList.add('hidden');
+        mark.classList.remove('flex');
+        c.classList.remove('border-2', 'border-[#0F6A3D]', 'bg-[#E9F5EC]');
+        c.classList.add('border', 'border-[hsl(150,19%,88%)]', 'bg-white');
       });
 
-    // Next button
-    nextBtn.addEventListener("click", () => {
-      if(selectedMaterials.length === 0) {
-        alert("Please select at least one material.");
-        return;
-      }
+      // 2. Your existing logic - Show only the clicked one (KEPT)
+      const currentMark = card.querySelector('.check-mark');
+      currentMark.classList.remove('hidden');
+      currentMark.classList.add('flex');
+      card.classList.add('border-2', 'border-[#0F6A3D]', 'bg-[#E9F5EC]');
+      card.classList.remove('border', 'border-[hsl(150,19%,88%)]', 'bg-white');
 
-       // 
-       const draft = {
-        materials: selectedMaterials,
-        location: currentLocation
-      };
-      localStorage.setItem("draftRequest", JSON.stringify(draft));
-      alert("Draft saved!"); // backend will handle the actual submission later
-      // window.location.href = "/next-step.html"; // Redirect to the next step page
-   });
-  //  start
-  loadMaterials();
+      // 3. NEW - Only show box if it's Others
+      const isOthers = card.dataset.material === 'others';
+
+      if (isOthers) {
+        othersBox.classList.remove('hidden');
+        textarea.focus();
+      } else {
+        othersBox.classList.add('hidden');
+      }
+    });
+  });
+});
+ 
