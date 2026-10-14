@@ -3,148 +3,534 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="shortcut icon" href="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" type="image/x-icon">
+  <script src="main.js" defer></script>
+
+  <link
+    rel="shortcut icon"
+    href="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+    type="image/x-icon"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Collector Sign-Up</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <title>Collector Sign-Up | Recycle Connect</title>
 </head>
-<body>
-  <div class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790793624/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_1_sjnxmr.png')] bg-no-repeat flex relative min-h-screen before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[350px] before:z-0  before:bg-top before:bg-no-repeat before:pointer-events-none">
 
-  
-    <aside class="max-w-[374px] w-full w-full bg-gradient-to-b from-transparent via-[#E8F6EE]/80 to-[#E8F6EE] p-6 relative z-10 shadow-[0_1px_3px_rgba(0,0,0,0.30)] ">
+<body class="m-0 min-h-screen bg-[#F2FAF5]">
 
-      <!-- LOGO -->
+  <!-- PAGE BACKGROUND -->
+  <div
+    class="relative flex min-h-screen bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790793624/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_1_sjnxmr.png')] bg-no-repeat bg-top"
+  >
 
-      <a href="index.html" class="flex items-center">
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle Connect logo">
-        <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">Recycle</h2>
-        <span class="font-[Montserrat] text-[24px] text-[#077053]">Connect</span>
+    <!-- SIDEBAR -->
+    <aside
+      class="fixed inset-x-0 bottom-0 z-50 w-full border-t border-[#D8E5DE] bg-[#E8F6EE] shadow-[0_-2px_10px_rgba(0,0,0,0.08)] md:sticky md:top-0 md:inset-x-auto md:bottom-auto md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r md:shadow-[0_1px_3px_rgba(0,0,0,0.15)] lg:w-[250px] lg:max-w-[250px] lg:bg-gradient-to-b lg:from-transparent lg:via-[#E8F6EE]/80 lg:to-[#E8F6EE]"
+    >
+
+      <!-- LOGO: DESKTOP ONLY -->
+      <a
+        href="index.html"
+        class="hidden items-center gap-1 p-4 lg:flex"
+      >
+        <img
+          src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+          alt="Recycle Connect logo"
+          class="h-10 w-10 shrink-0 object-contain"
+        >
+
+        <span class="whitespace-nowrap font-[Montserrat] text-[19px] font-bold text-[#077053]">
+          Recycle<span class="font-medium">Connect</span>
+        </span>
       </a>
 
-      <!-- BUTTONS -->
-      <div class="mt-18">
-        <ul class="flex flex-col gap-4">
-          <li data-href="House-Dashboard.html" class="flex gap-2 items-center rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png" class="max-w-[18px] w-full rounded " ><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]">Home</span></li>
+      <!-- NAVIGATION -->
+      <nav class="p-1 md:p-2 lg:mt-10 lg:px-3">
 
-          <li data-href="House-Request.html" class="flex items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png" class="max-w-[18px] w-full rounded"><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]" >Request Pickup</span></li>
+        <ul class="flex items-center justify-around gap-1 md:flex-col md:items-stretch md:gap-3 lg:gap-3">
 
-          <li data-href="Collector.html" class="flex items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png" class="max-w-[18px] w-full rounded"><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]">Become A Collector</span></li>
+          <!-- HOME -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="House-Dashboard.html"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                Home
+              </span>
+            </a>
+          </li>
 
-          <li data-href="PickUp-History.html" class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png" class="max-w-[24px] w-full rounded" ><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]">History</span></li>
+          <!-- REQUEST PICKUP -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="House-Request.html"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                <span class="md:hidden lg:inline">Request Pickup</span>
+                <span class="hidden md:inline lg:hidden">Pickup</span>
+              </span>
+            </a>
+          </li>
 
-          <li data-href="Collector-Reward.html" class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png" class="max-w-[22px] w-full rounded" ><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]">Rewards</span></li>
+          <!-- BECOME A COLLECTOR -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="Collector.html"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                <span class="md:hidden lg:inline">Become A Collector</span>
+                <span class="hidden md:inline lg:hidden">Collector</span>
+              </span>
+            </a>
+          </li>
 
-          <li data-href=".html" class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png" class="max-w-[22px] w-full rounded" ><span class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]">Profile</span></li>
+          <!-- HISTORY -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="PickUp-History.html"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                History
+              </span>
+            </a>
+          </li>
+
+          <!-- REWARDS -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="Collector-Reward.html"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                Rewards
+              </span>
+            </a>
+          </li>
+
+          <!-- PROFILE -->
+          <li class="flex-1 md:flex-none">
+            <a
+              href="#profile"
+              class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:bg-white/70 md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
+                alt=""
+                class="h-[20px] w-[20px] shrink-0 object-contain"
+              >
+              <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                Profile
+              </span>
+            </a>
+          </li>
+
         </ul>
-      </div>
+      </nav>
     </aside>
 
-    <main class=" w-full relative z-10">
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10 min-w-0 flex-1 pb-24 md:pb-8">
 
-      <!-- HEADER  -->
+      <!-- HEADER -->
+      <header class="border-b border-[#D8E5DE]/60 bg-white/30 px-4 py-3 sm:px-6 md:px-8">
+        <nav class="flex items-center justify-end">
 
-      <section>
-        <nav class="flex justify-end items-center p-4 ">
-          <div class="flex gap-4 items-center">
-            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869410/Group_80_oc9fch.png" class="w-[16px] h-[21px] cursor-pointer">
-            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869411/Ellipse_8_ushlu2.png" class="max-w-[60px] w-full max-h-[60px] h-full rounded-full">
-            <p class="text-[#043C2D] font-[Inter]">Lilian</p>
-            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869410/Vector_12_xya2l8.png" class="w-[14px] h-[6px] cursor-pointer">
+          <div class="flex items-center gap-3 sm:gap-4">
+
+            <button
+              type="button"
+              aria-label="Notifications"
+              class="shrink-0"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869410/Group_80_oc9fch.png"
+                alt=""
+                class="h-[21px] w-[16px]"
+              >
+            </button>
+
+            <img
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869411/Ellipse_8_ushlu2.png"
+              alt="Lilian's profile"
+              class="h-9 w-9 rounded-full object-cover sm:h-11 sm:w-11"
+            >
+
+            <p class="font-[Inter] text-sm font-medium text-[#043C2D] sm:text-base">
+              Lilian
+            </p>
+
+            <button
+              type="button"
+              aria-label="Open account menu"
+              class="shrink-0"
+            >
+              <img
+                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790869410/Vector_12_xya2l8.png"
+                alt=""
+                class="h-[6px] w-[14px]"
+              >
+            </button>
+
           </div>
         </nav>
-      </section>
-        <!-- CONTENT -->
+      </header>
 
-        <section class="p-10">
-          <div class="flex flex-col gap-2">
-            <h1 class="font-[Inter] font-bold text-[40px] leading-[100%]">
-              Create Collector Account
-            </h1>
-            <p class="text-[#07543E] font-bold font-[Inter] text-[20px] leading-[100%]">
-              Join our network of verified collectors and make an impact
-            </p>
-            <h2 class="font-[Inter] font-bold text-[20px] leading-[100%]">Personal Information</h2>
+      <!-- PAGE CONTENT -->
+      <section class="w-full px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10">
+
+        <!-- PAGE TITLE -->
+        <div class="flex flex-col gap-3">
+
+          <h1 class="font-[Inter] text-2xl font-bold leading-tight text-[#17221E] sm:text-3xl lg:text-[40px]">
+            Create Collector Account
+          </h1>
+
+          <p class="max-w-2xl font-[Inter] text-sm font-semibold leading-relaxed text-[#07543E] sm:text-base lg:text-[18px]">
+            Join our network of verified collectors and make an impact
+          </p>
+
+          <h2 class="mt-2 font-[Inter] text-lg font-bold text-[#17221E] sm:text-xl">
+            Personal Information
+          </h2>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="collector-signup-form" action="" method="post" class="mt-5">
+
+          <!-- PERSONAL INFORMATION GRID -->
+          <div class="grid grid-cols-1 gap-x-6 gap-y-5 sm:gap-y-6 lg:grid-cols-2 lg:gap-x-8">
+
+            <!-- FULL NAME -->
+            <div class="grid min-w-0 gap-2">
+              <label
+                for="collector-name"
+                class="font-[Inter] text-sm font-semibold text-[#17221E]"
+              >
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                name="name"
+                id="collector-name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+              >
+            </div>
+
+            <!-- PHONE NUMBER -->
+            <div class="grid min-w-0 gap-2">
+              <label
+                for="collector-phone"
+                class="font-[Inter] text-sm font-semibold text-[#17221E]"
+              >
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                name="collector-phone-number"
+                id="collector-phone"
+                required
+                placeholder="+234 801 234 5678"
+                autocomplete="tel"
+                class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+              >
+            </div>
+
+            <!-- EMAIL ADDRESS -->
+            <div class="grid min-w-0 gap-2">
+              <label
+                for="collector-mail"
+                class="font-[Inter] text-sm font-semibold text-[#17221E]"
+              >
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                name="collector-mail"
+                id="collector-mail"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+              >
+            </div>
+
+            <!-- DATE OF BIRTH -->
+            <div class="grid min-w-0 gap-2">
+              <label
+                for="collector-dob"
+                class="font-[Inter] text-sm font-semibold text-[#17221E]"
+              >
+                Date of Birth
+              </label>
+
+              <input
+                type="date"
+                name="date-of-birth"
+                id="collector-dob"
+                class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+              >
+            </div>
+
+            <!-- ADDRESS -->
+<div class="grid min-w-0 gap-2">
+  <label
+    for="collector-address"
+    class="font-[Inter] text-sm font-semibold text-[#17221E]"
+  >
+    Residential Address
+  </label>
+
+  <input
+    type="text"
+    name="address"
+    id="collector-address"
+    required
+    autocomplete="street-address"
+    placeholder="Enter your residential address"
+    class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+  >
+</div>
+
+<!-- COLLECTION ROUTE -->
+<div class="grid min-w-0 gap-2">
+  <label
+    for="collector-route"
+    class="font-[Inter] text-sm font-semibold text-[#17221E]"
+  >
+    Collection Route
+  </label>
+
+  <input
+    type="text"
+    name="route"
+    id="collector-route"
+    required
+    placeholder="Enter your assigned collection route"
+    class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+  >
+</div>
+
+<!-- PASSWORD -->
+<div class="grid min-w-0 gap-2">
+  <label
+    for="collector-password"
+    class="font-[Inter] text-sm font-semibold text-[#17221E]"
+  >
+    Password
+  </label>
+
+  <input
+    type="password"
+    name="password"
+    id="collector-password"
+    required
+    minlength="8"
+    autocomplete="new-password"
+    placeholder="Create a password (minimum 8 characters)"
+    class="h-[54px] w-full min-w-0 rounded-xl border-2 border-[#D8E5DE] bg-white/70 px-4 font-[Inter] text-sm outline-none transition focus:border-[#087A55] sm:h-[60px] sm:px-5 sm:text-base"
+  >
+</div>
+
           </div>
 
-          <!-- FORM -->
-
-          <form action="">
-            <div class="grid grid-cols-2 mt-4 gap-8">
-
-              <!-- NAME -->
-
-              <div class="grid gap-2">
-                <label for="collector-name" class="font-[Inter] font-semibold leading-[100%] text-[#17221E]">Full Name</label>
-                <input type="text" name="name" id="collector-name" placeholder="Enter your full name" class="rounded-[12px] border border-2 border-[#D8E5DE] max-w-[435px] w-full h-[63px] pl-[20px]">
-              </div>
-              
-              <!-- NUMBER -->
-
-              <div class="grid gap-2">
-                <label for="collector-phone" class="font-[Inter] font-semibold leading-[100%] text-[#17221E]" >Phone Number</label>
-                <input type="tel" name="collector-phone-number" id="collector-phone" required placeholder="+234 801 234 5678" class="rounded-[12px] border border-2 border-[#D8E5DE] max-w-[435px] w-full h-[63px] pl-[20px]">
-              </div>
-
-              <!-- EMAIL -->
-
-              <div class="grid gap-2">
-                <label for="collector-mail" class="font-[Inter] font-semibold leading-[100%] text-[#17221E]">Email Address</label>
-                <input type="email" name="collector-mail" id="collector-mail" placeholder="Enter your email address" class="rounded-[12px] border border-2 border-[#D8E5DE] max-w-[435px] w-full h-[63px] pl-[20px]">
-              </div>
-
-              <!-- DATE OF BIRTH -->
-
-              <div class="grid gap-2">
-                <label for="collector-name" class="font-[Inter] font-semibold leading-[100%] text-[#17221E]">Date of Birth</label>
-                <input type="date" name="name" id="collector-name" class="rounded-[12px] border border-2 border-[#D8E5DE] max-w-[435px] w-full h-[63px] pl-[20px]">
-              </div>
-            </div>
-          </form>
-
           <!-- VERIFICATION DOCUMENTS -->
-           <h2 class="font-[#17221E] font-[Inter] font-bold text-[20px] mt-4 mb-4">
+          <section class="mt-8">
+
+            <h2 class="mb-4 font-[Inter] text-lg font-bold text-[#17221E] sm:text-xl">
               Verification Documents
             </h2>
 
-          <section class="flex justify-between">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
 
-            <div class="flex rounded-[7px] border border-1 border-[#D8E5DE] justify-center items-center p-8 gap-2 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] cursor-pointer">
-              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png" class="w-[32px] h-[38px]">
-              <div>
-                <h3 class="font-[Inter] font-semibold text-[#087A55]">Upload CAC Cert.</h3>
-                <p class="font-[Inter] font-medium text-[#8E8E93]">(optional)</p>
-              </div>
-            </div>
+              <!-- CAC CERTIFICATE -->
+              <label
+                class="flex min-h-[110px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-[#D8E5DE] bg-white/60 p-4 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] transition hover:border-[#087A55] hover:shadow-md sm:p-5"
+              >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png"
+                  alt=""
+                  class="h-[38px] w-[32px] shrink-0 object-contain"
+                >
 
-            <div class="flex rounded-[7px] border border-1 border-[#D8E5DE] justify-center items-center p-8 gap-2 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] cursor-pointer ">
-              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png">
-              <div>
-                <h3 class="font-[Inter] font-semibold text-[#087A55]">Upload Business License</h3>
-                <p class="font-[Inter] font-medium text-[#8E8E93]">(optional)</p>
-              </div>
-            </div>
+                <span class="min-w-0">
+                  <span class="block font-[Inter] text-sm font-semibold leading-snug text-[#087A55] sm:text-base">
+                    Upload CAC Cert.
+                  </span>
 
-            <div class="flex rounded-[7px] border border-1 border-[#D8E5DE] justify-center items-center p-8 gap-2 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] cursor-pointer">
-              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png">
-              <div>
-                <h3 class="font-[Inter] font-semibold text-[#087A55]">Upload Utility Bill</h3>
-                <p class="font-[Inter] font-medium text-[#8E8E93]">(optional)</p>
-              </div>
+                  <span class="mt-1 block font-[Inter] text-sm font-medium text-[#8E8E93]">
+                    (optional)
+                  </span>
+                </span>
+
+                <input
+                  type="file"
+                  name="cac-certificate"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  class="sr-only"
+                >
+              </label>
+
+              <!-- BUSINESS LICENSE -->
+              <label
+                class="flex min-h-[110px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-[#D8E5DE] bg-white/60 p-4 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] transition hover:border-[#087A55] hover:shadow-md sm:p-5"
+              >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png"
+                  alt=""
+                  class="h-[38px] w-[32px] shrink-0 object-contain"
+                >
+
+                <span class="min-w-0">
+                  <span class="block font-[Inter] text-sm font-semibold leading-snug text-[#087A55] sm:text-base">
+                    Upload Business License
+                  </span>
+
+                  <span class="mt-1 block font-[Inter] text-sm font-medium text-[#8E8E93]">
+                    (optional)
+                  </span>
+                </span>
+
+                <input
+                  type="file"
+                  name="business-license"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  class="sr-only"
+                >
+              </label>
+
+              <!-- UTILITY BILL -->
+              <label
+                class="flex min-h-[110px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-[#D8E5DE] bg-white/60 p-4 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] transition hover:border-[#087A55] hover:shadow-md sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-[435px] xl:col-span-1 xl:mx-0 xl:max-w-none sm:p-5"
+              >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png"
+                  alt=""
+                  class="h-[38px] w-[32px] shrink-0 object-contain"
+                >
+
+                <span class="min-w-0">
+                  <span class="block font-[Inter] text-sm font-semibold leading-snug text-[#087A55] sm:text-base">
+                    Upload Utility Bill
+                  </span>
+
+                  <span class="mt-1 block font-[Inter] text-sm font-medium text-[#8E8E93]">
+                    (optional)
+                  </span>
+                </span>
+
+                <input
+                  type="file"
+                  name="utility-bill"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  class="sr-only"
+                >
+              </label>
+
+              <!-- IDENTIFICATION DOCUMENT -->
+<label
+  for="collector-identification-document"
+  class="flex min-h-[110px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-[#D8E5DE] bg-white/60 p-4 shadow-[0_2.44px_3.05px_-1.83px_rgba(0,0,0,0.25)] transition hover:border-[#087A55] hover:shadow-md sm:p-5"
+>
+  <img
+    src="https://res.cloudinary.com/vyomyquu/image/upload/v1790874943/Union_rtilhq.png"
+    alt=""
+    class="h-[38px] w-[32px] shrink-0 object-contain"
+  >
+
+  <span class="min-w-0">
+    <span class="block font-[Inter] text-sm font-semibold leading-snug text-[#087A55] sm:text-base">
+      Upload Identification Document
+    </span>
+
+    <span class="mt-1 block font-[Inter] text-sm font-medium text-[#8E8E93]">
+      JPEG or PDF · Maximum 5 MB · Required
+    </span>
+  </span>
+
+  <input
+    type="file"
+    name="identificationDocument"
+    id="collector-identification-document"
+    accept=".jpg,.jpeg,.pdf"
+    required
+    class="sr-only"
+  >
+</label>
+
             </div>
           </section>
 
-          <!-- SUBMIT BUTTON  -->
+          <!-- SUBMIT BUTTON -->
+          <!-- REGISTRATION MESSAGE -->
+<p
+  id="collector-signup-message"
+  role="status"
+  aria-live="polite"
+  class="mt-4 hidden rounded-lg p-4 font-[Inter] text-sm"
+></p>
 
-            <button type="submit" class="bg-[#087A55] text-white w-full mt-6 max-w-[922px] w-full max-h-[68px] h-full py-[17px] px-[127px] rounded-[12px]"><a href="Collector-Verification.html">Submit</a></button>
+<!-- SUBMIT BUTTON -->
+<div class="mt-7">
+  <button
+    type="submit"
+    id="collector-submit-button"
+    class="flex min-h-[54px] w-full items-center justify-center rounded-xl bg-[#087A55] px-5 py-4 font-[Inter] text-base font-semibold text-white transition hover:bg-[#07543E] focus:outline-none focus:ring-2 focus:ring-[#087A55] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[60px]"
+  >
+    Submit
+  </button>
+</div>
+        </form>
 
-        </section>
+      </section>
     </main>
   </div>
+  <script src="collector-sign-up.js"></script>
 </body>
 </html>
