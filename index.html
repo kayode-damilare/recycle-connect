@@ -18,15 +18,15 @@
 
   <!-- NAV BAR -->
 
-<header class="bg-white h-[64px] px-30 py-2 shadow-[0_4px_4px_rgba(0,0,0,0.05)] w-full fixed top-0 left-0 w-full z-50 ">
-    <div class="flex justify-between items-center">
-      <div class="flex items-center font-['Montserrat'] text-[#077053] text-14px">
+<header class="bg-white h-[64px] px-4 sm:px-6 md:px-8 lg:px-30 py-2 shadow-[0_4px_4px_rgba(0,0,0,0.05)] w-full fixed top-0 left-0 z-50">
+    <div class="flex justify-between items-center h-full">
+      <div class="flex items-center font-['Montserrat'] text-[#077053] text-14px shrink-0">
         <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle-Connect-Logo" class="w-[48px] h-[42px]">
         <h2 class="font-bold">Recycle</h2><span class="">Connect</span>
       </div>
       
-      <div class="">
-        <ul class="flex gap-16 text-[#043C2D] font-bold leading-0">
+      <div class="hidden lg:block">
+        <ul class="flex gap-8 xl:gap-16 text-[#043C2D] font-bold leading-0">
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#about">About US</a></li>
           <li><a href="">For Collection</a></li>
@@ -34,11 +34,27 @@
         </ul>
       </div>
 
-      <div class="">
+      <div class="hidden lg:block">
         <button class="inline-flex justify-center items-center h-[38px] gap-1 bg-[#087a55] p-1 rounded-[40px] max-w-full w-[156px] text-[#FEF9F9] font-bold cursor-pointer">
           <span><a href="Sign-Up.html">Get Started</a></span><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg" class="w-5">
         </button>
       </div>
+
+      <!-- ADDED: MOBILE NAVIGATION BUTTON -->
+      <button id="menu-button" class="lg:hidden flex items-center justify-center w-10 h-10 text-2xl text-[#07543E]" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        ☰
+      </button>
+    </div>
+
+    <!-- ADDED: MOBILE NAVIGATION -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-[64px] left-0 w-full bg-white shadow-md px-5 py-4">
+      <ul class="flex flex-col gap-5 text-[#043C2D] font-bold">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About US</a></li>
+        <li><a href="">For Collection</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="Sign-Up.html" class="inline-flex items-center gap-2 bg-[#087a55] text-white rounded-full px-4 py-2">Get Started</a></li>
+      </ul>
     </div>
   </header>
 
@@ -48,80 +64,80 @@
 
     <!-- SECTION 1 -->
 
-    <div class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790633679/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_txh6qg.png')] bg-no-repeat" >
+    <div class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790633679/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_txh6qg.png')] bg-no-repeat">
 
-       <section class="flex mt-25 px-30 gap-">
-      <div class="max-h-screen max-w-full -[690px] h-[361px] flex flex-col justify-between">
-        <div class="uppercase bg-[#ABEBC0] w-[243px] p-1.5 rounded-[24px] shadow-[0_1px_4px_rgba(0,0,0,0.50)]">
-          <ul class="flex justify-between mx-2 font-semibold text-[#07543E] text-[7px] ">
-            <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790676953/Vector_aerlnq.png')] ">Recycle</li>
-            <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790677017/Ellipse_2_ss220p.png')] ">connect</li>
-            <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790677017/Ellipse_2_ss220p.png')] ">build a cleaner future</li>
-          </ul>
-        </div>
+      <section class="flex flex-col lg:flex-row mt-25 px-4 sm:px-6 md:px-8 lg:px-30 gap-8 lg:gap-4">
 
-        <div class="flex flex-col gap-4">
-          <div>
-            <h1 class="font-bold text-[62px] text-[#07543E] leading-[63px] font-['inter'] w-[690px]">Turn Your Recycleables into a <span class="text-[#2e9b63]">Cleaner Future.</span></h1>
+        <div class="max-h-screen max-w-full w-full lg:w-[690px] h-auto lg:h-[361px] flex flex-col justify-between gap-8 lg:gap-0">
+
+          <div class="uppercase bg-[#ABEBC0] w-[243px] max-w-full p-1.5 rounded-[24px] shadow-[0_1px_4px_rgba(0,0,0,0.50)]">
+            <ul class="flex justify-between mx-2 font-semibold text-[#07543E] text-[7px]">
+              <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790676953/Vector_aerlnq.png')]">Recycle</li>
+              <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790677017/Ellipse_2_ss220p.png')]">connect</li>
+              <li class="list-inside list-image-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790677017/Ellipse_2_ss220p.png')]">build a cleaner future</li>
+            </ul>
           </div>
-          
-          <div class="max-w-full w-[566px] ">
-            <p class="text-[#07543E] font-medium font-['Inter'] text-[20px] leading-[100%]">Connect with trusted collectors and make recycling simple, convenient and rewarding.</p>
+
+          <div class="flex flex-col gap-4">
+            <div>
+              <h1 class="font-bold text-[36px] sm:text-[44px] md:text-[54px] lg:text-[62px] text-[#07543E] leading-tight lg:leading-[63px] font-['inter'] w-full lg:w-[690px]">Turn Your Recycleables into a <span class="text-[#2e9b63]">Cleaner Future.</span></h1>
+            </div>
+            
+            <div class="max-w-full w-full lg:w-[566px]">
+              <p class="text-[#07543E] font-medium font-['Inter'] text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[100%]">Connect with trusted collectors and make recycling simple, convenient and rewarding.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6">
+            <button class="inline-flex justify-center items-center w-full sm:w-[171px] leading-[100%] min-h-[40px] lg:h-[34px] bg-[#087A55] rounded-[28px] text-[11px] font-bold font-['Inter'] text-[#FEF9F9] gap-1 p-2 cursor-pointer">
+              <span><a href="Sign-Up.html">Register Household</a></span><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg" class="w-4">
+            </button>
+
+            <button class="inline-flex justify-center items-center border border-[#087A55] font-bold text-[11px] leading-[100%] text-[#087A55] rounded-[28px] gap-2.5 p-2 w-full sm:w-[171px] min-h-[40px] lg:h-[34px] cursor-pointer">
+              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790635775/Group_bchtd3.png"><span><a href="Collector.html">Become a Collector</a></span>
+            </button>
           </div>
         </div>
 
-
-        <div class="flex items-center gap-4 mb-6">
-          <button class="inline-flex justify-center items-center w-[171px] leading-[100%] h-[34px] bg-[#087A55] rounded-[28px] text-[11px] font-bold font-['Inter'] text-[#FEF9F9] gap-1 p-1 cursor-pointer "><span><a href="Sign-Up.html">Register Household</a></span><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg" class="w-4"></button>
-
-          <button class="inline-flex justify-center items-center border border-[#087A55] font-bold text-[11px] leading-[100%] text-[#087A55] rounded-[28px] gap-2.5 p-1 w-[171px] h-[34px] cursor-pointer ">
-            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790635775/Group_bchtd3.png"><span><a href="Collector.html">Become a Collector</a></span>
-          </button>
+        <div class="w-full lg:flex-1 flex justify-center items-center">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790634920/2201.i039.018.F.m004.c9.sustainable_living_zero_waste_isometric_1_ddqwc9.png" alt="Recycle-Image" class="max-h-screen h-auto w-full max-w-[450px] lg:max-w-none lg:h-[361px] object-contain">
         </div>
-      </div>
 
-      <div>
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790634920/2201.i039.018.F.m004.c9.sustainable_living_zero_waste_isometric_1_ddqwc9.png" alt="Recycle-Image" class="max-h-screen h-[361px] ">
-      </div>
+      </section>
     </div>
-    </section>
 
     <!-- HOW IT WORKS -->
 
-    <section class="bg-[#F1F7ED] px-30 py-8 " id="how-it-works">
-      <div class="flex justify-center items-center gap-8  ">
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] ">
-        <h2 class="uppercase text-[#087A55] font-['inter'] font-bold text-[12px] leading-[100%] ">How it works</h2>
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] ">
+    <section class="bg-[#F1F7ED] px-4 sm:px-6 md:px-8 lg:px-30 py-8" id="how-it-works">
+
+      <div class="flex justify-center items-center gap-4 sm:gap-8">
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] flex-1 min-w-0 h-0">
+        <h2 class="uppercase text-[#087A55] font-['inter'] font-bold text-[12px] leading-[100%] shrink-0">How it works</h2>
+        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] flex-1 min-w-0 h-0">
       </div>
 
       <div class="flex justify-center items-center">
-        <h2 class="font-bold text-[24px] leading-[100%] font-['Inter'] text-[#043C2D] mt-6 ">Recycling Made Simple</h2>
+        <h2 class="font-bold text-xl sm:text-[24px] leading-[100%] font-['Inter'] text-[#043C2D] mt-6 text-center">Recycling Made Simple</h2>
       </div>
 
       <!-- CARDS -->
 
-      <div class="flex items-center justify-between mt-6 gap-4 ">
+      <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between mt-6 gap-4">
 
         <!-- CARD 1 -->
 
-        <div class="flex max-h-screen w-full max-w-[326px] h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
-          <div class="flex items-start gap-3 ">
-
-            <div class="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-              01
-            </div>
+        <div class="flex max-h-screen w-full max-w-[326px] mx-auto lg:mx-0 lg:flex-1 lg:max-w-[326px] min-h-[121px] lg:h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+          <div class="flex items-start gap-3">
+            <div class="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">01</div>
 
             <div class="flex flex-col justify-between text-[#087A55] gap-2">
               <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790680190/Vector_1_l2cpog.png" alt="Sort icon" class="h-[31px] w-[25px] object-contain" />
-
               <div class="flex flex-col gap-2">
                 <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Sort</h3>
-                <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D] max-w-[145px] w-full">Separate your recyclable materials</p>
+                <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D] max-w-[145px] w-full">Separate your recyclable materials</p>
               </div>
             </div>
           </div>
-
 
           <div class="flex items-end">
             <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790680341/Vector_2_lxfycd.png" alt="Arrow" class="h-[8px] w-[9px] object-contain" />
@@ -130,33 +146,26 @@
 
         <!-- DIVIDER -->
 
-        <div>
-          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790694356/Vector_3_rvugn5.png" class="w-16 h-[15px]">
+        <div class="hidden lg:block shrink-0">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790694356/Vector_3_rvugn5.png" class="w-[16px] h-[15px]">
         </div>
 
+        <!-- CARD 2 -->
 
-                <!-- CARD 2 -->
-
-        <div class="flex max-h-screen w-full max-w-[326px] h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+        <div class="flex max-h-screen w-full max-w-[326px] mx-auto lg:mx-0 lg:flex-1 lg:max-w-[326px] min-h-[121px] lg:h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
           <div class="flex items-start gap-3">
-
-            <div class="flex h-[50px] max-w-[50px] w-full items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-              02
-            </div>
+            <div class="flex h-[50px] max-w-[50px] w-full shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">02</div>
 
             <div class="flex flex-col justify-between text-[#087A55] gap-2">
               <div>
-                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790709170/Vector_4_ht2aih.png" alt="Sort icon" class="h-[31px] w-[25px] object-contain" >
+                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790709170/Vector_4_ht2aih.png" alt="Sort icon" class="h-[31px] w-[25px] object-contain">
               </div>
-
-
               <div class="flex flex-col gap-2">
                 <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Schedule</h3>
-                <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D]">Choose what you want collected and schedule pickup</p>
+                <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D]">Choose what you want collected and schedule pickup</p>
               </div>
             </div>
           </div>
-
 
           <div class="flex items-end">
             <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790680341/Vector_2_lxfycd.png" alt="Arrow" class="h-[8px] w-[9px] object-contain" />
@@ -165,185 +174,188 @@
 
         <!-- DIVIDER -->
 
-        <div>
-          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790694356/Vector_3_rvugn5.png" class="w-16 h-[15px]">
+        <div class="hidden lg:block shrink-0">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790694356/Vector_3_rvugn5.png" class="w-[16px] h-[15px]">
         </div>
 
-                <!-- CARD 3 -->
+        <!-- CARD 3 -->
 
-        <div class="flex max-h-screen w-full max-w-[326px] h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+        <div class="flex max-h-screen w-full max-w-[326px] mx-auto lg:mx-0 lg:flex-1 lg:max-w-[326px] min-h-[121px] lg:h-[121px] justify-between rounded-[25px] bg-white p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
           <div class="flex items-start gap-3">
-
-            <div class="flex h-[50px] max-w-[50px] w-full items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-              03
-            </div>
+            <div class="flex h-[50px] max-w-[50px] w-full shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">03</div>
 
             <div class="flex flex-col justify-between text-[#087A55] gap-2">
               <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790709221/Vector_5_sa0kyq.png" alt="Sort icon" class="h-[31px] w-[25px] object-contain" />
-
               <div class="flex flex-col gap-2">
                 <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Connect & Collect</h3>
-                <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D]">A nearby collector picks up your recyclables</p>
+                <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D]">A nearby collector picks up your recyclables</p>
               </div>
             </div>
           </div>
-
 
           <div class="flex items-end">
             <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790680341/Vector_2_lxfycd.png" alt="Arrow" class="h-[8px] w-[9px] object-contain" />
           </div>
         </div>
-        
       </div>
     </section>
-</main>
+  </main>
 
-<section class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790778233/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_gqch3y.png')] bg-no-repeat bg-right-bottom relative w-full before:content-[''] before:absolute before:inset-0 before:z-0 before:bg-cover before:bg-bottom before:bg-no-repeat before:pointer-events-non ">
+<section class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1790778233/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_gqch3y.png')] bg-no-repeat bg-right-bottom relative w-full before:content-[''] before:absolute before:inset-0 before:z-0 before:bg-cover before:bg-bottom before:bg-no-repeat before:pointer-events-none">
 
+  <!-- WHY CHOOSE RECYCLE-CONNECT -->
 
-          <!-- WHY CHOOSE RECYLE-CONNECT  -->
-           <section class="bg-white/50 px-30 py-8 relative z-10 ">
-            <div class="flex justify-center items-center gap-8  ">
-              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] ">
-              <h2 class="uppercase text-[#087A55] font-['inter'] font-bold text-[12px] leading-[100%] ">why choose recycle-connect</h2>
-              <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] ">
-            </div>
+  <section class="bg-white/50 px-4 sm:px-6 md:px-8 lg:px-30 py-8 relative z-10">
 
-            <div class="flex justify-center items-center">
-              <h2 class="font-bold text-[24px] leading-[100%] font-['Inter'] text-[#043C2D] mt-6 ">Simple. Reliable. Impactful</h2>
-            </div>
+    <div class="flex justify-center items-center gap-4 sm:gap-8">
+      <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] flex-1 min-w-0 h-0">
+      <h2 class="uppercase text-[#087A55] font-['inter'] font-bold text-[10px] sm:text-[12px] leading-[100%] text-center">why choose recycle-connect</h2>
+      <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790677770/Line_1_pjehd4.png" class="border border-[#087A55] flex-1 min-w-0 h-0">
+    </div>
 
-            <!-- CARDS -->
+    <div class="flex justify-center items-center">
+      <h2 class="font-bold text-xl sm:text-[24px] leading-[100%] font-['Inter'] text-[#043C2D] mt-6 text-center">Simple. Reliable. Impactful</h2>
+    </div>
 
-            <div class="flex items-center justify-between mt-6 gap-4 ">
+    <!-- CARDS -->
 
-              <!-- CARD 1 -->
+    <div class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row items-stretch lg:items-center justify-between mt-6 gap-4">
 
-              <div class="flex max-h-screen w-full max-w-[326px] h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
-                <div class="flex items-start gap-3">
+      <!-- CARD 1 -->
 
-                  <div class="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-                    <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790711387/Vector_7_xr56fh.png" class=" ">
-                  </div>
-
-                  <div class="text-[#087A55]">
-                    <div class="flex flex-col gap-1">
-                      <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Easy Recycling</h3>
-                      <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D] max-w-[140px] w-full">Request a pickup in just few steps</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-
-                      <!-- CARD 2 -->
-
-              <div class="flex max-h-screen w-full max-w-[326px] h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
-                <div class="flex items-start gap-3">
-
-                  <div class="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-                    <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712317/Group_44_qvpatc.png" class=" ">
-                  </div>
-
-                  <div class="text-[#087A55]">
-                    <div class="flex flex-col gap-1">
-                      <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Trusted Collectors</h3>
-                      <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D] max-w-[140px] w-full">Connect With reliable collectors in your area</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-
-
-                      <!-- CARD 3 -->
-
-              <div class="flex max-h-screen w-full max-w-[326px] h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
-                <div class="flex items-start gap-3">
-
-                  <div class="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
-                    <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712317/Group_46_okaewk.png" class=" ">
-                  </div>
-
-                  <div class="text-[#087A55]">
-                    <div class="flex flex-col gap-1">
-                      <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Make an Impact</h3>
-                      <p class="font-['Inter'] text-[12px] leading-[100%] text-[#043C2D] max-w-[140px] w-full">Help reduce waste and build a cleaner community</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      <div class="flex max-h-screen w-full lg:max-w-[326px] lg:flex-1 min-h-[95px] lg:h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+        <div class="flex items-start gap-3">
+          <div class="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
+            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790711387/Vector_7_xr56fh.png" alt="" class="">
           </div>
-
-
-        <!-- FOOTER  -->
-
-        <footer class="relative z-10" id="about">
-          
-          <!-- ALL ITEMS -->
-
-          <div class="flex justify-center items gap-8 text-[#087A55] py-6 ">
-            <!-- ITEM 1 -->
-            <div class="max-w-[126px] w-full">
-              <div class="flex items-center gap-1.5">
-
-                <div class="flex items-center">
-                  <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712873/Vector_8_o54khi.png" class="max-w-[14px] w-full max-h-[18px] h-screen ">
-                  <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712873/Group_26_zgxlp9.png" class="max-w-[59px] w-full max-h-[10px] h-screen">
-                </div>
-
-                <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">4.7/5</span>
-              </div>
-
-              <div class="">
-                <p class="font-['Inter'] leading-[100%] text-[10px] ">Trusted by 5,000+ users</p>
-              </div>
-            </div>
-
-            <!-- ITEM 2 -->
-            <div class="max-w-[126px] w-full ">
-              <div class="flex items-center gap-1.5">
-                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719210/Vector_9_f7mdah.png" class="max-w-[14px] w-full max-h-[18px] h-screen ">
-                <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">#25M+</span>
-              </div>
-
-              <div class="">
-                <p class="font-['Inter'] leading-[100%] text-[10px] ">Saved by users</p>
-              </div>
-            </div>
-
-            <!-- ITEM 3 -->
-
-            <div class="max-w-[126px] w-full ">
-              <div class="flex items-center gap-1.5">
-                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719201/Vector_10_f4n8pt.png" class="max-w-[14px] w-full max-h-[18px] h-screen ">
-                <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">6000+</span>
-              </div>
-
-              <div class="">
-                <p class="font-['Inter'] leading-[100%] text-[10px] ">Active customers</p>
-              </div>
-            </div>
-
-            <!-- ITEM 4 -->
-
-            <div>
-              <div class="max-w-[126px] w-full ">
-              <div class="flex justify-center items-center gap-1.5">
-                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719200/Vector_11_xaozir.png" class="max-w-[14px] w-full max-h-[18px] h-screen ">
-                <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">98%</span>
-              </div>
-
-              <div class="">
-                <p class="font-['Inter'] leading-[100%] text-[10px] ">Customer satisfaction</p>
-              </div>
+          <div class="text-[#087A55]">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Easy Recycling</h3>
+              <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D] max-w-[140px] w-full">Request a pickup in just few steps</p>
             </div>
           </div>
-        </footer>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="flex max-h-screen w-full lg:max-w-[326px] lg:flex-1 min-h-[95px] lg:h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+        <div class="flex items-start gap-3">
+          <div class="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
+            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712317/Group_44_qvpatc.png" alt="" class="">
+          </div>
+          <div class="text-[#087A55]">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Trusted Collectors</h3>
+              <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D] max-w-[140px] w-full">Connect With reliable collectors in your area</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="flex max-h-screen w-full lg:max-w-[326px] lg:flex-1 min-h-[95px] lg:h-[95px] justify-between items-center rounded-[25px] bg-[#F1F7ED] p-4 shadow-[0_1px_5px_rgba(0,0,0,0.25)]">
+        <div class="flex items-start gap-3">
+          <div class="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-[#F1F7ED] font-['Inter'] font-bold leading-[100%] text-[#087A55]">
+            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712317/Group_46_okaewk.png" alt="" class="">
+          </div>
+          <div class="text-[#087A55]">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-['Inter'] text-[16px] font-bold leading-[100%]">Make an Impact</h3>
+              <p class="font-['Inter'] text-[12px] leading-relaxed text-[#043C2D] max-w-[140px] w-full">Help reduce waste and build a cleaner community</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="relative z-10 px-4 sm:px-6 md:px-8" id="about">
+
+    <!-- ALL ITEMS -->
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-6 sm:gap-4 text-[#087A55] py-6">
+
+      <!-- ITEM 1 -->
+
+      <div class="max-w-[126px] w-full">
+        <div class="flex items-center gap-1.5">
+          <div class="flex items-center">
+            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712873/Vector_8_o54khi.png" class="max-w-[14px] w-full max-h-[18px] h-screen">
+            <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790712873/Group_26_zgxlp9.png" class="max-w-[59px] w-full max-h-[10px] h-screen">
+          </div>
+          <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">4.7/5</span>
+        </div>
+        <div>
+          <p class="font-['Inter'] leading-[100%] text-[10px]">Trusted by 5,000+ users</p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+
+      <div class="max-w-[126px] w-full">
+        <div class="flex items-center gap-1.5">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719210/Vector_9_f7mdah.png" class="max-w-[14px] w-full max-h-[18px] h-screen">
+          <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">#25M+</span>
+        </div>
+        <div>
+          <p class="font-['Inter'] leading-[100%] text-[10px]">Saved by users</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+
+      <div class="max-w-[126px] w-full">
+        <div class="flex items-center gap-1.5">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719201/Vector_10_f4n8pt.png" class="max-w-[14px] w-full max-h-[18px] h-screen">
+          <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">6000+</span>
+        </div>
+        <div>
+          <p class="font-['Inter'] leading-[100%] text-[10px]">Active customers</p>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+
+      <div class="max-w-[126px] w-full">
+        <div class="flex items-center gap-1.5">
+          <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790719200/Vector_11_xaozir.png" class="max-w-[14px] w-full max-h-[18px] h-screen">
+          <span class="font-['Inter'] font-bold leading-[100%] text-[19px]">98%</span>
+        </div>
+        <div>
+          <p class="font-['Inter'] leading-[100%] text-[10px]">Customer satisfaction</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 </section>
+
+<!-- ADDED: MOBILE NAVIGATION FUNCTIONALITY -->
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    menuButton.textContent = isOpen ? "☰" : "✕";
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "☰";
+    });
+  });
+</script>
+
 </body>
 </html>
