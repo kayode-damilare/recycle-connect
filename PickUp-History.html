@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pick Up History | RecycleConnect</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,133 +14,143 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <!-- pb-20 leaves room for the bottom nav on mobile -->
   <body class="min-h-screen bg-[#f7fcf9] pb-20 text-gray-800 md:pb-0">
     <div class="flex min-h-screen">
-      <!--SIDEBAR-->
+      <!-- SIDEBAR -->
       <aside
-        class="fixed inset-x-0 bottom-0 z-50 border-t border-gray-100 bg-[#eaf8f1] md:sticky md:top-0 md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r lg:w-[250px]"
+        class="fixed inset-x-0 bottom-0 z-50 border-t border-gray-100 bg-[#eaf8f1] md:sticky md:top-0 md:h-screen md:w-[84px] md:shrink-0 md:border-r lg:w-[250px]"
       >
-        <!-- Logo: tablet and up only (mobile shows it in the header) -->
         <div
           class="hidden items-center justify-center px-4 py-6 md:flex lg:justify-start lg:px-6"
         >
-          <a href="index.html" class="flex items-center gap-2">
+          <a href="./index.html" class="flex items-center gap-2">
             <img
               src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
               alt="Recycle Connect logo"
-              class="h-8 w-8 shrink-0"
+              class="h-8 w-8"
             />
             <span
               class="hidden whitespace-nowrap font-[Montserrat] text-[18px] text-[#077053] lg:block"
             >
-              <b class="font-bold">Recycle</b>Connect
+              <b>Recycle</b>Connect
             </span>
           </a>
         </div>
 
         <nav class="px-2 py-1 text-sm md:mt-6 md:px-3 lg:mt-10 lg:px-6">
           <ul class="flex justify-around md:flex-col md:justify-start md:gap-2">
-            <li
-              data-href="House-Dashboard.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
-                class="w-[18px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >Home</span
+            <li>
+              <a
+                href="./House-Dashboard.html"
+                class="flex flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
+                  class="w-[18px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >Home</span
+                >
+              </a>
             </li>
 
-            <li
-              data-href="House-Request.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
-                class="w-[18px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >Request Pickup</span
+            <li>
+              <a
+                href="./House-Request.html"
+                class="flex flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
+                  class="w-[18px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >Request Pickup</span
+                >
+              </a>
             </li>
 
-            <li
-              data-href="Collector.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
-                class="w-[18px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >Become A Collector</span
+            <li>
+              <a
+                href="./Collector.html"
+                class="flex flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
+                  class="w-[18px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >Become A Collector</span
+                >
+              </a>
             </li>
 
-            <!-- ACTIVE ITEM -->
-            <li
-              data-href="PickUp-History.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded bg-[#D1FFE3] p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
-                class="w-[22px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >History</span
+            <li>
+              <a
+                href="./PickUp-History.html"
+                aria-current="page"
+                class="flex flex-col items-center justify-center gap-1 rounded bg-[#D1FFE3] p-2 md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
+                  class="w-[22px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >History</span
+                >
+              </a>
             </li>
 
-            <li
-              data-href="Collector-Reward.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
-                class="w-[22px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >Rewards</span
+            <li>
+              <a
+                href="./Collector-Reward.html"
+                class="flex flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
+                  class="w-[22px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >Rewards</span
+                >
+              </a>
             </li>
 
-            <li
-              data-href="Profile.html"
-              class="flex cursor-pointer flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
-            >
-              <img
-                src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
-                class="w-[22px] rounded"
-                alt=""
-              />
-              <span
-                class="font-[Inter] text-[10px] font-semibold leading-none text-[#087A55] md:hidden lg:inline lg:text-[16px]"
-                >Profile</span
+            <li>
+              <a
+                href="./Profile.html"
+                class="flex flex-col items-center justify-center gap-1 rounded p-2 hover:border hover:border-[#D8E5DE] hover:shadow-lg md:h-[60px] lg:flex-row lg:justify-start lg:gap-2"
               >
+                <img
+                  src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
+                  class="w-[22px] rounded"
+                  alt=""
+                />
+                <span
+                  class="font-[Inter] text-[10px] font-semibold text-[#087A55] md:hidden lg:inline lg:text-[16px]"
+                  >Profile</span
+                >
+              </a>
             </li>
           </ul>
         </nav>
       </aside>
 
+      <!-- MAIN CONTENT -->
       <div class="min-w-0 flex-1">
-        <!-- HEADER: logo on the left for mobile, user info on the right -->
         <header
-          class="flex h-16 items-center justify-between gap-3 border-b border-green-100 bg-[#f7fcf9] px-4 py-2 sm:px-5 md:justify-end md:px-10"
+          class="flex h-16 items-center justify-between gap-3 border-b border-green-100 bg-[#f7fcf9] px-4 sm:px-5 md:justify-end md:px-10"
         >
-          <a href="index.html" class="flex items-center md:hidden">
+          <a href="./index.html" class="flex items-center md:hidden">
             <img
               src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
               alt="Recycle Connect logo"
@@ -154,272 +165,100 @@
             <img
               class="h-4 w-4"
               src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869712/bells_ik9zmk.png"
-              alt="notification"
+              alt="Notifications"
             />
             <img
               class="h-8 w-8 rounded-full object-cover"
               src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869726/avatar_hnfqe5.png"
-              alt="user profile"
+              alt="User profile"
             />
             <p
-              class="hidden font-[Inter] text-[16px] font-medium leading-none text-gray-700 sm:block"
+              class="hidden font-[Inter] text-[16px] font-medium text-gray-700 sm:block"
             >
               Lilian
             </p>
             <img
               class="h-3 w-3"
               src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790869745/chevron_wnxprc.svg"
-              alt="dropdown"
+              alt=""
             />
           </div>
         </header>
 
         <main class="px-4 py-5 sm:px-5 md:px-10 md:py-8">
           <h1
-            class="font-[Inter] text-[24px] font-bold leading-none text-[#087A55] md:text-[28px] lg:text-[32px]"
+            class="font-[Inter] text-[24px] font-bold text-[#087A55] md:text-[28px] lg:text-[32px]"
           >
             Pick Up History
           </h1>
 
-          <!-- FILTERS: stacked on mobile, one row from sm up -->
+          <!-- FILTERS -->
           <div
             class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
           >
             <div
-              class="flex gap-2 overflow-x-auto font-[Inter] text-[14px] sm:gap-4 sm:overflow-visible md:text-[16px] lg:text-[20px]"
+              class="flex gap-2 overflow-x-auto font-[Inter] text-[14px] sm:gap-4 md:text-[16px]"
             >
               <button
-                class="shrink-0 rounded-lg bg-[#077053] px-4 py-2 font-semibold leading-none text-white shadow-sm sm:px-6 sm:py-3 lg:px-[26px] lg:py-[16px]"
+                type="button"
+                data-filter="all"
+                aria-pressed="true"
+                class="shrink-0 rounded-lg bg-[#077053] px-4 py-3 font-semibold text-white shadow-sm sm:px-6"
               >
                 All
               </button>
+
               <button
-                class="shrink-0 rounded-lg border border-green-100 bg-white/60 px-4 py-2 font-semibold leading-none text-[#077053] shadow-sm sm:px-6 sm:py-3 lg:px-[26px] lg:py-[16px]"
+                type="button"
+                data-filter="ongoing"
+                aria-pressed="false"
+                class="shrink-0 rounded-lg border border-green-100 bg-white/60 px-4 py-3 font-semibold text-[#077053] shadow-sm sm:px-6"
               >
                 Ongoing
               </button>
+
               <button
-                class="shrink-0 rounded-lg border border-green-100 bg-white/60 px-4 py-2 font-semibold leading-none text-[#077053] shadow-sm sm:px-6 sm:py-3 lg:px-[26px] lg:py-[16px]"
+                type="button"
+                data-filter="completed"
+                aria-pressed="false"
+                class="shrink-0 rounded-lg border border-green-100 bg-white/60 px-4 py-3 font-semibold text-[#077053] shadow-sm sm:px-6"
               >
                 Completed
               </button>
             </div>
 
             <div
-              class="flex w-full items-center gap-2 rounded-lg border border-green-100 bg-white px-3 py-2 shadow-sm sm:w-56 lg:w-64"
+              class="flex w-full items-center gap-2 rounded-lg border border-green-100 bg-white px-3 py-3 shadow-sm sm:w-56 lg:w-64"
             >
               <img
-                class="h-[18px] w-[18px] shrink-0"
+                class="h-[18px] w-[18px]"
                 src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868014/akar-icons_search_xz0iwc.png"
-                alt="search"
+                alt=""
               />
               <input
-                type="text"
-                placeholder="Search"
-                class="min-w-0 flex-1 font-[Inter] text-[14px] leading-none outline-none placeholder:text-gray-400"
-              />
-              <img
-                class="h-[18px] w-[18px] shrink-0"
-                src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868077/carbon_global-filters_w4t0vh.png"
-                alt="filter"
+                id="pickup-search"
+                type="search"
+                placeholder="Search pickups"
+                class="min-w-0 flex-1 font-[Inter] text-[14px] outline-none placeholder:text-gray-400"
               />
             </div>
           </div>
 
-          <!-- CARD 1 -->
-          <div
-            class="mt-4 flex items-center justify-between gap-3 rounded-lg border border-green-100 bg-white/60 p-4 hover:shadow-md sm:px-6 sm:py-5 lg:px-8 lg:py-6"
+          <!-- JAVASCRIPT WILL RENDER THE PICKUP CARDS HERE -->
+          <section
+            id="pickup-list"
+            aria-live="polite"
+            aria-busy="true"
+            class="mt-4"
           >
-            <div class="flex min-w-0 items-center gap-3 sm:gap-5">
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D1FFE3] sm:h-12 sm:w-12"
-              >
-                <img
-                  class="h-10 w-10 sm:h-12 sm:w-12"
-                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868264/plastic_ejsjbn.svg"
-                  alt="plastic"
-                />
-              </div>
-              <div class="min-w-0">
-                <p
-                  class="truncate font-[Inter] text-[16px] font-semibold text-[#07543E] sm:text-[20px] lg:text-[24px]"
-                >
-                  Plastic, Paper, Glass
-                </p>
-                <p
-                  class="font-[Inter] text-[12px] text-[#898484] sm:text-[16px] lg:text-[18px]"
-                >
-                  Sep 20, 2026 - 10:34 AM
-                </p>
-              </div>
-            </div>
-            <div class="flex shrink-0 items-center gap-3 sm:gap-5">
-              <div class="flex flex-col items-end gap-2 sm:gap-4">
-                <span
-                  class="rounded-lg bg-[#D1FFE3] px-3 py-1.5 text-center font-[Inter] text-[12px] font-semibold text-[#2E9B63] sm:px-5 sm:py-3 sm:text-[16px]"
-                  >Completed</span
-                >
-                <div
-                  class="flex gap-3 text-[13px] font-semibold text-[#087A55] sm:gap-5 sm:text-[18px] lg:text-[20px]"
-                >
-                  <span>12.5KG</span>
-                  <span>₦2500</span>
-                </div>
-              </div>
-              <img
-                class="hidden h-4 w-4 sm:block"
-                src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868406/Vector_2_sbgr1l.png"
-                alt="Side button"
-              />
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div
-            class="mt-4 flex items-center justify-between gap-3 rounded-lg border border-green-100 bg-white/60 p-4 hover:shadow-md sm:px-6 sm:py-5 lg:px-8 lg:py-6"
-          >
-            <div class="flex min-w-0 items-center gap-3 sm:gap-5">
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D1FFE3] sm:h-12 sm:w-12"
-              >
-                <img
-                  class="h-10 w-10 sm:h-12 sm:w-12"
-                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868264/plastic_ejsjbn.svg"
-                  alt="plastic"
-                />
-              </div>
-              <div class="min-w-0">
-                <p
-                  class="truncate font-[Inter] text-[16px] font-semibold text-[#07543E] sm:text-[20px] lg:text-[24px]"
-                >
-                  Plastic, Metal
-                </p>
-                <p
-                  class="font-[Inter] text-[12px] text-[#898484] sm:text-[16px] lg:text-[18px]"
-                >
-                  Sep 15, 2026 - 2:15 PM
-                </p>
-              </div>
-            </div>
-            <div class="flex shrink-0 items-center gap-3 sm:gap-5">
-              <div class="flex flex-col items-end gap-2 sm:gap-4">
-                <span
-                  class="rounded-lg bg-[#D1FFE3] px-3 py-1.5 text-center font-[Inter] text-[12px] font-semibold text-[#2E9B63] sm:px-5 sm:py-3 sm:text-[16px]"
-                  >Completed</span
-                >
-                <div
-                  class="flex gap-3 text-[13px] font-semibold text-[#087A55] sm:gap-5 sm:text-[18px] lg:text-[20px]"
-                >
-                  <span>6.2KG</span>
-                  <span>₦1800</span>
-                </div>
-              </div>
-              <img
-                class="hidden h-4 w-4 sm:block"
-                src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868406/Vector_2_sbgr1l.png"
-                alt="Side button"
-              />
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div
-            class="mt-4 flex items-center justify-between gap-3 rounded-lg border border-green-100 bg-white/60 p-4 hover:shadow-md sm:px-6 sm:py-5 lg:px-8 lg:py-6"
-          >
-            <div class="flex min-w-0 items-center gap-3 sm:gap-5">
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D1FFE3] sm:h-12 sm:w-12"
-              >
-                <img
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868323/Vector_1_imgfpj.png"
-                  alt="Glass"
-                />
-              </div>
-              <div class="min-w-0">
-                <p
-                  class="truncate font-[Inter] text-[16px] font-semibold text-[#07543E] sm:text-[20px] lg:text-[24px]"
-                >
-                  Paper, Glass
-                </p>
-                <p
-                  class="font-[Inter] text-[12px] text-[#898484] sm:text-[16px] lg:text-[18px]"
-                >
-                  Sep 6, 2026 - 10:50 AM
-                </p>
-              </div>
-            </div>
-            <div class="flex shrink-0 items-center gap-3 sm:gap-5">
-              <div class="flex flex-col items-end gap-2 sm:gap-4">
-                <span
-                  class="rounded-lg bg-[#D1E4FF] px-3 py-1.5 text-center font-[Inter] text-[12px] font-semibold text-[#0482EF] sm:px-5 sm:py-3 sm:text-[16px]"
-                  >Ongoing</span
-                >
-                <div
-                  class="flex gap-3 text-[13px] font-semibold text-[#0482EF] sm:gap-5 sm:text-[18px] lg:text-[20px]"
-                >
-                  <span>5.6KG</span>
-                  <span>₦1200</span>
-                </div>
-              </div>
-              <img
-                class="hidden h-4 w-4 sm:block"
-                src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868406/Vector_2_sbgr1l.png"
-                alt="Side button"
-              />
-            </div>
-          </div>
-
-          <!-- CARD 4 -->
-          <div
-            class="mt-4 flex items-center justify-between gap-3 rounded-lg border border-green-100 bg-white/60 p-4 hover:shadow-md sm:px-6 sm:py-5 lg:px-8 lg:py-6"
-          >
-            <div class="flex min-w-0 items-center gap-3 sm:gap-5">
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D1FFE3] sm:h-12 sm:w-12"
-              >
-                <img
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868393/Vector_gwrsis.png"
-                  alt="E-waste"
-                />
-              </div>
-              <div class="min-w-0">
-                <p
-                  class="truncate font-[Inter] text-[16px] font-semibold text-[#07543E] sm:text-[20px] lg:text-[24px]"
-                >
-                  E-waste
-                </p>
-                <p
-                  class="font-[Inter] text-[12px] text-[#898484] sm:text-[16px] lg:text-[18px]"
-                >
-                  Sep 2, 2026 - 9:22 AM
-                </p>
-              </div>
-            </div>
-            <div class="flex shrink-0 items-center gap-3 sm:gap-5">
-              <div class="flex flex-col items-end gap-2 sm:gap-4">
-                <span
-                  class="rounded-lg bg-[#D1FFE3] px-3 py-1.5 text-center font-[Inter] text-[12px] font-semibold text-[#2E9B63] sm:px-5 sm:py-3 sm:text-[16px]"
-                  >Completed</span
-                >
-                <div
-                  class="flex gap-3 text-[13px] font-semibold text-[#087A55] sm:gap-5 sm:text-[18px] lg:text-[20px]"
-                >
-                  <span>3.3KG</span>
-                  <span>₦900</span>
-                </div>
-              </div>
-              <img
-                class="hidden h-4 w-4 sm:block"
-                src="https://res.cloudinary.com/hesd0s4y/image/upload/v1790868406/Vector_2_sbgr1l.png"
-                alt="Side button"
-              />
-            </div>
-          </div>
+            <p class="mt-6 text-center font-[Inter] text-[16px] text-[#898484]">
+              Loading pickup history...
+            </p>
+          </section>
         </main>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
