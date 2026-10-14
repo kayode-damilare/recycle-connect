@@ -1,161 +1,256 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up | Recycle Connect</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Sign-Up Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body class="bg-[#F2FAF5] flex flex-col">
 
-  <!-- NAV BAR -->
+<body class="bg-[#F2FAF5] min-h-screen font-['Inter']">
 
-  <header class="bg-white h-[64px] px-30 py-2 shadow-[0_4px_4px_rgba(0,0,0,0.05)] w-full fixed">
-    <div class="flex justify-between items-center">
-      <div class="flex items-center font-['Montserrat'] text-[#077053] text-14px">
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle-Connect-Logo" class="w-[48px] h-[42px]">
-        <h2 class="font-bold">Recycle</h2><span class="">Connect</span>
-      </div>
-      
-      <div class="">
-        <ul class="flex gap-16 text-[#043C2D] font-bold leading-0">
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#about">About US</a></li>
-          <li><a href="">For Collection</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
+  <!-- NAVIGATION -->
 
-      <div class="">
-        <button class="inline-flex justify-center items-center h-[38px] gap-1 bg-[#087a55] p-1 rounded-[40px] max-w-full w-[156px] text-[#FEF9F9] font-bold cursor-pointer">
-          <span><a href="Sign-Up.html">Get Started</a></span><img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg" class="w-5">
-        </button>
-      </div>
-    </div>
+  <header class="fixed top-0 left-0 z-50 w-full h-16 bg-white shadow-[0_4px_4px_rgba(0,0,0,0.05)]">
+    <div class="flex items-center justify-between h-full px-4 sm:px-6 lg:px-12 xl:px-20">
+
+  <!-- LOGO -->
+  <a href="index.html" class="flex items-center shrink-0 font-['Montserrat'] text-[#077053]">
+    <img
+      src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+      alt="Recycle Connect Logo"
+      class="w-10 h-10 sm:w-12 sm:h-[42px]"
+    >
+
+    <span class="font-bold text-sm sm:text-base">Recycle</span>
+    <span class="text-sm sm:text-base">Connect</span>
+  </a>
+
+  <!-- DESKTOP NAVIGATION -->
+  <nav class="hidden lg:block">
+    <ul class="flex items-center gap-6 xl:gap-10 text-sm xl:text-base text-[#043C2D] font-bold">
+      <li><a href="index.html#how-it-works" class="hover:text-[#087A55]">How It Works</a></li>
+      <li><a href="index.html#about" class="hover:text-[#087A55]">About Us</a></li>
+      <li><a href="Collector.html" class="hover:text-[#087A55]">For Collection</a></li>
+      <li><a href="index.html#contact" class="hover:text-[#087A55]">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- GET STARTED -->
+  <a
+    href="Sign-Up.html"
+    class="inline-flex items-center justify-center gap-2 px-3 sm:px-4 h-9 bg-[#087A55] rounded-full text-white text-sm sm:text-base font-bold whitespace-nowrap hover:bg-[#07543E] transition"
+  >
+    Get Started
+    <img
+      src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626965/arrow-right_mdgbqy.svg"
+      alt=""
+      class="w-4 sm:w-5"
+    >
+  </a>
+
+</div>
+
   </header>
 
+  <!-- PAGE LAYOUT -->
 
-  <div class="flex">
+  <div class="flex flex-col lg:flex-row min-h-screen pt-16">
 
-  
-   <aside class="bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat max-w-[460px] w-full border border-[#F2FAF5] rounded-[0_50px_50px_0] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-[#F2FAF5]">
+<!-- BRAND SIDEBAR: DESKTOP ONLY -->
+<aside class="hidden lg:flex flex-col max-w-[420px] xl:max-w-[460px] w-full shrink-0 bg-[#F2FAF5] bg-[url('https://res.cloudinary.com/vyomyquu/image/upload/v1791036732/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_2_wgvztf.png')] bg-no-repeat bg-cover bg-center border border-[#F2FAF5] rounded-r-[40px] xl:rounded-r-[50px] shadow-[0_4px_4px_rgba(0,0,0,0.15)]">
 
-    <!-- Logo -->
+  <!-- BRAND IDENTITY -->
+  <div class="flex flex-col items-center justify-center px-6 py-12 xl:py-16 text-center">
 
-     <div class="mt-47 bg-[#F2FAF5]">
-      <div class="flex flex-col justify-center items-center gap-1 p-6">
-        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791036677/RecycleConnect_Logo_icon_1_x603h6.png" alt="logo" class="max-w-[137px] w-full max-h-[135px] h-full">
-        <div class="flex">
-          <h2 class="font-[Montserrat] font-bold text-[28px] text-[#07543E]">Recycle</h2>
-          <span class="font-[Montserrat] text-[28px] text-[#07543E]">Connect</span>
-        </div>
-        
-        <div>
-          <ul class="flex gap-8 text-[#07543E]">
-            <li>Reduce</li>
-            <li>Recycle</li>
-            <li>Reuse</li>
-          </ul>
-        </div>
+    <img
+      src="https://res.cloudinary.com/vyomyquu/image/upload/v1791036677/RecycleConnect_Logo_icon_1_x603h6.png"
+      alt="Recycle Connect icon"
+      class="w-28 h-28 xl:w-[137px] xl:h-[135px] object-contain"
+    >
 
-        <div class="max-w-[159px] w-full text-center mt-6">
-          <h2 class="text-[#07543E] font-semibold font-[Inter]">A cleaner tomorrow starts with you.</h2>
-        </div>
-        
-      </div>
-     </div>
+    <div class="flex items-center mt-2 font-['Montserrat'] text-[#07543E]">
+      <h2 class="font-bold text-2xl xl:text-[28px]">Recycle</h2>
+      <span class="text-2xl xl:text-[28px]">Connect</span>
+    </div>
 
-     <!-- LOWER IMAGE -->
+    <ul class="flex gap-6 xl:gap-8 mt-2 text-sm xl:text-base text-[#07543E]">
+      <li>Reduce</li>
+      <li>Recycle</li>
+      <li>Reuse</li>
+    </ul>
 
-     <div class="">
-      <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791037531/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_2_sdj5cz.png" alt="Eco-friendly representation image" class="w-full max-h-[736px] h-full rounded-[0_0_50px_0]">
-     </div>
-     
-  </aside>
-
-  <!-- MAIN CONTENT -->
-
-   <main class="p-12 flex flex-col gap-2 bg-[#F2FAF5] w-full">
-  <div class="mt-20">
-
-    
-    <h1 class="font-[Inter] font-bold text-[40px]">
-      Create Your Account
-    </h1>
-    <p class="font-[Inter] text-[18px] text-[#07543E]">
-      Start your journey towards a greener tomorrow today!
+    <p class="max-w-[200px] mt-6 text-[#07543E] font-semibold">
+      A cleaner tomorrow starts with you.
     </p>
 
-    <!-- FORM  -->
+  </div>
 
-    <form id="signup-form" class="flex flex-col gap-4 mt-4">
+  <!-- LOWER IMAGE -->
+  <div class="mt-auto">
+    <img
+      src="https://res.cloudinary.com/vyomyquu/image/upload/v1791037531/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_1_2_sdj5cz.png"
+      alt="Eco-friendly representation"
+      class="w-full max-h-[500px] xl:max-h-[650px] object-cover rounded-br-[40px] xl:rounded-br-[50px]"
+    >
+  </div>
 
-      <!-- NAME -->
+</aside>
 
-      <input type="text" id="name" name="fullName" placeholder="Full Name" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+<!-- MAIN CONTENT -->
+<main class="flex-1 min-w-0 px-4 py-8 sm:px-6 sm:py-10 lg:px-10 xl:px-12 bg-[#F2FAF5]">
+
+  <div class="w-full max-w-[729px] mx-auto lg:mx-0 mt-2 sm:mt-4 lg:mt-8">
+
+    <!-- PAGE HEADING -->
+    <div>
+      <h1 class="font-bold text-[28px] sm:text-[34px] lg:text-[40px] leading-tight text-[#10251C]">
+        Create Your Account
+      </h1>
+
+      <p class="mt-2 text-[15px] sm:text-base lg:text-[18px] text-[#07543E]">
+        Start your journey towards a greener tomorrow today!
+      </p>
+    </div>
+
+    <!-- SIGN-UP FORM -->
+    <form id="signup-form" class="flex flex-col gap-4 mt-6 sm:mt-8">
+
+      <!-- FULL NAME -->
+      <input
+        type="text"
+        id="name"
+        name="fullName"
+        placeholder="Full Name"
+        autocomplete="name"
+        required
+        class="border border-[#D8E5DE] rounded-xl px-4 w-full h-[50px] bg-white focus:outline-none focus:border-2 focus:border-[#087A55]"
+      >
 
       <!-- EMAIL -->
-
-      <input type="email" name="email" id="e-mail" placeholder="Email Address" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <input
+        type="email"
+        id="e-mail"
+        name="email"
+        placeholder="Email Address"
+        autocomplete="email"
+        required
+        class="border border-[#D8E5DE] rounded-xl px-4 w-full h-[50px] bg-white focus:outline-none focus:border-2 focus:border-[#087A55]"
+      >
 
       <!-- PHONE NUMBER -->
-
-      <input type="tel" name="phone" id="phone" placeholder="Phone Number" minlength="11" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Phone Number"
+        autocomplete="tel"
+        required
+        class="border border-[#D8E5DE] rounded-xl px-4 w-full h-[50px] bg-white focus:outline-none focus:border-2 focus:border-[#087A55]"
+      >
 
       <!-- PASSWORD -->
+      <div class="relative w-full">
 
-      <div class="relative ">
-        <input type="password" name="password" id="password" minlength="8" placeholder="Password" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          autocomplete="new-password"
+          required
+          minlength="8"
+          class="border border-[#D8E5DE] rounded-xl px-4 pr-12 w-full h-[50px] bg-white focus:outline-none focus:border-2 focus:border-[#087A55]"
+        >
 
-        <button type="button" class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer" data-target="password" aria-label="Show password" >
-
-          <i class="fa-regular fa-eye" ></i>
-
+        <button
+          type="button"
+          class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer"
+          data-target="password"
+          aria-label="Show password"
+        >
+          <i class="fa-regular fa-eye" aria-hidden="true"></i>
         </button>
+
       </div>
-      
 
       <!-- CONFIRM PASSWORD -->
+      <div class="relative w-full">
 
-      <div class="relative">
-        <input type="password" name="confirmPassword" id="confirm-pass" placeholder="Confirm Password" minlength="8" required class="border border-[#D8E5DE] rounded-[12px] px-4 max-w-[729px] w-full max-h-[50px] h-screen focus:outline-none focus:border-[2px] focus:border-[#087A55]">
+        <input
+          type="password"
+          id="confirm-pass"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          autocomplete="new-password"
+          required
+          minlength="8"
+          class="border border-[#D8E5DE] rounded-xl px-4 pr-12 w-full h-[50px] bg-white focus:outline-none focus:border-2 focus:border-[#087A55]"
+        >
 
-        <button type="button" class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer" data-target="confirm-pass" aria-label="Show password">
-
-          <i class="fa-regular fa-eye"></i>
-
+        <button
+          type="button"
+          class="toggle-password absolute right-4 top-1/2 -translate-y-1/2 text-[#087A55] cursor-pointer"
+          data-target="confirm-pass"
+          aria-label="Show password"
+        >
+          <i class="fa-regular fa-eye" aria-hidden="true"></i>
         </button>
+
       </div>
-      
 
       <!-- TERMS AND CONDITIONS -->
+      <div class="flex items-start gap-2 mt-1">
 
-      <div>
-        <input type="checkbox" name="agree" id="terms-condition" required class=" checked:accent-[#087A55] ring-[#087A55] border border-[#087A55] h-3 w-3 ">
-        <label for="terms-condition" class="text-[#087A55]">I Agree to the Terms & Conditions and Privacy Policy</label>
+        <input
+          type="checkbox"
+          id="terms-condition"
+          name="agree"
+          required
+          class="mt-1 shrink-0 accent-[#087A55] w-4 h-4"
+        >
+
+        <label for="terms-condition" class="text-sm sm:text-base text-[#07543E] leading-relaxed">
+          I agree to the Terms &amp; Conditions and Privacy Policy.
+        </label>
+
       </div>
 
-      <!-- MESSAGE AREA  -->
+      <!-- REGISTRATION MESSAGE -->
+      <p
+        id="signup-message"
+        role="status"
+        aria-live="polite"
+        class="text-sm break-words"
+      ></p>
 
-      <p id="signup-message" role="status" aria-live="polite"></p>
+      <!-- CREATE ACCOUNT BUTTON -->
+      <div class="mt-1 sm:mt-2">
 
-          <!-- CREATE ACCOUNT BUTTON  -->
-         
-      <div class="mt-6">
-        <button id="signup-button" class="flex justify-center items-center bg-[#087A55] w-full text-white h-[68px] font-[Inter] font-semibold rounded-[12px] cursor-pointer" type="submit" >
-        Create Account
+        <button
+          id="signup-button"
+          type="submit"
+          class="flex items-center justify-center bg-[#087A55] w-full text-white h-[54px] sm:h-[60px] lg:h-[68px] font-semibold rounded-xl cursor-pointer hover:bg-[#07543E] transition disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          Create Account
         </button>
-    </div>
+
+      </div>
+
     </form>
 
-    <!-- GOOGLE LOGIN -->
+        <!-- GOOGLE LOGIN -->
 
     <div class="flex flex-col items-center">
       <div class="flex justify-center items-center gap-3 text-center text-[#043C2D] font-[Inter] mt-6">
@@ -169,18 +264,27 @@
       </div>
     </div>
 
+    <!-- SIGN IN LINK -->
+    <div class="flex justify-center text-center mt-8 sm:mt-10 pb-4 text-sm sm:text-base lg:text-[18px] font-bold">
 
+      <p>
+        Already have an account?
+        <a href="Sign-in.html" class="text-[#087A55] hover:underline">
+          Sign In
+        </a>
+      </p>
 
-    <!-- SIGN IN  -->
-
-    <div class="flex justify-center mt-8 font-bold text-[20px] font-[Inter] font-[#087A55]">
-      <h2 >Already have an account? <a href="Sign-in.html" class="text-[#087A55]">Sign In</a></h2>
     </div>
-    </div>
-  </main>
 
   </div>
 
+</main>
+
+  </div>
+
+  <!-- SIGN-UP JAVASCRIPT -->
+
   <script src="signup.js"></script>
+
 </body>
 </html>

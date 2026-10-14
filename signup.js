@@ -8,113 +8,130 @@ const confirmPasswordInput = document.getElementById("confirm-pass");
 const message = document.getElementById("signup-message");
 const signupButton = document.getElementById("signup-button");
 
-// 2. Backend API endpoint
-const API_URL = "http://localhost:5000/api/auth/household/register";
+// 2. Deployed backend endpoint
+const API_URL =
+  "https://recycle-connect-m189.onrender.com/api/auth/household/register";
 
-// 3. Listen for form submission
-signupForm.addEventListener("submit", async function (event) {
-  // Stop the browser from refreshing the page
-  event.preventDefault();
+// 3. Check that required HTML elements exist
+if (
+  signupForm &&
+  fullNameInput &&
+  emailInput &&
+  phoneInput &&
+  passwordInput &&
+  confirmPasswordInput &&
+  message &&
+  signupButton
+) {
+  // 4. Handle form submission
+  signupForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  // Clear the previous message
-  message.textContent = "";
-  message.className = "";
+    message.textContent = "";
+    message.className = "text-sm";
 
-  // 4. Get the values entered by the user
-  const fullName = fullNameInput.value.trim();
-  const email = emailInput.value.trim();
-  const phone = phoneInput.value.trim();
-  const password = passwordInput.value;
-  const confirmPassword = confirmPasswordInput.value;
+    const fullName = fullNameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
 
-  // 5. Check whether the passwords match
-  if (password !== confirmPassword) {
-    message.textContent = "Your passwords do not match.";
-    message.className = "text-red-600";
-    return;
-  }
-
-  // 6. Prepare the data for the backend
-  const userData = {
-    fullName: fullName,
-    email: email,
-    phone: phone,
-    password: password
-  };
-
-  try {
-    // Prevent repeated submissions while the request is processing
-    signupButton.disabled = true;
-    signupButton.textContent = "Creating Account...";
-
-    // 7. Send the registration request
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userData)
-    });
-
-    // 8. Read the backend response
-    const result = await response.json();
-
-    // 9. Handle errors returned by the backend
-    if (!response.ok) {
-      const errorMessage =
-        result.message ||
-        result.error ||
-        (Array.isArray(result.errors)
-          ? result.errors.map(error => error.message || error.msg).join(", ")
-          : "") ||
-        "Registration failed. Please try again.";
-
-      throw new Error(errorMessage);
+    // Check that passwords match
+    if (password !== confirmPassword) {
+      message.textContent = "Your passwords do not match.";
+      message.classList.add("text-red-600");
+      return;
     }
 
-    // 10. Show success message
-    message.textContent =
-      "Account created successfully. Redirecting to login...";
+    // Prepare registration data
+    const userData = new FormData();
+    userData.append("fullName", fullName);
+    userData.append("email", email);
+    userData.append("phone", phone);
+    userData.append("password", password);
 
-    message.className = "text-green-700";
+    try {
+      signupButton.disabled = true;
+      signupButton.textContent = "Creating Account...";
 
-    // Redirect to thr login page after 2 seconds
-    setTimeout(() => {
-      window.location.href = "Sign-in.html";
-    }, 2000);
+      // Send registration request
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: userData
+      });
 
-    // Clear the form after successful registration
-    signupForm.reset();
+      // Read the server response
+      const result = await response.json().catch(() => ({}));
 
-  } catch (error) {
-    // Handle connection problems and other errors
-    message.textContent =
-      error instanceof TypeError
-        ? "Unable to connect to the server. Check that the backend is running."
-        : error.message;
+      // Handle errors returned by the backend
+      if (!response.ok) {
+        let errorMessage =
+          result.message ||
+          result.error ||
+          "Registration failed. Please try again.";
 
-    message.className = "text-red-600";
+        if (Array.isArray(result.errors) && result.errors.length > 0) {
+          errorMessage = result.errors
+            .map(error => error.message || error.msg || String(error))
+            .join(", ");
+        }
 
-  } finally {
-    // Re-enable the button
-    signupButton.disabled = false;
-    signupButton.textContent = "Create Account";
-  }
-});
+        throw new Error(errorMessage);
+      }
 
-// Show and hide password fields
+      // Show success message
+      message.textContent =
+        result.message ||
+        "Account created successfully. Redirecting to sign in...";
+
+      message.classList.add("text-green-700");
+
+      // Clear the form
+      signupForm.reset();
+
+      // Redirect after successful registration
+      setTimeout(function () {
+        window.location.href = "Sign-in.html";
+      }, 2000);
+
+    } catch (error) {
+      console.error("Registration error:", error);
+
+      if (error instanceof TypeError) {
+        message.textContent =
+          "Could not connect to the server. Check your internet connection and try again.";
+      } else {
+        message.textContent = error.message;
+      }
+
+      message.classList.add("text-red-600");
+
+    } finally {
+      signupButton.disabled = false;
+      signupButton.textContent = "Create Account";
+    }
+  });
+
+} else {
+  console.error(
+    "Sign-up setup failed: One or more required HTML elements are missing. Check the element IDs."
+  );
+}
+
+// 5. Show and hide password fields
 const toggleButtons = document.querySelectorAll(".toggle-password");
 
 toggleButtons.forEach(function (button) {
   button.addEventListener("click", function () {
-    // Find the password field associated with this button
     const targetId = button.dataset.target;
     const passwordField = document.getElementById(targetId);
-
-    // Find the eye icon
     const eyeIcon = button.querySelector("i");
 
-    // Toggle between hidden and visible
+    if (!passwordField || !eyeIcon) {
+      console.error("Password toggle setup failed. Check data-target and the icon.");
+      return;
+    }
+
     if (passwordField.type === "password") {
       passwordField.type = "text";
       eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
