@@ -1,11 +1,11 @@
-// --- API PART ONLY ---
-const BASE_URL = 'https://localhost:5000/api'; // change this
+
 // Get HTML elements
 const materialsContainer = document.getElementById("materials-container");
 const locationDisplay = document.getElementById("location-display");
 const useLocationBtn = document.getElementById("use-location-btn");
 const nextBtn = document.getElementById("next-btn");
 
+// const BASE_URL = 'https://recycle-connect-m189.onrender.com';
 
 // const iconMap = {
 //   plastic: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/Group_vnbhb6.png',
@@ -13,42 +13,41 @@ const nextBtn = document.getElementById("next-btn");
 //   metal: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/emojione-v1_oil-drum_yfnegm.png',
 //   glass: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/Vector_1_nasga7.png',
 //   ewaste: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_2_wbozty.png',
+//   'e-waste': 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_2_wbozty.png',
 //   others: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Group_1_supxpn.png'
 // };
 
-// fetch(BASE_URL + '/api/materials/', {
+// fetch(`${BASE_URL}/api/materials/`, {
 //   headers: {
 //     'Authorization': 'Bearer ' + localStorage.getItem('token')
 //   }
 // })
-// .then(function(res){ return res.json(); })
-// .then(function(data){
-//   const materials = data.data || data; // your API returns array
+// .then(res => res.json())
+// .then(data => {
+//   const materials = data.data || data;
 //   materialsContainer.innerHTML = '';
 
-//   materials.forEach(function(mat){
-//     // mat.name and mat.description are required per your doc
+//   materials.forEach(mat => {
 //     const key = mat.name.toLowerCase();
 //     const div = document.createElement('div');
 //     div.className = 'material-card selected relative flex flex-col h-[110px] md:h-[120px] lg:h-[130px] w-full rounded-xl shadow-sm bg-white items-center justify-center gap-2 border border-[hsl(150,19%,88%)] hover:border-2 hover:border-[hsl(161,88%,25%)] hover:bg-[hsl(146,44%,94%)] cursor-pointer';
-//     div.setAttribute('data-material', key);
-//     div.setAttribute('data-material-id', mat._id || mat.id);
-//     div.setAttribute('data-name', mat.name);
-//     div.setAttribute('data-description', mat.description);
+//     div.dataset.material = key;
+//     div.dataset.materialId = mat._id || mat.id;
+//     div.dataset.name = mat.name;
+//     div.dataset.description = mat.description;
 
-//     div.innerHTML =
-//       '<div class="check-mark hidden absolute top-3 right-3 w-5 h-5 bg-[hsl(161,88%,25%)] text-white rounded-full flex items-center justify-center text-[14px] font-bold">✓</div>' +
-//       '<img src="' + (iconMap[key] || iconMap.others) + '" class="w-8 h-8 lg:w-12 lg:h-12 object-contain" />' +
-//       '<p class="text-[13px] lg:text-base font-[600]">' + mat.name + '</p>';
-
+//     div.innerHTML = `
+//       <div class="check-mark hidden absolute top-3 right-3 w-5 h-5 bg-[hsl(161,88%,25%)] text-white rounded-full flex items-center justify-center text-[14px] font-bold">✓</div>
+//       <img src="${iconMap[key] || iconMap.others}" class="w-8 h-8 lg:w-12 lg:h-12 object-contain" />
+//       <p class="text-[13px] lg:text-base font-[600]">${mat.name}</p>
+//     `;
 //     materialsContainer.appendChild(div);
 //   });
 // })
-// .catch(function(err){
+// .catch(err => {
 //   console.error(err);
 //   materialsContainer.innerHTML = '<p class="text-red-500 text-sm">Failed to load materials</p>';
 // });
-
 
 
 
