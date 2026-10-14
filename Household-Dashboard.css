@@ -66,6 +66,42 @@ body {
   padding-inline: 20px;
 }
 
+.input-group {
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper .icon {
+    position: absolute;
+    left: 14px;
+}
+
+.input-wrapper input {
+    width: 550px;
+    padding: 13px 14px 13px 42px;
+    border: 1px solid hsl(148, 20%, 87%);
+    border-radius: 12px;
+    font-size: 12px;
+    outline: none;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 2%, 53%);
+    /* transition: border-color 0.2s ease; */
+}
+
+.input-wrapper input::placeholder{
+    color: hsl(0, 2%, 53%);
+}
+
+.input-wrapper input:focus {
+    border-color: hsl(148, 20%, 87%);
+}
+
 .home-section {
   display: grid;
   grid-template-columns: 2fr 1.5fr;
