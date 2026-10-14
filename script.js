@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const RESEND_SECONDS = 45;
 
   /* ---------- 1. CODE BOXES ---------- */
-  // Lets phones suggest the SMS/email code on the first box
+  
   boxes[0].setAttribute('autocomplete', 'one-time-code');
   boxes[0].focus();
 
