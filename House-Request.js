@@ -5,6 +5,102 @@ const locationDisplay = document.getElementById("location-display");
 const useLocationBtn = document.getElementById("use-location-btn");
 const nextBtn = document.getElementById("next-btn");
 
+
+// const API_URL = "https://recycle-connect-m189.onrender.com/api/materials/";
+
+// const materialsContainer = document.getElementById("materials-container");
+
+// async function fetchMaterials() {
+//   materialsContainer.innerHTML = `
+//     <p class="col-span-full text-center text-gray-500">
+//       Loading materials...
+//     </p>
+//   `;
+
+//   try {
+//     const response = await fetch(API_URL, { method:"GET",});
+
+//     if (!response.ok) {
+//       throw new Error(`Request failed: ${response.status}`);
+//     }
+
+//     const data = await response.json();
+
+//     // Supports either an array or a paginated { results: [] } response
+//     const materials = Array.isArray(data) ? data : data.results;
+
+//     if (!Array.isArray(materials)) {
+//       throw new Error("Unexpected materials response format.");
+//     }
+
+//     materialsContainer.innerHTML = "";
+
+//     if (materials.length === 0) {
+//       materialsContainer.innerHTML = `
+//         <p class="col-span-full text-center text-gray-500">
+//           No materials available.
+//         </p>
+//       `;
+//       return;
+//     }
+
+//     materials.forEach((material) => {
+//       const card = document.createElement("button");
+
+//       card.type = "button";
+//       card.className =
+//         "material-card selected flex flex-col items-center justify-center gap-3 rounded-xl border border-purple-600 p-4 transition";
+
+//       card.dataset.materialId = material.id;
+
+//       card.innerHTML = `
+//         <span class="check-mark">✓</span>
+//         <span class="material-icon"></span>
+//         <span class="material-name"></span>
+//       `;
+
+//       // Use textContent for API-provided text
+//       card.querySelector(".material-name").textContent = material.name;
+
+//       // Add an icon if the API provides an image URL
+//       const iconElement = card.querySelector(".material-icon");
+
+//       if (material.icon || material.image || material.image_url) {
+//         const img = document.createElement("img");
+//         img.src = material.icon || material.image || material.image_url;
+//         img.alt = material.name;
+//         img.className = "h-10 w-10 object-contain";
+//         iconElement.appendChild(img);
+//       } else {
+//         iconElement.textContent = "♻️";
+//       }
+
+//       // Toggle selection
+//       card.addEventListener("click", () => {
+//         card.classList.toggle("selected");
+
+//         const checkMark = card.querySelector(".check-mark");
+//         checkMark.classList.toggle(
+//           "hidden",
+//           !card.classList.contains("selected")
+//         );
+//       });
+
+//       materialsContainer.appendChild(card);
+//     });
+//   } catch (error) {
+//     console.error("Error fetching materials:", error);
+
+//     materialsContainer.innerHTML = `
+//       <p class="col-span-full text-center text-red-500">
+//         Unable to load materials. Please refresh and try again.
+//       </p>
+//     `;
+//   }
+// }
+
+// fetchMaterials();
+
 // const BASE_URL = 'https://recycle-connect-m189.onrender.com';
 
 // const iconMap = {
