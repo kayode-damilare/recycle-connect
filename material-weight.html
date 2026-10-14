@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src=""></script>
+    <script defer src="first.js">
+      f
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link
       rel="stylesheet"
@@ -74,27 +76,50 @@
       <div
         class="w-full md:w-64 lg:max-w-[357px] px-[10px] font[Inter] bg-[#e8f6ee] flex border-b md:border-b-0 md:border-r flex-col shrink-0 pb-4 md:pb-0 md:min-h-screen"
       >
-        <!-- LOGO -->
-        <a href="index.html" class="flex items-center mb-4 md:mb-12 gap-2 mt-4">
-          <img
-            src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
-            alt="Recycle Connect logo"
-          />
-          <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">
-            Recycle
-          </h2>
-          <span class="font-[Montserrat] text-[24px] text-[#077053]"
-            >Connect</span
+        <!-- LOGO & MOBILE MENU TOGGLE -->
+        <div class="flex flex-row md:flex-row items-center mb-4 md:mb-12 mt-4">
+          <!-- MOBILE HAMBURGER BUTTON -->
+          <button
+            id="menu-toggle-btn"
+            type="button"
+            aria-label="Toggle navigation"
+            class="flex md:hidden p-2 text-[#077053] hover:text-[#054a36] focus:outline-none cursor-pointer"
+            onclick="
+              const fl = document.getElementById('first-list');
+              if (fl.classList.contains('hidden')) {
+                fl.classList.remove('hidden');
+                fl.classList.add('flex');
+              } else {
+                fl.classList.add('hidden');
+                fl.classList.remove('flex');
+              }
+            "
           >
-        </a>
+            <i class="fa fa-bars text-2xl"></i>
+          </button>
+
+          <!-- LOGO -->
+          <a href="index.html" class="flex items-center gap-2">
+            <img
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+              alt="Recycle Connect logo"
+            />
+            <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">
+              Recycle
+            </h2>
+            <span class="font-[Montserrat] text-[24px] text-[#077053]"
+              >Connect</span
+            >
+          </a>
+        </div>
 
         <!-- BUTTONS -->
         <div
           id="first-list"
-          class="relative md:absolute top-0 md:top-[150px] left-0 w-full max-w-[300px] md:w-[220px] px-[10px] mt-2 md:mt-18"
+          class="hidden md:flex flex-col relative md:absolute top-0 md:top-[150px] left-0 w-full max-w-[300px] md:w-[220px] px-[10px] mt-2 md:mt-18"
         >
           <ul
-            class="flex flex-row md:flex-col gap-2 md:gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0"
+            class="flex flex-col-reverse md:flex-col gap-2 md:gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0 w-full"
           >
             <li
               data-href="House-Dashboard.html"
