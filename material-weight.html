@@ -90,6 +90,7 @@
 
         <!-- BUTTONS -->
         <div
+          id="first-list"
           class="relative md:absolute top-0 md:top-[150px] left-0 w-full max-w-[300px] md:w-[220px] px-[10px] mt-2 md:mt-18"
         >
           <ul
@@ -377,14 +378,19 @@
           <div
             class="flex justify-center items-center p-2 rounded-lg bg-[#b2e6c5] self-start sm:self-auto sm:ml-auto lg:ml-20 shrink-0"
           >
-            <p class="text-[#2e9b63] text-bold font-bold">In Progress</p>
+            <p id="In-progress" class="text-[#2e9b63] text-bold font-bold">
+              In Progress
+            </p>
           </div>
         </div>
         <!-----secound------->
         <div
           class="flex flex-col sm:flex-row gap-4 md:gap-8 lg:gap-24 mt-6 md:mt-10"
         >
-          <div class="flex flex-col w-full sm:w-auto sm:flex-1 lg:flex-initial">
+          <div
+            id="material"
+            class="flex flex-col w-full sm:w-auto sm:flex-1 lg:flex-initial"
+          >
             <h3 class="mb-4 text-[#07543e] text-lg font-bold">Material</h3>
             <label
               class="flex flex-row border border-[#07543e] rounded-lg bg-[#b2e6c5] items-center justify-between sm:justify-start w-full sm:w-auto"
@@ -413,7 +419,10 @@
             </label>
           </div>
           <div class="flex flex-col w-full sm:w-auto sm:flex-1 lg:flex-initial">
-            <h3 class="mb-4 text-[#07543e] text-lg font-bold">
+            <h3
+              id="materialWeight"
+              class="mb-4 text-[#07543e] text-lg font-bold"
+            >
               Material Weight [Kg]
             </h3>
             <label
