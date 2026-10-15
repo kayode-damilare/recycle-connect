@@ -4,37 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RecycleConnect - Collector Dashboard</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- API Endpoint Configuration -->
+    <meta name="api-endpoint" content="https://api.recycleconnect.ng/v1" />
     <!-- FontAwesome for Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              recycleBg: "#f0f4f1",
-              recycleGreen: "#10b981",
-              recycleLightGreen: "#d1fae5",
-              recycleDarkGreen: "#065f46",
-              recycleCard: "#ffffff",
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Application Logic & Tailwind Configuration (All JavaScript Consolidated in first.js) -->
+    <script src="collector-dashboard.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
     class="bg-[#f2faf5] text-gray-800 font-inter antialiased min-h-screen flex"
   >
+    <!-- Backdrop for Mobile Drawer -->
+    <div
+      id="sidebar-backdrop"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden md:hidden transition-opacity duration-300"
+    ></div>
+
     <!-- Sidebar -->
     <aside
-      class="fixed inset-x-0 bottom-0 z-50 w-full border-t border-[#D8E5DE] bg-[#E8F6EE] shadow-[0_-2px_10px_rgba(0,0,0,0.08)] md:sticky md:top-0 md:inset-x-auto md:bottom-auto md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r md:shadow-[0_1px_3px_rgba(0,0,0,0.15)] lg:w-[250px] lg:max-w-[250px] lg:bg-gradient-to-b lg:from-transparent lg:via-[#E8F6EE]/80 lg:to-[#E8F6EE]"
+      id="sidebar"
+      class="fixed inset-y-0 left-0 z-50 w-64 bg-[#E8F6EE] border-r border-[#D8E5DE] shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:sticky md:top-0 md:inset-x-auto md:bottom-auto md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r md:shadow-[0_1px_3px_rgba(0,0,0,0.15)] lg:w-[250px] lg:max-w-[250px] lg:bg-gradient-to-b lg:from-transparent lg:via-[#E8F6EE]/80 lg:to-[#E8F6EE] flex flex-col justify-between overflow-y-auto"
     >
       <div>
+        <!-- LOGO & CLOSE BUTTON: MOBILE DRAWER ONLY -->
+        <div
+          class="flex items-center justify-between p-4 border-b border-[#D8E5DE] md:hidden"
+        >
+          <a href="index.html" class="flex items-center gap-2">
+            <img
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+              alt="Recycle Connect logo"
+              class="h-8 w-8 shrink-0 object-contain"
+            />
+            <span
+              class="whitespace-nowrap font-[Montserrat] text-[18px] font-bold text-[#077053]"
+            >
+              Recycle<span class="font-medium">Connect</span>
+            </span>
+          </a>
+          <button
+            id="sidebar-close-btn"
+            type="button"
+            aria-label="Close navigation"
+            class="w-8 h-8 flex items-center justify-center rounded-lg text-emerald-800 hover:text-emerald-950 hover:bg-emerald-100/60 transition-colors"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
         <!-- LOGO: DESKTOP ONLY -->
         <a href="index.html" class="hidden items-center gap-1 p-4 lg:flex">
           <img
@@ -51,15 +73,13 @@
         </a>
 
         <!-- NAVIGATION -->
-        <nav class="p-1 md:p-2 lg:mt-10 lg:px-3">
-          <ul
-            class="flex items-center justify-around gap-1 md:flex-col md:items-stretch md:gap-3 lg:gap-3"
-          >
+        <nav class="p-2 lg:mt-10 lg:px-3">
+          <ul class="flex flex-col gap-2 md:gap-3 lg:gap-3">
             <!-- HOME -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="House-Dashboard.html"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
@@ -67,7 +87,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   Home
                 </span>
@@ -75,10 +95,10 @@
             </li>
 
             <!-- REQUEST PICKUP -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="House-Request.html"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
@@ -86,7 +106,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   <span class="md:hidden lg:inline">Request Pickup</span>
                   <span class="hidden md:inline lg:hidden">Pickup</span>
@@ -95,10 +115,10 @@
             </li>
 
             <!-- BECOME A COLLECTOR -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="Collector.html"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
@@ -106,7 +126,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   <span class="md:hidden lg:inline">Become A Collector</span>
                   <span class="hidden md:inline lg:hidden">Collector</span>
@@ -115,10 +135,10 @@
             </li>
 
             <!-- HISTORY -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="PickUp-History.html"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
@@ -126,7 +146,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   History
                 </span>
@@ -134,10 +154,10 @@
             </li>
 
             <!-- REWARDS -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="Collector-Reward.html"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
@@ -145,7 +165,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   Rewards
                 </span>
@@ -153,10 +173,10 @@
             </li>
 
             <!-- PROFILE -->
-            <li class="flex-1 md:flex-none">
+            <li class="w-full md:w-auto">
               <a
                 href="#profile"
-                class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
+                class="flex min-h-[48px] flex-row items-center justify-start gap-3 rounded-lg px-3 py-2 text-left transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full md:flex-col md:justify-center md:gap-1 md:p-1 md:text-center lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left"
               >
                 <img
                   src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
@@ -164,7 +184,7 @@
                   class="h-[20px] w-[20px] shrink-0 object-contain"
                 />
                 <span
-                  class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
+                  class="text-[14px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]"
                 >
                   Profile
                 </span>
@@ -179,25 +199,58 @@
     <main class="flex-1 flex flex-col min-w-0">
       <!-- Top Navbar -->
       <header
-        class="bg-recycleBg px-6 py-4 flex items-center justify-between border-b border-emerald-100/50"
+        class="bg-recycleBg px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-b border-emerald-100/50 sticky top-0 z-30 gap-2 sm:gap-4 w-full"
       >
-        <!-- Search Bar -->
-        <div class="relative w-full max-w-md">
-          <span
-            class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
+        <!-- Mobile/Tablet Toggle & Logo Group (Vertically Aligned with Nav) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0 lg:hidden">
+          <button
+            id="menu-toggle-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            class="w-10 h-10 flex items-center justify-center text-[#087A55] bg-white rounded-xl border border-gray-200/80 shadow-sm hover:bg-emerald-50 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20 cursor-pointer shrink-0"
           >
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i
+              id="menu-toggle-icon"
+              class="fa-solid fa-bars text-lg text-[#087A55]"
+            ></i>
+          </button>
+
+          <a
+            href="index.html"
+            class="flex items-center gap-1.5 sm:gap-2 shrink-0"
+          >
+            <img
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+              alt="Recycle Connect logo"
+              class="h-8 w-8 sm:h-9 sm:w-9 shrink-0 object-contain"
+            />
+            <span
+              class="whitespace-nowrap font-[Montserrat] text-base sm:text-lg font-bold text-[#077053] hidden xs:inline min-[400px]:inline"
+            >
+              Recycle<span class="font-medium">Connect</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative flex-1 max-w-xs sm:max-w-md mx-1 sm:mx-4 min-w-0">
+          <span
+            class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-400 pointer-events-none"
+          >
+            <i class="fa-solid fa-magnifying-glass text-xs sm:text-sm"></i>
           </span>
           <input
             type="text"
             placeholder="Search pickups, materials, or locations..."
-            class="w-full pl-11 pr-4 py-2.5 bg-white border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm"
+            class="w-full pl-9 sm:pl-11 pr-3 sm:pr-4 py-2 sm:py-2.5 bg-white border border-gray-200 rounded-full text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 shadow-sm transition-all"
           />
         </div>
 
         <!-- User Profile Area -->
-        <div class="flex items-center space-x-4">
-          <div class="flex items-center space-x-3 px-3 py-1.5">
+        <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
+          <div
+            class="flex items-center space-x-2 sm:space-x-3 px-1 sm:px-3 py-1.5"
+          >
             <svg
               width="18"
               height="23"
@@ -258,8 +311,12 @@
               </defs>
             </svg>
 
-            <span class="text-sm font-medium text-gray-700">John</span>
-            <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+            <span class="text-sm font-medium text-gray-700 hidden sm:inline"
+              >John</span
+            >
+            <i
+              class="fa-solid fa-chevron-down text-xs text-gray-400 hidden sm:inline"
+            ></i>
           </div>
         </div>
       </header>
