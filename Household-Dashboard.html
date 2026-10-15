@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="householddashboard.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,71 +17,97 @@
     <body>
         <div class="dashboard-layout">
 
-            <header class="flex md:hidden items-center justify-between px-4 py-3 bg-[hsl(146,44%,94%)] sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <a href="index.html" class="flex items-center gap-1">
-                        <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1790715284/fe1a3e9445108f7b67cbddb8b1f19ae4a5d3911f_f0so5l.png" alt="Recycle Connect logo" class="w-7 h-7"/>
-                        <h2 class="font-[Montserrat] font-bold text-[20px] text-[#077053]">Recycle<span class="font-normal">Connect</span></h2>
-                    </a>
-                </div>
-                <div class="flex items-center gap-3">
-                    <button aria-label="Notifications"><img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png" alt="bell-img" class="w-5 h-5"/></button>
-                    <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Ellipse_8_efpgpl.png" alt="Lillian-img" class="w-8 h-8 rounded-full"/>
-                </div>
-            </header>
-            <!-- Side-bar -->
+            <aside class="fixed inset-x-0 bottom-0 z-50 w-full border-t border-[#D8E5DE] bg-[#E8F6EE] shadow-[0_-2px_10px_rgba(0,0,0,0.08)] md:sticky md:top-0 md:inset-x-auto md:bottom-auto md:h-screen md:w-[84px] md:shrink-0 md:border-t-0 md:border-r md:shadow-[0_1px_3px_rgba(0,0,0,0.15)] lg:w-[250px] lg:max-w-[250px] lg:bg-gradient-to-b lg:from-transparent lg:via-[#E8F6EE]/80 lg:to-[#E8F6EE]">
 
-            <div class="relative flex">
-                <aside id="sidebar" class="hidden md:flex relative top-0 z-20 flex-col flex-1 gap-8 md:gap-12 md:px-5 lg:px-7 md:py-5 min-h-screen h-auto self-stretch w-[280px] md:w-[180px] lg:w-[280px] before:content-[''] before:absolute before:inset-0 before:bg-[hsl(146,44%,94%)] before:-z-20 after:content[''] after:absolute after:inset-y-0 after:-right-20 after:bg-no-repeat after:w-[130%] after:bg-h-full after:bg[position:80px_top] after:bg-[url('https://res.cloudinary.com/pftvcaqk/image/upload/v1790676031/Logos_that_represent_eco-friendliness__ai_aiart_aiartcommunity_aiartwork_aiartist_droppthetea_logodesigner_logodesigns_logodesign_logomark_2_xylfqu.png')] after:-z-10 after:pointer-events-none after:bg-overflow-visible">
-                    <a href="index.html" class="hidden md:flex items-center">
-                        <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle Connect logo"/>
-                        <h2 class="font-[Montserrat] font-bold text-[20px] lg:text-[24px] text-[#077053]">Recycle</h2><span class="font-[Montserrat] text-[20px] lg:text-[24px] text-[#077053]">Connect</span>
-                    </a>
+                <!-- LOGO: DESKTOP ONLY -->
+                <a href="index.html" class="hidden items-center gap-1 p-4 lg:flex">
+                    <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png" alt="Recycle Connect logo"  class="h-10 w-10 shrink-0 object-contain">
+                    <span class="whitespace-nowrap font-[Montserrat] text-[19px] font-bold text-[#077053]">Recycle<span class="font-medium">Connect</span></span>
+                </a>
 
-                    <!-- nav-links -->
+                <!-- NAVIGATION -->
+                <nav class="p-1 md:p-2 lg:mt-10 lg:px-3">
 
-                    <div class="mt-2 md:mt-8">
-                        <ul class="flex flex-col gap-1 lg:gap-4">
-                            <li data-href="House-Dashboard.html" class="flex gap-2 items-center rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png" class="max-w-[18px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">Home</span>
-                            </li>
-                            <li data-href="House-Request.html" class="flex items-center gap-2 rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png" class="max-w-[18px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">Request Pickup</span>
-                            </li>
-                            <li data-href="Collector.html" class="flex gap-2 items-center rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png" class="max-w-[18px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">Become A Collector</span>
-                            </li>
-                            <li data-href="PickUp-History.html" class="flex gap-2 items-center rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png" class="max-w-[24px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">History</span>
-                            </li>
-                            <li data-href="Collector-Reward.html" class="flex gap-2 items-center rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png" class="max-w-[22px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">Rewards</span>
-                            </li>
-                            <li data-href="profile.html" class="flex gap-2 items-center rounded-lg p-3 h-[50px] lg:h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer">
-                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png" class="max-w-[22px] w-full"/>
-                                <span class="text-[#087A55] font-[Inter] font-semibold text-[13px] lg:text-[16px] leading-[100%]">Profile</span>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
+                    <ul class="flex items-center justify-around gap-1 md:flex-col md:items-stretch md:gap-3 lg:gap-3">
+
+                        <!-- HOME -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="House-Dashboard.html" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">Home</span>
+                            </a>
+                        </li>
+
+                        <!-- REQUEST PICKUP -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="House-Request.html" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                                    <span class="md:hidden lg:inline">Request Pickup</span>
+                                    <span class="hidden md:inline lg:hidden">Pickup</span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <!-- BECOME A COLLECTOR -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="Collector.html" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">
+                                    <span class="md:hidden lg:inline">Become A Collector</span>
+                                    <span class="hidden md:inline lg:hidden">Collector</span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <!-- HISTORY -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="PickUp-History.html" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">History</span>
+                            </a>
+                        </li>
+
+                        <!-- REWARDS -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="Collector-Reward.html" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">Rewards</span>
+                            </a>
+                        </li>
+
+                        <!-- PROFILE -->
+                        <li class="flex-1 md:flex-none">
+                            <a href="#profile" class="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-lg p-1 text-center transition hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] md:h-[64px] md:w-full lg:h-[52px] lg:flex-row lg:justify-start lg:gap-3 lg:px-3 lg:text-left">
+                                <img src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png" alt="" class="h-[20px] w-[20px] shrink-0 object-contain">
+                                <span class="text-[10px] font-semibold leading-tight text-[#087A55] md:text-[10px] lg:text-[15px]">Profile</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </aside>
 
             <main class="dashboard-section">
-                <form id="login-form" action="/submit-data">
-                            <div class="input-group">
-                                <div class="input-wrapper">
-                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <path d="M30.9069 28.7718L20.8435 18.7084C22.4052 16.6896 23.2499 14.2212 23.2499 11.6249C23.2499 8.51721 22.037 5.60323 19.8438 3.40611C17.6505 1.20899 14.7288 0 11.6249 0C8.52109 0 5.59935 1.21287 3.40611 3.40611C1.20899 5.59935 0 8.51721 0 11.6249C0 14.7288 1.21287 17.6505 3.40611 19.8438C5.59935 22.0409 8.51721 23.2499 11.6249 23.2499C14.2212 23.2499 16.6857 22.4052 18.7045 20.8474L28.7679 30.9069C28.7974 30.9364 28.8324 30.9598 28.871 30.9758C28.9095 30.9918 28.9509 31 28.9926 31C29.0344 31 29.0757 30.9918 29.1143 30.9758C29.1528 30.9598 29.1879 30.9364 29.2174 30.9069L30.9069 29.2212C30.9364 29.1917 30.9598 29.1567 30.9758 29.1181C30.9918 29.0796 31 29.0382 31 28.9965C31 28.9548 30.9918 28.9134 30.9758 28.8749C30.9598 28.8363 30.9364 28.8013 30.9069 28.7718ZM17.7629 17.7629C16.1199 19.402 13.9422 20.3049 11.6249 20.3049C9.30771 20.3049 7.12997 19.402 5.48698 17.7629C3.84786 16.1199 2.94499 13.9422 2.94499 11.6249C2.94499 9.30771 3.84786 7.12609 5.48698 5.48698C7.12997 3.84786 9.30771 2.94499 11.6249 2.94499C13.9422 2.94499 16.1238 3.84398 17.7629 5.48698C19.402 7.12997 20.3049 9.30771 20.3049 11.6249C20.3049 13.9422 19.402 16.1238 17.7629 17.7629Z" fill="#8E8E93"/>
-                                    </svg>
-                                    <input type="search" id="search" placeholder="Search for collectors, materials, or locations...">
-                                </div>
+                <header class="profile">
+                    <form id="login-form" action="/submit-data">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path d="M30.9069 28.7718L20.8435 18.7084C22.4052 16.6896 23.2499 14.2212 23.2499 11.6249C23.2499 8.51721 22.037 5.60323 19.8438 3.40611C17.6505 1.20899 14.7288 0 11.6249 0C8.52109 0 5.59935 1.21287 3.40611 3.40611C1.20899 5.59935 0 8.51721 0 11.6249C0 14.7288 1.21287 17.6505 3.40611 19.8438C5.59935 22.0409 8.51721 23.2499 11.6249 23.2499C14.2212 23.2499 16.6857 22.4052 18.7045 20.8474L28.7679 30.9069C28.7974 30.9364 28.8324 30.9598 28.871 30.9758C28.9095 30.9918 28.9509 31 28.9926 31C29.0344 31 29.0757 30.9918 29.1143 30.9758C29.1528 30.9598 29.1879 30.9364 29.2174 30.9069L30.9069 29.2212C30.9364 29.1917 30.9598 29.1567 30.9758 29.1181C30.9918 29.0796 31 29.0382 31 28.9965C31 28.9548 30.9918 28.9134 30.9758 28.8749C30.9598 28.8363 30.9364 28.8013 30.9069 28.7718ZM17.7629 17.7629C16.1199 19.402 13.9422 20.3049 11.6249 20.3049C9.30771 20.3049 7.12997 19.402 5.48698 17.7629C3.84786 16.1199 2.94499 13.9422 2.94499 11.6249C2.94499 9.30771 3.84786 7.12609 5.48698 5.48698C7.12997 3.84786 9.30771 2.94499 11.6249 2.94499C13.9422 2.94499 16.1238 3.84398 17.7629 5.48698C19.402 7.12997 20.3049 9.30771 20.3049 11.6249C20.3049 13.9422 19.402 16.1238 17.7629 17.7629Z" fill="#8E8E93"/>
+                                </svg>
+                                <input type="search" id="search" placeholder="Search for collectors, materials, or locations...">
                             </div>
-                        </form>
+                        </div>
+                    </form>
+                    <div class="profile-notification">
+                        <button aria-label="Notifications"><img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1792033060/415dd105-7b4e-4c0f-9642-b1ac1d4dae89.png" alt="bell-img" class="prof-not-img"/></button>
+                        <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Ellipse_8_efpgpl.png" alt="lillian-img" class="prof-not-pic"/>
+                        <span class="text-base text-[hsl(163,53%,26%)] font-[700]">Lillian</span>
+                        <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1792033186/a0bcdedb-7a82-4994-905f-391e334ab304.png" alt="drop-down-img" class="prof-arrow"/>
+                    </div>
+                </header>
+                
                 <div class="home-section">
                     <section class="central-column">
                         <div class="welcome-banner">
@@ -123,18 +149,33 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="history-section">
+                            <div class="section-header">
+                                <h2 class="section-title">Recent Pickup History</h2>
+                                <button class="view-all-link" id="viewAllBtn">
+                                    <span>View all</span>
+                                    <span class="arrow">→</span>
+                                </button>
+                            </div>
+
+                            <div class="search-filter-status" id="searchFilterStatus" style="display: none;">
+                                <span id="filterStatusText">Showing results</span>
+                                <button class="reset-filter-btn" id="resetFilterBtn">Clear filter</button>
+                            </div>
+
+                            <!-- List rendered dynamically by script.js -->
+                            <div class="pickup-list" id="pickupList" role="list"></div>
+
+                            <!-- Empty Search State -->
+                            <div class="empty-state" id="emptyState" style="display: none;">
+                                <h3 class="empty-title">No pickups found</h3>
+                                <p class="empty-desc" id="emptyDesc">No recycling history matches your search query.</p>
+                                <button class="empty-clear-btn" id="emptyClearBtn">Clear Search</button>
+                            </div>
+                        </div>
                     </section>
 
                     <aside class="right-column">
-                        <main class="flex flex-3 flex-col w-full min-w-0 pb-24 md:pb-0">
-                            <header class="hidden md:flex top-0 right-0 justify-end items-center gap-4 pr-4 pt-4">
-                                <button aria-label="Notifications"><img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790692838/Group_80_ukkpob.png" alt="bell-img"/></button>
-                                <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Ellipse_8_efpgpl.png" alt="lillian-img" class="w-8 h-8 rounded-full"/>
-                                <span class="text-base text-[hsl(163,53%,26%)] font-[400]">Lillian</span>
-                                <img src="https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_4_caszaf.png" alt="drop-down-img"/>
-                            </header>
-                        </main>
-                        
                         <div class="impact-card" id="impactCard">
                             <div class="impact-header">
                                 <img src="https://res.cloudinary.com/oo2ddlek/image/upload/v1791993453/5022c762-8d80-48d4-bd10-13df05ee0885.png" alt="badge icon" class="impact-badge-icon">
@@ -174,9 +215,108 @@
                         </div>
                     </aside>
                 </div>
+
+
                 
             </main>
         </div>
+
+        <!-- MODALS -->
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <!-- Pickup Detail Modal -->
+        <div class="modal-box" id="pickupModal" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <h3 class="modal-title" id="pickupModalTitle">Pickup Details</h3>
+                <button class="modal-close-btn" data-close-modal>✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Material</span>
+                        <span class="detail-value font-bold" id="modalMaterial">Plastic</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="detail-badge-pill" id="modalStatus">Completed</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Weight</span>
+                        <span class="detail-value font-bold text-green" id="modalWeight">2.5 kg</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date & Time</span>
+                        <span class="detail-value" id="modalDate">Sept 10, 2026, 10:24 AM</span>
+                    </div>
+                    <div class="detail-item full-width">
+                        <span class="detail-label">Eco Contribution</span>
+                        <span class="detail-value text-secondary" id="modalEcoImpact"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-secondary" data-close-modal>Close</button>
+            <button class="btn btn-primary" id="downloadReceiptBtn">Download Receipt</button>
+            </div>
+        </div>
+
+        <!-- Request Pickup Modal -->
+        <div class="modal-box" id="requestPickupModal" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <h3 class="modal-title">Request Curbside Pickup</h3>
+                <button class="modal-close-btn" data-close-modal>✕</button>
+            </div>
+            <form id="pickupRequestForm" class="modal-body">
+                <div class="form-group">
+                    <label for="materialSelect" class="form-label">Material *</label>
+                    <select id="materialSelect" class="form-select" required>
+                        <option value="Plastic">Plastic</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Glass">Glass</option>
+                        <option value="Metal">Metal</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="weightInput" class="form-label">Estimated Weight (kg) *</label>
+                        <input type="number" id="weightInput" class="form-input" min="0.5" max="50" step="0.5" value="2.0" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="pickupDate" class="form-label">Preferred Date *</label>
+                        <input type="date" id="pickupDate" class="form-input" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm Pickup Request</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- History Modal -->
+        <div class="modal-box modal-lg" id="historyModal" role="dialog" aria-modal="true">
+            <div class="modal-header">
+                <h3 class="modal-title">Complete Recycling History</h3>
+                <button class="modal-close-btn" data-close-modal>✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="history-filter-chips">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="Plastic">Plastic</button>
+                    <button class="filter-chip" data-filter="Paper">Paper</button>
+                    <button class="filter-chip" data-filter="Glass">Glass</button>
+                    <button class="filter-chip" data-filter="Metal">Metal</button>
+                </div>
+                <div class="modal-history-list" id="modalHistoryList"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close-modal>Close</button>
+                <button class="btn btn-primary" id="exportHistoryBtn">Export CSV Report</button>
+            </div>
+        </div>
+
+        <!-- Toast Notification Container -->
+        <div class="toast-container" id="toastContainer" aria-live="polite"></div>
         
         <script src="householddashboard.js"></script>
     </body>
