@@ -1,7 +1,7 @@
 // const BASE_URL = 'https://recycle-connect-m189.onrender.com';
 
 // document.addEventListener('DOMContentLoaded', async () => {
-//   const token = localStorage.getItem('collectorToken') || localStorage.getItem('token');
+//   const token = localStorage.getItem('collectorToken') || localStorage.getItem('Token');
 //   const container = document.getElementById('directory-container'); // your grid/list div
 
 //   // if(!token){
@@ -13,7 +13,7 @@
 //   if(container) container.innerHTML = '<p class="text-sm text-gray-500">Loading recyclers...</p>';
 
 //   try {
-//     const res = await fetch(`${BASE_URL}/api/collectors/recyclers`, {
+//     const res = await fetch(`${BASE_URL}/api/collector/recyclers`, {
 //       headers: { Authorization: `Bearer ${token}` }
 //     });
 
@@ -74,3 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
