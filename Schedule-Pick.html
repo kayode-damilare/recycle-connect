@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="api-endpoint" content="https://api.recycleconnect.ng/v1" />
     <script defer src="Schedule-Pick.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link
@@ -24,9 +25,13 @@
     />
     <title>Schedule Pickup</title>
   </head>
-  <body>
-    <div class="absolute -top-2 z-50">
+  <body class="overflow-x-hidden min-h-screen">
+    <div
+      id="bg-pattern-wrapper"
+      class="absolute -top-2 z-50 max-w-full overflow-hidden pointer-events-none"
+    >
       <svg
+        class="max-w-full h-auto"
         width="652"
         height="189"
         viewBox="0 0 652 189"
@@ -64,101 +69,158 @@
         </defs>
       </svg>
     </div>
-    <div id="app" class="flex relative flex-row gap-6 w-full">
+    <div
+      id="app"
+      class="flex relative flex-col md:flex-row gap-4 md:gap-6 w-full min-h-screen"
+    >
       <aside
-        class="w-full max-w-[357px] px-[10px] font[Inter] bg-[#e8f6ee] flex border-r flex-col"
+        id="sidebar"
+        class="w-full md:w-64 lg:max-w-[357px] px-3 sm:px-4 md:px-[10px] font-[Inter] bg-[#e8f6ee] flex border-b border-[#D8E5DE] md:border-b-0 md:border-r flex-col shrink-0 justify-center md:justify-start h-16 md:h-auto md:min-h-screen relative z-40"
       >
-        <!-- LOGO -->
-
-        <a href="index.html" class="flex items-center mb-12 gap-2 mt-4">
-          <img
-            src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
-            alt="Recycle Connect logo"
-          />
-          <h2 class="font-[Montserrat] font-bold text-[24px] text-[#077053]">
-            Recycle
-          </h2>
-          <span class="font-[Montserrat] text-[24px] text-[#077053]"
-            >Connect</span
+        <!-- LOGO & MOBILE TOGGLE -->
+        <div
+          id="sidebar-header"
+          class="flex flex-row items-center gap-1.5 sm:gap-2 h-16 md:h-auto md:mt-4 md:mb-12"
+        >
+          <button
+            id="menu-toggle-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            class="flex md:hidden p-1.5 sm:p-2 text-[#077053] focus:outline-none cursor-pointer"
           >
-        </a>
+            <i id="menu-toggle-icon" class="fa fa-bars text-xl sm:text-2xl"></i>
+          </button>
+          <a
+            id="logo-link"
+            href="index.html"
+            class="flex items-center gap-1.5 sm:gap-2"
+          >
+            <img
+              id="logo-img"
+              src="https://res.cloudinary.com/vyomyquu/image/upload/v1790626204/RecycleConnect_Logo_1_dq4b8w.png"
+              alt="Recycle Connect logo"
+              class="h-7 w-auto sm:h-8 md:h-auto"
+            />
+            <h2
+              id="logo-title"
+              class="font-[Montserrat] font-bold text-lg sm:text-xl md:text-[24px] text-[#077053] leading-none"
+            >
+              Recycle
+            </h2>
+            <span
+              id="logo-subtitle"
+              class="font-[Montserrat] text-lg sm:text-xl md:text-[24px] text-[#077053] leading-none"
+              >Connect</span
+            >
+          </a>
+        </div>
 
-        <!-- BUTTONS -->
-        <div class="mt-18 absolute top-[150px] left-0 w-[320px] px-[10px]">
-          <ul class="flex flex-col gap-4">
+        <!-- BUTTONS / NAVIGATION LIST -->
+        <div
+          id="first-list"
+          class="hidden md:flex flex-col absolute md:static top-full left-0 z-40 w-full md:w-full bg-[#e8f6ee] md:bg-transparent shadow-lg md:shadow-none border-b border-[#D8E5DE] md:border-b-0 px-[10px] py-4 md:py-0 md:mt-6"
+        >
+          <ul
+            id="nav-list"
+            class="flex flex-col-reverse md:flex-col gap-2 md:gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0 w-full"
+          >
             <li
+              id="nav-home"
               data-href="House-Dashboard.html"
               class="flex gap-2 items-center rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-home-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_1_h4envp.png"
                 class="max-w-[18px] w-full rounded"
+                alt="Home"
               /><span
+                id="nav-home-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >Home</span
               >
             </li>
 
             <li
+              id="nav-request-pickup"
               data-href="House-Request.html"
               class="flex items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-request-pickup-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/boxicons_pickup-truck_mhaoya.png"
                 class="max-w-[18px] w-full rounded"
+                alt="Request Pickup"
               /><span
+                id="nav-request-pickup-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >Request Pickup</span
               >
             </li>
 
             <li
+              id="nav-become-collector"
               data-href="Collector.html"
               class="flex items-center gap-2 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-become-collector-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790793348/Group_2_fdnpvu.png"
                 class="max-w-[18px] w-full rounded"
+                alt="Become A Collector"
               /><span
+                id="nav-become-collector-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >Become A Collector</span
               >
             </li>
 
             <li
+              id="nav-history"
               data-href="PickUp-History.html"
               class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-history-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/Group_71_hjvsub.png"
                 class="max-w-[24px] w-full rounded"
+                alt="History"
               /><span
+                id="nav-history-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >History</span
               >
             </li>
 
             <li
+              id="nav-rewards"
               data-href="Collector-Reward.html"
               class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-rewards-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1791402532/iconmind_anniversary-reward-duotone-thin_bpclry.png"
                 class="max-w-[22px] w-full rounded"
+                alt="Rewards"
               /><span
+                id="nav-rewards-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >Rewards</span
               >
             </li>
 
             <li
+              id="nav-profile"
               data-href=".html"
               class="flex items-center gap-1 rounded p-2 h-[60px] hover:border hover:border-[#D8E5DE] hover:shadow-lg hover:shadow-[#087a55] cursor-pointer"
             >
               <img
+                id="nav-profile-icon"
                 src="https://res.cloudinary.com/vyomyquu/image/upload/v1790784302/reicon_profile_coza0b.png"
                 class="max-w-[22px] w-full rounded"
+                alt="Profile"
               /><span
+                id="nav-profile-text"
                 class="text-[#087A55] font-[Inter] font-semibold text-[16px] leading-[100%]"
                 >Profile</span
               >
@@ -166,16 +228,24 @@
           </ul>
         </div>
       </aside>
-      <div class=" pr-6">
+      <div id="main-content" class="px-4 md:px-0 md:pr-6 w-full min-w-0">
         <!-----header2------>
-        <nav class="flex flex-row mt-4 mb-14 items-center gap-4 place-self-end">
-          <a href=""
+        <nav
+          id="top-nav"
+          class="flex flex-row items-center justify-end gap-2 sm:gap-3 md:gap-4 absolute md:static top-0 right-3 sm:right-6 md:top-auto md:right-auto h-16 md:h-auto mt-0 md:mt-4 mb-0 md:mb-14 z-50"
+        >
+          <a
+            id="notification-link"
+            href="#"
+            aria-label="Notifications"
+            class="p-1 sm:p-1.5 text-[#087A55] flex items-center justify-center cursor-pointer"
             ><svg
               width="18"
               height="23"
               viewBox="0 0 18 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-5 sm:w-[18px] sm:h-[23px]"
             >
               <path
                 d="M11.9994 19C11.9994 19.7957 11.6833 20.5587 11.1207 21.1213C10.5581 21.6839 9.79503 22 8.99938 22C8.20373 22 7.44067 21.6839 6.87806 21.1213C6.31545 20.5587 5.99938 19.7957 5.99938 19M9.72038 5.00302L8.25438 5.00002C4.91038 4.99202 2.00738 7.70902 1.98438 11V14.79C1.98438 15.58 1.88438 16.351 1.45338 17.008L1.16638 17.446C0.729378 18.11 1.19938 19 1.98438 19H16.0144C16.7994 19 17.2684 18.11 16.8324 17.446L16.5454 17.008C16.1154 16.351 16.0144 15.579 16.0144 14.789V11.001C15.9744 7.70902 13.0644 5.01102 9.72038 5.00302Z"
@@ -193,7 +263,11 @@
               />
             </svg>
           </a>
-          <a href=""
+          <a
+            id="profile-avatar-link"
+            href="#"
+            aria-label="Profile"
+            class="flex items-center justify-center cursor-pointer"
             ><svg
               width="60"
               height="60"
@@ -201,6 +275,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
+              class="w-8 h-8 sm:w-10 sm:h-10 md:w-[60px] md:h-[60px] rounded-full shrink-0"
             >
               <circle cx="30" cy="30" r="30" fill="url(#pattern0_446_42)" />
               <defs>
@@ -225,14 +300,25 @@
               </defs>
             </svg>
           </a>
-          <a href="" class="text-[#087a55]"> Lilian</a>
-          <a href=""
+          <a
+            id="profile-name-link"
+            href="#"
+            class="text-[#087a55] font-semibold text-xs sm:text-sm md:text-base leading-none"
+          >
+            Lilian</a
+          >
+          <a
+            id="profile-dropdown-link"
+            href="#"
+            aria-label="Profile dropdown"
+            class="flex items-center cursor-pointer"
             ><svg
               width="14"
               height="6"
               viewBox="0 0 14 6"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              class="w-2.5 sm:w-3.5"
             >
               <path
                 d="M0.308501 0.229482C0.506076 0.0825455 0.77402 0 1.0534 0C1.33279 0 1.60073 0.0825455 1.7983 0.229482L7.01343 4.10882L12.2286 0.229482C12.4282 0.0912137 12.6922 0.0159467 12.965 0.0195183C13.2377 0.0230899 13.498 0.105222 13.691 0.248633C13.884 0.392043 13.9947 0.585551 13.9998 0.788441C14.0049 0.991331 13.904 1.18778 13.7184 1.33647L7.75916 5.77052C7.56158 5.91745 7.29364 6 7.01426 6C6.73487 6 6.46693 5.91745 6.26936 5.77052L0.308501 1.33769C0.110969 1.19072 0 0.991408 0 0.783586C0 0.575764 0.110969 0.376451 0.308501 0.229482Z"
@@ -242,274 +328,349 @@
           </a>
         </nav>
         <!----heading and rating----->
-        <div class="mb-20 font-[inter]">
-          <h2 class="text-4xl font-bold leading-[30px] mb-2">
+        <div
+          id="schedule-heading"
+          class="mb-8 md:mb-14 lg:mb-20 font-[Inter] mt-2 sm:mt-4 md:mt-0"
+        >
+          <h2
+            id="schedule-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight md:leading-[30px] mb-2"
+          >
             Schedule Pickup
           </h2>
-          <p class="text-[#246955] font-medium leading-[24px]">
+          <p
+            id="schedule-subtitle"
+            class="text-[#246955] text-sm sm:text-base font-medium leading-[24px]"
+          >
             Choose a date and time for your pickup.
           </p>
         </div>
-        <div class="flex flex-row mt-8 gap-8">
+        <div
+          id="schedule-container"
+          class="flex flex-col lg:flex-row mt-4 md:mt-8 gap-6 lg:gap-8 items-start w-full"
+        >
           <!----calender---->
-          <div id="calendar"
-            class="w-[451px] h-[332px] bg-[#F5F5F5] border shadow-md rounded-lg items-center justify-center p-8">
-            <header class="flex flex-row gap-4 items-center justify-center">
-              <button id="prev-month"><i class="fas fa-arrow-left"></i></button>
-              <h2 id="monthyear" class="text-xl font-bold">October 2023</h2>
-              <button id="next-month">
+          <div
+            id="calendar"
+            class="w-full max-w-[451px] min-h-[332px] bg-[#F5F5F5] border shadow-md rounded-lg flex flex-col justify-between p-4 sm:p-6 lg:p-8 shrink-0"
+          >
+            <header
+              id="calendar-header"
+              class="flex flex-row gap-4 items-center justify-center"
+            >
+              <button
+                id="prev-month"
+                type="button"
+                aria-label="Previous month"
+                class="p-1 hover:text-[#087a55] cursor-pointer"
+              >
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <h2 id="monthyear" class="text-lg sm:text-xl font-bold">
+                October 2023
+              </h2>
+              <button
+                id="next-month"
+                type="button"
+                aria-label="Next month"
+                class="p-1 hover:text-[#087a55] cursor-pointer"
+              >
                 <i class="fas fa-arrow-right"></i>
               </button>
             </header>
-            <div class="grid grid-cols-7 gap-2 mt-4">
+            <div
+              id="calendar-weekdays"
+              class="grid grid-cols-7 gap-1 sm:gap-2 mt-4 text-center justify-items-center"
+            >
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Sun
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Mon
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Tue
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Wed
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Thu
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Fri
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-500"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-500 text-xs sm:text-sm font-medium"
               >
                 Sat
               </div>
             </div>
 
             <!-- Days of the month -->
-            <div id="days" class="grid grid-cols-7 gap-2 mt-2">
+            <div
+              id="days"
+              class="grid grid-cols-7 gap-1 sm:gap-2 mt-2 text-center justify-items-center"
+            >
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 1
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 2
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 3
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 4
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 5
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 7
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 8
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 10
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 11
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 13
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 14
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 16
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 17
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 19
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 20
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 22
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 23
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 25
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 26
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 27
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 28
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 30
               </div>
               <div
-                class="text-center w-[30px] h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55]"
+                class="text-center w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] flex items-center justify-center text-gray-400 hover:rounded-full hover:bg-[#087a55] hover:text-white cursor-pointer text-xs sm:text-sm transition-colors"
               >
                 31
               </div>
             </div>
           </div>
-          
-          <!----time slot----->
-          <div class="flex flex-col gap-4 ml-10 w-[362px] h-[318px]">
-          <p class="text-lg font-semibold">Set Time Slot</p>
-          <label for="morning"
-            class="flex flex-row relative cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
-          >
 
-            <input
-              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955] focus:outline-none"
-              type="radio"
-              name="time"
-              value="morning"
-            />
-            
-            8:00 AM - 10:00AM 
-          </label>
-          <label for="afternoon"
-            class="flex flex-row cursor-pointer relative text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
-          >
-            <input
-              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="radio"
-              name="time"
-              value="afternoon"
-            />
-            10:00 AM - 12:00 PM
-          </label>
+          <!----time slot----->
           <div
-            class="flex flex-row cursor-pointer relative text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
+            id="time-slot-container"
+            class="flex flex-col gap-3 sm:gap-4 ml-0 lg:ml-10 w-full max-w-[362px] min-h-[318px]"
           >
-            <input
-              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="radio"
-              name="time"
-              value="evening"
-            />
-            12:00 PM- 2:00 PM
-          </div>
-          <div
-            class="flex flex-row cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
-          >
-            <input
-              class="rounded-full focus:ring-[#246955] focus:caret-[#246955] focus:bg-[#246955]"
-              type="radio"
-              name="time"
-              value="night"
-            /> 
-            2:00 PM - 4:00 PM
-          </div>
-          <div
-            class="flex flex-row cursor-pointer text-gray-400 gap-4 items-center rounded-lg px-4 py-2 border shadow-md"
-          >
-            <input
-              class="rounded-full focus:caret-[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-              type="radio"
-              name="time"
-              value="late-night"
-            />
-            4:00 PM - 6:00 PM
+            <p
+              id="time-slot-title"
+              class="text-base sm:text-lg font-semibold text-gray-800"
+            >
+              Set Time Slot
+            </p>
+            <label
+              id="time-slot-morning-label"
+              for="morning"
+              class="time-slot-option flex flex-row relative cursor-pointer text-gray-500 gap-4 items-center rounded-lg px-4 py-2 border shadow-md hover:border-[#246955] transition-all"
+            >
+              <input
+                id="morning"
+                class="accent-[#087a55] w-4 h-4 cursor-pointer focus:ring-[#087a55]"
+                type="radio"
+                name="time"
+                value="8:00 AM - 10:00 AM"
+              />
+              <span id="time-slot-morning-text">8:00 AM - 10:00 AM</span>
+            </label>
+            <label
+              id="time-slot-afternoon-label"
+              for="afternoon"
+              class="time-slot-option flex flex-row cursor-pointer relative text-gray-500 gap-4 items-center rounded-lg px-4 py-2 border shadow-md hover:border-[#246955] transition-all"
+            >
+              <input
+                id="afternoon"
+                class="accent-[#087a55] w-4 h-4 cursor-pointer focus:ring-[#087a55]"
+                type="radio"
+                name="time"
+                value="10:00 AM - 12:00 PM"
+              />
+              <span id="time-slot-afternoon-text">10:00 AM - 12:00 PM</span>
+            </label>
+            <label
+              id="time-slot-evening-label"
+              for="evening"
+              class="time-slot-option flex flex-row cursor-pointer relative text-gray-500 gap-4 items-center rounded-lg px-4 py-2 border shadow-md hover:border-[#246955] transition-all"
+            >
+              <input
+                id="evening"
+                class="accent-[#087a55] w-4 h-4 cursor-pointer focus:ring-[#087a55]"
+                type="radio"
+                name="time"
+                value="12:00 PM - 2:00 PM"
+              />
+              <span id="time-slot-evening-text">12:00 PM - 2:00 PM</span>
+            </label>
+            <label
+              id="time-slot-night-label"
+              for="night"
+              class="time-slot-option flex flex-row cursor-pointer text-gray-500 gap-4 items-center rounded-lg px-4 py-2 border shadow-md hover:border-[#246955] transition-all"
+            >
+              <input
+                id="night"
+                class="accent-[#087a55] w-4 h-4 cursor-pointer focus:ring-[#087a55]"
+                type="radio"
+                name="time"
+                value="2:00 PM - 4:00 PM"
+              />
+              <span id="time-slot-night-text">2:00 PM - 4:00 PM</span>
+            </label>
+            <label
+              id="time-slot-late-night-label"
+              for="late-night"
+              class="time-slot-option flex flex-row cursor-pointer text-gray-500 gap-4 items-center rounded-lg px-4 py-2 border shadow-md hover:border-[#246955] transition-all"
+            >
+              <input
+                id="late-night"
+                class="accent-[#087a55] w-4 h-4 cursor-pointer focus:ring-[#087a55]"
+                type="radio"
+                name="time"
+                value="4:00 PM - 6:00 PM"
+              />
+              <span id="time-slot-late-night-text">4:00 PM - 6:00 PM</span>
+            </label>
           </div>
         </div>
-      </div>
-      <!----footer text----->
-      <p
-        class="w-full max-w-[450px] text-[#246955] flex flex-row gap-4 items-start mt-10 text-sm font-semibold"
-      >
-        <input
-          class="border-2 border-[#246955] bg:[#246955] focus:ring-[#246955] focus:bg-[#246955]"
-          type="checkbox"
-          name="terms"
-          value="agree"
-        />
-        I confirm pickup at my registered adress in 12 Greenview Estate, Lagos,
-        on Fri, Sep 4, 2026 between 8:00AM - 10:00AM.
-      </p>
-      <p class="ml-8 text-sm text-[#246955] font-semibold leading-[20px]">
-        I understand a no-show fee may apply.
-      </p>
-      <div
-        class="flex flex-row place-self-end gap-16 mb-20 mt-12"
-      >
-        <button href="House-Request.html"
-          class="bg-[#e8f6ee] text-[#246955] w-[250px] shadow h-[50px] rounded-lg"
+        <!----footer text----->
+        <div id="confirmation-section" class="mt-8 md:mt-10">
+          <p
+            id="confirmation-text"
+            class="w-full max-w-[450px] text-[#246955] flex flex-row gap-4 items-start text-sm font-semibold"
+          >
+            <input
+              id="terms-checkbox"
+              class="accent-[#087a55] w-4 h-4 cursor-pointer rounded focus:ring-[#087a55] mt-0.5"
+              type="checkbox"
+              name="terms"
+              value="agree"
+            />
+            <span id="confirmation-msg">
+              I confirm pickup at my registered adress in 12 Greenview Estate,
+              Lagos, on
+              <span id="confirmed-date">Fri, Sep 4, 2026</span> between
+              <span id="confirmed-time">8:00 AM - 10:00 AM</span>.
+            </span>
+          </p>
+          <p
+            id="noshow-fee-text"
+            class="ml-8 text-sm text-[#246955] font-semibold leading-[20px] mt-1"
+          >
+            I understand a no-show fee may apply.
+          </p>
+        </div>
+        <div
+          id="action-buttons-container"
+          class="flex flex-col-reverse sm:flex-row sm:place-self-end gap-4 sm:gap-8 lg:gap-16 mb-12 md:mb-20 mt-8 md:mt-12 w-full sm:w-auto"
         >
-          Back
-        </button>
-        <button href="Order-Receive.html"
-          class="bg-[#246955] text-white w-[470px] rounded-lg hover:bg-[#087a55]"
-        >
-          Next
-        </button>
+          <button
+            id="back-btn"
+            type="button"
+            class="bg-[#e8f6ee] text-[#246955] w-full sm:w-[180px] lg:w-[250px] shadow h-[50px] rounded-lg font-medium cursor-pointer flex items-center justify-center hover:bg-[#d8e5de] transition-colors"
+          >
+            Back
+          </button>
+          <button
+            id="next-btn"
+            type="button"
+            class="bg-[#246955] text-white w-full sm:w-[280px] lg:w-[470px] h-[50px] rounded-lg hover:bg-[#087a55] font-medium cursor-pointer flex items-center justify-center transition-colors shadow"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   </body>
