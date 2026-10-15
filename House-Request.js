@@ -193,41 +193,66 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-   // ===== 3 - USE MY CURRENT LOCATION =====
-  const useLocationBtn = document.getElementById('use-location-btn');
-  const locationDisplay = document.getElementById('location-display');
 
-  useLocationBtn.addEventListener('click', () => {
-    if (!navigator.geolocation) {
-      alert('Geolocation not supported');
-      return;
-    }
+  
+// ===== 3 - USE MY CURRENT LOCATION =====
+const btn = document.getElementById('use-location-btn');
+const display = document.getElementById('location-display');
 
-    locationDisplay.textContent = 'Getting location...';
-    useLocationBtn.style.opacity = '0.5';
+btn.addEventListener('click', () => {
+  display.textContent = 'Locating...';
+  navigator.geolocation.getCurrentPosition(async (p) => {
+    const { latitude: lat, longitude: lon } = p.coords;
+    try {
+      const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`);
+      const d = await r.json();
+      const a = d.address || {};
 
-    navigator.geolocation.getCurrentPosition(async (pos) => {
-      const { latitude, longitude } = pos.coords;
+      // 1. Street part
+      let street = '';
+      if (a.house_number && a.road) street = `${a.house_number} ${a.road}`;
+      else street = a.road || a.neighbourhood || a.suburb || d.display_name.split(',')[0];
 
-      // Try to convert lat/lng to address (free, no API key)
-      try {
-        const res = await fetch("https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude");
-        const data = await res.json();
-        locationDisplay.textContent = data.display_name? data.display_name.slice(0, 50) + '...' : `${latitude.toFixed(4)}, ${longitude.toFixed(4)}`;
-      } catch {
-        locationDisplay.textContent = `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+      // 2. Place = city / LGA / area
+      const place = a.city || a.town || a.county || a.suburb || '';
+
+      // 3. State
+      const state = a.state || '';
+
+      // Build short display - MAX 3 parts
+      let shortDisplay = '';
+      if (a.house_number && a.road) {
+        // With number: Number, Street, Place, State -> but you want 3, so combine number+street
+        shortDisplay = `${street}, ${place}, ${state}`;
+      } else {
+        // Without number: Street, Place, State
+        shortDisplay = `${street}, ${place}, ${state}`;
       }
-      useLocationBtn.style.opacity = '1';
-      // Save for next page
-      localStorage.setItem('pickupLocation', locationDisplay.textContent);
-      localStorage.setItem('pickupCoords', JSON.stringify({ latitude, longitude }));
 
-    }, (err) => {
-      alert('Could not get location: ' + err.message);
-      locationDisplay.textContent = '12 Greenview Estate, Lagos';
-      useLocationBtn.style.opacity = '1';
-    });
-  });
+      // Clean: remove empty,, and duplicates
+      shortDisplay = [...new Set(shortDisplay.split(',').map(s=>s.trim()).filter(Boolean))].join(', ');
+
+      // Show SHORT to user
+      display.textContent = shortDisplay;
+
+      // For backend - save FULL real address (5 parts needed)
+      localStorage.setItem('pickupLocationDisplay', shortDisplay);
+      localStorage.setItem('pickupLocation', d.display_name);
+      localStorage.setItem('pickupCoords', JSON.stringify({ lat, lon }));
+
+      console.log('SHORT (3 parts):', shortDisplay);
+      console.log('FULL for API:', d.display_name);
+
+    } catch(e){
+      console.error(e);
+      display.textContent = 'Failed';
+    }
+  }, (e) => alert(e.message), { enableHighAccuracy: true });
+});
+
+
+
+  
 
   // ===== 4 - NEXT BUTTON VALIDATION =====
   const nextBtn = document.getElementById('next-btn');
