@@ -108,7 +108,7 @@ const nextBtn = document.getElementById("next-btn");
 //   paper: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/Vector_mc2l36.png',
 //   metal: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/emojione-v1_oil-drum_yfnegm.png',
 //   glass: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676033/Vector_1_nasga7.png',
-//   ewaste: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_2_wbozty.png',
+//   // ewaste: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_2_wbozty.png',
 //   'e-waste': 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Vector_2_wbozty.png',
 //   others: 'https://res.cloudinary.com/pftvcaqk/image/upload/v1790676032/Group_1_supxpn.png'
 // };
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
+
 // ===== 3 - USE MY CURRENT LOCATION =====
 const btn = document.getElementById('use-location-btn');
 const display = document.getElementById('location-display');
